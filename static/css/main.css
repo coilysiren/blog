@@ -1,141 +1,221 @@
-/* 
+.shown {
+    opacity: 1;}
 
-helper classes 
+.invisible {
+    opacity: 0; }
 
-*/ 
-.visible 
-{
-    opacity: 1;
-}
-.invisible 
-{
-    opacity: 0; 
-}
-.none 
-{
+.none {
     display: none;
 }
-.full-width
-{
-    width: 100%;
-}
-.full-height
-{
-    height: 100%;
-}
-/* 
 
-general formatting
+.positionAbsolute {
+    position: absolute;
+}
 
-*/
-body, html
-{
-    background-color: gray;
-    margin: 0;
+.positionStatic {
+    position: static;
+}
+
+a {
+    cursor: inherit;
+    color: purple;
+    text-decoration: inherit; }
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: black;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Press Start 2P", cursive;
+}
+
+h3 {
+    -webkit-margin-before: 0;
+    margin-top: 0; }
+
+html, body, .texture {
     padding: 0;
-}
-h1, h2, h3
-{
-    font-family: arial;
-}
-.content-title
-{
+    margin: 0;
+    width: 100%;
+    height: 100%; }
+
+body {
+    background-color: #c5ecd7;
+    overflow-x: hidden; }
+
+.texture {
+    z-index: -1;
+    background-image: url(../img/texture.png);
+    opacity: 1;
+    position: fixed; }
+
+#name {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
     text-align: center;
+    background-color: rgba(255,255,255,.2);
 }
-/* 
 
-specific formatting 
-
-*/
-.content-title
-{
-    height: 15%;
+nav button {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    right: 15px;
+    opacity: 0.7;
+    border: none;
+    text-align: right;
+    background-color: #fda720;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+    font-family: "Press Start 2P", cursive;
+    transition-property: color, background-color;
+    transition-duration: .1s;
+    transition-timing-function: ease-in;
 }
-.frame-left
-{
+
+nav button:hover {
+    color: #ef5030;
+    background-color: black;
+}
+
+nav button:active {
+    background-color: #ef5030;
+    color: black;
+}
+
+#me{
+    position: relative;
+    height: 160px;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,.7);
+    box-shadow: 0 5px 5px 2px rgba(0,0,0,.3);
+}
+
+.imgMax160x160 {
+    max-width: 160px;
+    max-height: 160px;
+}
+
+#me img{
+    height: 160px;
+    width: 160px;
+}
+
+nav {
     position: fixed;
-    width: 20%;
+    padding-top: 0;
+    top: 0;
+    left: 0;
+    width: 225px;
     height: 100%;
-    padding-top: 15%;
+    transition: width .1s ease-in;
+    background-color: #ef5030;
 }
-    .frame-left button
-    {
-        display: block;
+
+h3 {
+    font-family: "Press Start 2P", cursive;
+    color: black;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #ef5030; }
+
+main {
+    display: table;
+    list-style-type: none;
+    margin-left: 225px;
+    padding-top: 0; }
+
+article {
+    opacity: 0; 
+    margin: 30px;
+    margin-bottom: 20px;
+    width: 65%;
+    background-color: rgba(253, 167, 32, 0.3);
+    box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    padding-bottom: 5px;
+    position: absolute;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
     }
-    .buttons-top
-    {
-        width: 100%;
-        height: 30%;
-    }
-    .buttons-middle
-    {
-        width: 100%;
-        height: 30%;
-    }
-    .buttons-bottom
-    {
-        width: 100%;
-    }
-.sim-frame
-{
-    position: fixed;
-    top: 15%;
-    left: 20%;
-    width: 80%;
-    height: 85%;
-    background-color: pink;
+
+article p {
+    font-family: "Droid Sans Mono", sans-serif;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+
+.list {
+    list-style-type: square;
+    font-family: "Droid Sans Mono", sans-serif;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.15);
 }
-    .sim-display
-    {
-        margin-top: 2.5%;
-        margin-left: auto;
-        margin-right: auto;
-        width: 95%;
-        height: 95%;
-        background-color: purple;
-    }
-        nav
-        {
-            position: absolute;
-            right: 2.5%;
-            width: 25%;
-            height: 95%;
-            background-color: gray;
-        }
-            .picture-frame
-            {
-                margin-top: 10%;
-                margin-bottom: 10%;
-                width: 80%;
-                height: 20%;
-                margin-left: auto;
-                margin-right: auto;
-                background-color: yellow;
-            }
-            nav button
-            {
-                width: 100%;
-                display: block;
-            }
-/*
 
-tablet formatting
-
-*/
-
-/*
-
-mobile formatting
-
-*/
-@media all and (max-height: 500px) and (max-width: 500px)
-{
-    .frame-left
-    {
-        display: none;
-    }
-    .content-title
-    {
-        display: none;
-    }
+.fa-linkedin {
+    color: #4875B4;
 }
+
+.fa-twitter {
+    color: #33CCFF;
+}
+
+.fa-skype {
+    color: #12A5F4;
+}
+
+.fa-envelope {
+    color: gray;
+}
+
+.fa-github {
+    color: black;
+}
+
+@font-face {
+    font-family: "Superfly";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Superfly"), local("Superfly-Regular"), url(../fonts/superfly.woff) format("woff"); }
+
+@font-face {
+    font-family: "Dusty";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Dusty"), local("Dusty-Regular"), url(../fonts/dusty.woff) format("woff"); }
