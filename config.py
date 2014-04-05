@@ -11,3 +11,9 @@ class config (object):
         AVATAR = "static/locals/me.png"
     URL = "http://lynncyrin.me"
     DESC = "Queer, Feminist, Programmer"
+'''
+#Parsed like so:
+for configuration in config.config.__dict__.items(): #for everything in class
+    if configuration[0][0] == "_": continue #check for private things
+    app.config[configuration[0]] = configuration[1] #add to app config
+'''
