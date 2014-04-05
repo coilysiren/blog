@@ -4,6 +4,7 @@ import os
 import sys #???
 import sqlite3
 import flask
+import config
 #import flask_flatpages
 #import flask_frozen
 
@@ -11,6 +12,15 @@ import flask
 app = flask.Flask(__name__)
 #flatpages = FlatPages(app)
 app.config.from_object(__name__)
+
+#custom figuration file parsing!!!
+#for all the values in the config attribute dictionary
+for configuration in config.config.__dict__.items():
+    #if we are are working with a private variable, continue
+    #if [variable's][first character] is "_" (underscore) then private
+    if configuration[0][0] == "_": continue
+    #for all others, attach to the flask config object
+    app.config[configuration[0]] = configuration[1]
 
 #FLATPAGES_AUTO_RELOAD = True
 #FLATPAGES_EXTENSION = '.markdown'
@@ -49,4 +59,4 @@ def show_post_by_title (post_title):
 #can be run via foreman
 #or by running the python file directly:
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
