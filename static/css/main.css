@@ -1,20 +1,36 @@
-.shown {
-    opacity: 1;}
+/*
+__NAME__ = main.css
+__AUTHOR__ = lynn
 
-.invisible {
-    opacity: 0; }
+Organization:
 
-.none {
-    display: none;
-}
+[HELPERS]
+    basic stuff, like add to invisble or disable none
+[GLOBAL]
+    global styling. ex fonts, underlining, colors
+[DESKTOP]
+    the basic styling of the page
+[TABLET]
+    tablet media queries and styling
+[MOBILE]
+    mobile media queries and styling
+[EXTERNAL]
+    styling for external resources. ex icons and fonts
+*/
 
-.positionAbsolute {
-    position: absolute;
-}
+/*---------------
+    HELPERS 
+-----------------*/
 
-.positionStatic {
-    position: static;
-}
+.visible {opacity: 1;}
+.invisible {opacity: 0;}
+.none {display: none;}
+.positionAbsolute {position: absolute;}
+.positionStatic {position: static;}
+
+/*---------------
+    GLOBAL
+-----------------*/
 
 a {
     cursor: inherit;
@@ -56,6 +72,10 @@ body {
     background-image: url(../img/texture.png);
     opacity: 1;
     position: fixed; }
+
+/*---------------
+    DESKTOP
+-----------------*/
 
 #name {
     margin-left: auto;
@@ -187,6 +207,18 @@ article p {
     color: black;
     background-color: rgba(255, 255, 255, 0.15);
 }
+
+/*---------------
+    TABLET
+-----------------*/
+
+/*---------------
+    MOBILE
+-----------------*/
+
+/*---------------
+    EXTERNAL
+-----------------*/
 
 .fa-linkedin {
     color: #4875B4;
