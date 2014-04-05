@@ -1,7 +1,7 @@
 FLASK BLOG YAAAAAYYYYYY
 
-[[CONFIG]]
-inside config.py
+[CONFIG](config.py)
+
 	DEBUG = turn off for production
 	OFFLINE = turn off for production
 		offline checks are inside of:
