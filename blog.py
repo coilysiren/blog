@@ -25,7 +25,7 @@ def index ():
     #posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
     #sort by data
     #posts.sort(key=lambda item:item['date'], reverse=False)
-    return flask.render_template('index.html', posts=posts)
+    return flask.render_template('base.html', posts=posts)
 
 @app.route('/tagged/<tag_input>')
 def show_posts_with_tag (tag_input):
