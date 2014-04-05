@@ -1,0 +1,1 @@
+local clones of internet resources. used to enable offline developement

@@ -1,19 +1,25 @@
 /*
-__NAME__ = main.css
-__AUTHOR__ = lynn
+main.css
 
 Organization:
 
 [HELPERS]
     basic stuff, like add to invisble or disable none
 [GLOBAL]
-    global styling. ex fonts, underlining, colors
+    global styling
+        font
+        font style
+        colors
 [DESKTOP]
-    the basic styling of the page
+    desktop layout
+        height / width
+        margin and padding
+        font size
+        shadows
 [TABLET]
-    tablet media queries and styling
+    tablet media queries and layout
 [MOBILE]
-    mobile media queries and styling
+    mobile media queries and layout
 [EXTERNAL]
     styling for external resources. ex icons and fonts
 */
@@ -70,7 +76,7 @@ body {
 .texture {
     z-index: -1;
     background-image: url(../img/texture.png);
-    opacity: 1;
+    opacity: 0.8;
     position: fixed; }
 
 /*---------------
@@ -80,10 +86,10 @@ body {
 #name {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2px;
-    padding-bottom: 2px;
     text-align: center;
     background-color: rgba(255,255,255,.2);
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 nav button {
@@ -239,15 +245,17 @@ article p {
 .fa-github {
     color: black;
 }
-
+{% if config.OFFLINE -%}
 @font-face {
-    font-family: "Superfly";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Superfly"), local("Superfly-Regular"), url(../fonts/superfly.woff) format("woff"); }
-
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Press Start 2P'), local('PressStart2P-Regular'), url(../locals/pressstart2p.tff) format('truetype');
+}
 @font-face {
-    font-family: "Dusty";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Dusty"), local("Dusty-Regular"), url(../fonts/dusty.woff) format("woff"); }
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans Mono'), local('DroidSansMono'), url(../locals/droidsansmono.tff) format('truetype');
+}
+{%- endif %}
