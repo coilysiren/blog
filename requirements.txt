@@ -1,6 +1,9 @@
 Flask==0.10.1
+Flask-FlatPages==0.5
 Jinja2==2.7.2
+Markdown==2.4
 MarkupSafe==0.19
+PyYAML==3.11
 Werkzeug==0.9.4
 argparse==1.2.1
 gunicorn==18.0
