@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <!-- base.html -->
-<!--
-
-h1 = the title at the top of the page
-h2 = post titles
-h3 = post subtitles
-
-when you see [[thing]] then I need an icon for "thing"
-
-responsive images???
-
--->
 <html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
     <head>
     	{% include 'head.html' %}
 	</head>
 	<body>
-		{% include 'nav.html' %}
-		{% include 'main.html' %}
-		{% include 'footer.html' %}
-	</body>
-
-<link href="static/css/main.css" rel="stylesheet">
+		<nav>
+			{% include 'nav.html' %}
+		</nav>
+		<main>
+			{% include 'main.html' %}
+		</main>
+		<footer>
+			{% include 'footer.html' %}
+		</footer>
