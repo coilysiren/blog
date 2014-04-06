@@ -33,6 +33,10 @@ Organization:
 .none {display: none;}
 .positionAbsolute {position: absolute;}
 .positionStatic {position: static;}
+.em2 {font-size: 2em;}
+.em3 {font-size: 3em;}
+.em4 {font-size: 4em;}
+.em5 {font-size: 5em;}
 
 /*---------------
     GLOBAL
