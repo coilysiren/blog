@@ -40,8 +40,8 @@ def build_html (post_title):
 	'''makes html from markdown files, or returns 0 if it cant'''
 	html = 'templates/rendered_posts/'+str(post_title)+'.html'
 	md = 'posts/'+str(post_title)+'.md'
-	#look for an already created html file
-	try: with open(html): pass; return 1
+	try: #look for an already created html file
+		with open(html): pass; return 1
 	#if none
 	except IOError: 
 		#look for a markdown file to turn into html
