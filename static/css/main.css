@@ -79,33 +79,21 @@ body {
     opacity: 0.8;
     position: fixed; }
 
-/*---------------
-    DESKTOP
------------------*/
-
 #name {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     background-color: rgba(255,255,255,.2);
-    padding-top: 2px;
-    padding-bottom: 2px;
 }
 
 nav button {
+    position: relative;
     display: block;
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 15px;
-    margin-bottom: 10px;
-    position: relative;
-    right: 15px;
     opacity: 0.7;
     border: none;
     text-align: right;
     background-color: #fda720;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
     font-family: "Press Start 2P", cursive;
     transition-property: color, background-color;
     transition-duration: .1s;
@@ -122,16 +110,11 @@ nav button:active {
     color: black;
 }
 
-#me{
+#me {
     position: relative;
-    height: 160px;
-    width: 160px;
+    background-color: rgba(255,255,255,.7);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    background-color: rgba(255,255,255,.7);
-    box-shadow: 0 5px 5px 2px rgba(0,0,0,.3);
 }
 
 .imgMax160x160 {
@@ -149,7 +132,6 @@ nav {
     padding-top: 0;
     top: 0;
     left: 0;
-    width: 225px;
     height: 100%;
     transition: width .1s ease-in;
     background-color: #ef5030;
@@ -158,60 +140,108 @@ nav {
 h3 {
     font-family: "Press Start 2P", cursive;
     color: black;
-    font-size: 1.3em;
-    padding-top: 10px;
-    padding-bottom: 10px;
     text-align: center;
-    background-color: #ef5030; }
+    background-color: #ef5030; 
+}
 
 main {
     display: table;
     list-style-type: none;
-    margin-left: 225px;
-    padding-top: 0; }
+    padding-top: 0; 
+}
 
 article {
     opacity: 0; 
-    margin: 30px;
-    margin-bottom: 20px;
-    width: 65%;
-    background-color: rgba(253, 167, 32, 0.3);
-    box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
     color: black;
-    padding-bottom: 5px;
+    background-color: rgba(253, 167, 32, 0.3);
     position: absolute;
     transition-property: opacity;
     transition-duration: .5s;
     transition-timing-function: ease-in;
-    }
+}
 
 article p {
-    font-family: "Droid Sans Mono", sans-serif;
-    margin-left: 25px;
-    margin-right: 25px;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 1em;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
+    font-family: "Droid Sans Mono", sans-serif;
     color: black;
     background-color: rgba(255, 255, 255, 0.15);
     transition-property: background-color, color;
     transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
+    transition-timing-function: ease-in; 
+}
 
 .list {
     list-style-type: square;
     font-family: "Droid Sans Mono", sans-serif;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/*---------------
+    DESKTOP
+-----------------*/
+
+#name {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+nav button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    right: 15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+}
+
+#me{
+    height: 160px;
+    width: 160px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 5px 2px rgba(0,0,0,.3);
+}
+
+nav {
+    width: 225px;
+}
+
+h3 {
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+main {
+    margin-left: 225px;
+}
+
+article {
+    padding-bottom: 5px;
+    margin: 30px;
+    margin-bottom: 20px;
+    width: 65%;
+    box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+article p {
     margin-left: 25px;
     margin-right: 25px;
     font-size: 1em;
     padding-right: 15px;
     padding-left: 15px;
     padding-bottom: 15px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.list {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 /*---------------
