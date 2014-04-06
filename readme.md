@@ -1,9 +1,8 @@
 FLASK BLOG YAAAAAYYYYYY
 
-[CONFIG](config.py)
-
-	DEBUG = turn off for production
-	OFFLINE = turn off for production
-		offline checks are inside of:
-		templates/head.html resources
-		static/css/main.css external
+[CONFIG](config.yaml)
+	
+	#REMEMBER BEFORE YOU PUSH!!!
+	DEBUG: False 
+	OFFLINE: False
+	URL: check this, might be a testing one
