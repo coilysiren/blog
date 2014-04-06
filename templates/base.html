@@ -9,7 +9,8 @@
 			{% include 'nav.html' %}
 		</nav>
 		<main>
-			{% include 'main.html' %}
+			<div class="texture"></div>
+			{% block content %}{% endblock %}
 		</main>
 		<footer>
 			{% include 'footer.html' %}

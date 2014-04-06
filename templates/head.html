@@ -29,18 +29,18 @@
     <meta name="twitter:domain" content="{{ config.URL }}">
 <!-- resources -->
     {% if config.OFFLINE -%}
-    <script src="static/locals/prefixfree.min.js"></script>
-    <link href="static/locals/font-awesome.css" rel="stylesheet">
-    <link href="static/locals/normalize.min.css" rel="stylesheet">
-    <link href="static/locals/animate.min.css" rel="stylesheet">
-    <link href="static/css/main.css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='locals/prefixfree.min.js') }}"></script>
+    <link href="{{ url_for('static', filename='locals/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='locals/normalize.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='locals/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
     <!-- 
     not going to use this highlighting for a bit
     <link href="http://yandex.st/highlightjs/8.0/styles/default.min.css" rel="stylesheet">
     <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
     -->
-    <script src="static/locals/jquery.min.js"></script>
-    <script src="static/js/main.js"></script>        
+    <script src="{{ url_for('static', filename='locals/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>        
     {% else %}
     <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel='stylesheet' type='text/css'>
@@ -48,14 +48,14 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css" rel="stylesheet">
-    <link href="static/css/main.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
     <!-- 
     not going to use this highlighting for a bit
     <link href="http://yandex.st/highlightjs/8.0/styles/default.min.css" rel="stylesheet">
     <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
     -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="static/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     {%- endif %}
 <!-- head scripts -->
     <script>
