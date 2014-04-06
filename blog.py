@@ -3,43 +3,53 @@
 import os
 import flask
 import yaml
+import markdown
 
 #start app and set configuration
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
 for key, value in yaml.load(file('config.yaml','r')).items():
-    app.config[key] = value
+	app.config[key] = value
+
 
 #views
-@app.route('/')
-def index ():
-    #get all posts in post directory (???)
-    posts = list()
-    #posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
-    #sort by data
-    #posts.sort(key=lambda item:item['date'], reverse=False)
-    return flask.render_template('base.html', posts=posts)
 
-@app.route('/tagged/<tag_input>')
-def show_posts_with_tag (tag_input):
-    #tag_input = tag_input.lower()
-    #something to handle spaces in tags? I'm going to have to use them
-    posts = list()
-    posts = [p for p in flatpages]
-    tagged_posts = list()
-    #for post in posts
-        #if tag_input in post.tags:
-            #tagged_posts.append(post)
-    return flask.render_template('tagged.html', tag_input=tag_input,
-        tagged_posts=tagged_posts)
+@app.route('/')
+@app.route('/home')
+@app.route('/index')
+def index (): 
+	return flask.render_template('index.html')
 
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
-    path = '{}/{}'.format(POST_DIR, post_title)
-    #post = flatpages.get_or_404(path)
-    return flask.render_template('post.html', post=post)
+	post_title = post_title.lower() #clean input
+	file_built = build_html(post_title) #build your html file
+	if file_built: post_url = 'rendered_posts/'+str(post_title)+'.html'
+	else: return flask.render_template('404.html'), 404 #no such file exists
+	return flask.render_template('post.html', post_url=post_url)
+
+@app.route('/recent/<post_number>')
+def show_post_by_recentness (post_number):
+	return "WIP"
+
+@app.errorhandler(404)
+def page_not_found (e):
+	return flask.render_template('404.html'), 404
+
+def build_html (post_title):
+	'''makes html from markdown files, or returns 0 if it cant'''
+	html = 'templates/rendered_posts/'+str(post_title)+'.html'
+	md = 'posts/'+str(post_title)+'.md'
+	#look for an already created html file
+	try: with open(html): pass; return 1
+	#if none
+	except IOError: 
+		#look for a markdown file to turn into html
+		try: markdown.markdownFromFile(input=md, output=html); return 1
+		#if no markdown file then 'fail'
+		except IOError: return 0 
 
 #can be run via foreman
 #or by running the python file directly:
 if __name__ == '__main__':
-    app.run()
+	app.run()
