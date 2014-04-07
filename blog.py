@@ -2,7 +2,6 @@
 
 import os
 import flask
-from flask import url_for
 import yaml
 import markdown
 import flask.ext.scss
@@ -20,21 +19,16 @@ flask.ext.scss.Scss(app)
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
-def index (): 
-	return flask.render_template('index.html')
+def index (): return flask.render_template('index.html')
 
 @app.route('/about')
-def about ():
-	url_for('static', filename='locals/jquery.min.js')
-	return flask.render_template('post.html', post_url='pages/about.html')
+def about (): return flask.render_template('post.html', post_url='pages/about.html')
 
 @app.route('/contact')
-def contact ():
-	return flask.render_template('post.html', post_url='pages/contact.html')
+def contact (): return flask.render_template('post.html', post_url='pages/contact.html')
 
 @app.route('/name')
-def name ():
-	return flask.render_template('post.html', post_url='pages/name.html')
+def name (): return flask.render_template('post.html', post_url='pages/name.html')
 
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
@@ -49,8 +43,9 @@ def show_post_by_recentness (post_number):
 	return "WIP"
 
 @app.errorhandler(404)
-def page_not_found (e):
-	return flask.render_template('404.html'), 404
+def page_not_found (e): return flask.render_template('404.html'), 404
+
+#functions
 
 def build_html (post_title):
 	'''makes html from markdown files, or returns 0 if it cant'''
