@@ -80,8 +80,10 @@
                                               margin-left: auto;
                                               margin-right: auto;
                                               text-align: center;
-                                              background-color: rgba(255, 255, 255, 0.2);
-                                              font-family: "Press Start 2P", cursive; }
+                                              background-color: #fda720;
+                                              font-family: "Press Start 2P", cursive;
+                                              opacity: 0.7;
+                                              box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.3); }
 
                                               nav button {
                                                 position: relative;
@@ -97,18 +99,19 @@
                                                 transition-timing-function: ease-in; }
 
                                                 nav button:hover {
-                                                  color: #ef5030;
+                                                  color: #7AADA6;
                                                   background-color: black; }
 
                                                   nav button:active {
-                                                    background-color: #ef5030;
+                                                    background-color: #7AADA6;
                                                     color: black; }
 
                                                     #me {
                                                       position: relative;
                                                       background-color: rgba(255, 255, 255, 0.7);
                                                       margin-left: auto;
-                                                      margin-right: auto; }
+                                                      margin-right: auto;
+                                                      box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.3); }
 
                                                       nav {
                                                         position: fixed;
@@ -116,13 +119,14 @@
                                                         top: 0;
                                                         left: 0;
                                                         transition: width 0.1s ease-in;
-                                                        background-color: #ef5030; }
+                                                        background-color: #7AADA6;
+                                                        box-shadow: 0 15px 15px 7px rgba(253, 167, 32, 0.3); }
 
                                                         h3 {
                                                           font-family: "Press Start 2P", cursive;
                                                           color: black;
                                                           text-align: center;
-                                                          background-color: #ef5030; }
+                                                          background-color: #7AADA6; }
 
                                                           main {
                                                             display: table;
@@ -255,8 +259,7 @@
           height: 160px;
           width: 160px;
           margin-top: 10px;
-          margin-bottom: 20px;
-          box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.3);   }
+          margin-bottom: 20px;   }
           #me img {
             height: 160px;
             width: 160px;   }
