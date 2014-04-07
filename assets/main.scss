@@ -45,6 +45,13 @@ Organization:
     max-height: 160px;
 }
 
+$primary_color = #ef5030;
+$off_primary = #fda720;
+$body_color = rgba(253, 167, 32, 0.3);
+
+$primary_font = "Press Start 2P", cursive;
+$secondary_font = "Droid Sans Mono", sans-serif;
+
 /*---------------
     GLOBAL
 -----------------*/
@@ -54,23 +61,16 @@ a {
     color: purple;
     text-decoration: inherit; }
 
-a:hover {
-    text-decoration: underline;
-}
+a:hover {text-decoration: underline;}
 
-p {
-    color: black;
-    -webkit-margin-before: 0;
+h1, h2, h3, h4, h5 {$primary_font;}
+
+h1, h2, h3, h4, h5, p {
+    -webkit-margin-before: 0;  
     -webkit-margin-after: 0;
-    margin-top: 0;
+    margin-top: 0;  
     margin-bottom: 0;
-}
-
-h1, h2, h3, h4, h5 {font-family: "Press Start 2P", cursive;}
-
-h3 {
-    -webkit-margin-before: 0;
-    margin-top: 0; }
+    color: black }
 
 html, body, .texture {
     padding: 0;
@@ -93,6 +93,7 @@ body {
     margin-right: auto;
     text-align: center;
     background-color: rgba(255,255,255,.2);
+    font-family: $primary_font;
 }
 
 nav button {
@@ -102,20 +103,20 @@ nav button {
     opacity: 0.7;
     border: none;
     text-align: right;
-    background-color: #fda720;
-    font-family: "Press Start 2P", cursive;
+    background-color: $off_primary;
+    font-family: $primary_font;
     transition-property: color, background-color;
     transition-duration: .1s;
     transition-timing-function: ease-in;
 }
 
 nav button:hover {
-    color: #ef5030;
+    color: $primary_color;
     background-color: black;
 }
 
 nav button:active {
-    background-color: #ef5030;
+    background-color: $primary_color;
     color: black;
 }
 
@@ -132,14 +133,14 @@ nav {
     top: 0;
     left: 0;
     transition: width .1s ease-in;
-    background-color: #ef5030;
+    background-color: $primary_color;
 }
 
 h3 {
-    font-family: "Press Start 2P", cursive;
+    font-family: $primary_font;
     color: black;
     text-align: center;
-    background-color: #ef5030; 
+    background-color: $primary_color; 
 }
 
 main {
@@ -151,7 +152,7 @@ main {
 article {
     opacity: 0; 
     color: black;
-    background-color: rgba(253, 167, 32, 0.3);
+    background-color: $body_color;
     position: absolute;
     transition-property: opacity;
     transition-duration: .5s;
@@ -161,7 +162,7 @@ article {
 article p {
     background-repeat: no-repeat;
     background-position: center;
-    font-family: "Droid Sans Mono", sans-serif;
+    font-family: $secondary_font;
     color: black;
     background-color: rgba(255, 255, 255, 0.15);
     transition-property: background-color, color;
@@ -171,7 +172,7 @@ article p {
 
 .list {
     list-style-type: square;
-    font-family: "Droid Sans Mono", sans-serif;
+    font-family: $secondary_font;
     color: black;
     background-color: rgba(255, 255, 255, 0.15);
 }
@@ -180,7 +181,7 @@ article p {
     BASE LAYOUT (TABLET)
 ---------------------------*/
 
-/* LONG EDGE HORIZONTAL */
+// LONG EDGE HORIZONTAL
 
 @media all {
 
@@ -202,6 +203,7 @@ article p {
 
     nav {
         width: 20%;
+        height: 100%;
     }
 
     h3 {
@@ -241,7 +243,7 @@ article p {
     }
 }
 
-/* LONG EDGE VERTICLE */
+// LONG EDGE VERTICLE
 
 @media (orientation:portrait) {
 
@@ -265,11 +267,11 @@ article p {
 
     nav {
         width: 100%;
+        height: auto;
         position: static;
     }
 
     h3 {
-        font-size: 1.3em;
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -345,7 +347,6 @@ article p {
     }
 
     h3 {
-        font-size: 1.3em;
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -385,10 +386,78 @@ article p {
     MOBILE
 -----------------*/
 
-/* LONG EDGE VERTICAL @media (orientation:portrait) */
-/* LONG EDGE HORIZONTAL @media (orientation:landscape) */
+// LONG EDGE VERTICAL
 
-@media all and (max-height: 400px) and (max-width: 700px){
+@media all and (orientation:portrait) and (max-height: 500px){
+    
+    html {font-size: 0.7em;}
+    
+    #name {
+        font-size: 0.7em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    nav button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        right: 15px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+    }
+
+    #me{display: none;}
+
+    nav {
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
+        position: static;
+    }
+
+    h3 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    main {
+        position: static;
+        margin-left: 0;
+    }
+
+    article {
+        padding-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    article p {
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    .list {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+// LONG EDGE HORIZONTAL
+
+@media all and (orientation:landscape) and (max-height: 500px){
 
     html {
         font-size: 0.7em;
@@ -411,11 +480,12 @@ article p {
 
     nav {
         width: 100%;
+        height: auto;
+        padding-bottom: 5px;
         position: static;
     }
 
     h3 {
-        font-size: 1.3em;
         padding-top: 10px;
         padding-bottom: 10px;
     }
