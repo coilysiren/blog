@@ -89,10 +89,14 @@ body {
     overflow-x: hidden; }
 
 .texture {
+    position: fixed; 
+}
+
+.body_texture {
+    background-image: url(../img/body.png);
     z-index: -1;
-    background-image: url(../img/texture.png);
     opacity: 0.8;
-    position: fixed; }
+}
 
 #name {
     margin-left: auto;
