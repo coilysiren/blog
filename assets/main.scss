@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5, p {
     margin-bottom: 0;
     color: black }
 
+h3 {
+    -webkit-margin-before: 10px;  
+    margin-bottom: 10px;}
+
 html, body, .texture {
     padding: 0;
     margin: 0;
@@ -196,7 +200,7 @@ article p {
         padding-bottom: 5px;
         padding-right: 15px;
         margin-bottom: 10px;
-        right: 15px;
+        right: 15%;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
     }
 
@@ -258,7 +262,6 @@ article p {
         padding-bottom: 5px;
         padding-right: 15px;
         margin-bottom: 10px;
-        right: 15px;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
     }
 
@@ -325,7 +328,6 @@ article p {
         padding-bottom: 5px;
         padding-right: 15px;
         margin-bottom: 10px;
-        right: 15px;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
     }
 
@@ -404,7 +406,6 @@ article p {
         padding-bottom: 5px;
         padding-right: 15px;
         margin-bottom: 5px;
-        right: 15px;
         box-shadow: 3px 3px 3px rgba(0,0,0,0.66);
     }
 
@@ -460,21 +461,20 @@ article p {
 
 @media all and (orientation:landscape) and (max-height: 500px){
 
-    html {
-        font-size: 0.7em;
-    }
-
+    html {font-size: 0.7em;}
+    
     #name {
         font-size: 0.7em;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
-
+    
     nav button {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-right: 15px;
-        margin-bottom: 10px;
-        right: 15px;
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+        margin-bottom: 5px;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.66);
     }
 
     #me{display: none;}
@@ -487,8 +487,9 @@ article p {
     }
 
     h3 {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
     }
 
     main {
@@ -502,8 +503,7 @@ article p {
         margin-bottom: 20px;
         margin-left: 0;
         margin-right: 0;
-        width: 90%;
-        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
     }
 
     article p {
@@ -523,7 +523,7 @@ article p {
         padding-left: 15px;
         padding-bottom: 15px;
     }
-}
+}}
 
 /*---------------
     EXTERNAL
