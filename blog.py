@@ -2,6 +2,7 @@
 
 import os
 import flask
+from flask import url_for
 import yaml
 import markdown
 import flask.ext.scss
@@ -21,6 +22,19 @@ flask.ext.scss.Scss(app)
 @app.route('/index')
 def index (): 
 	return flask.render_template('index.html')
+
+@app.route('/about')
+def about ():
+	url_for('static', filename='locals/jquery.min.js')
+	return flask.render_template('post.html', post_url='pages/about.html')
+
+@app.route('/contact')
+def contact ():
+	return flask.render_template('post.html', post_url='pages/contact.html')
+
+@app.route('/name')
+def name ():
+	return flask.render_template('post.html', post_url='pages/name.html')
 
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):

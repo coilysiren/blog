@@ -2,11 +2,10 @@
 	<div id="name"><h1>Lynn Cyrin</h1></div><br>
 	<div id="me">
 	<img src={{ config.AVATAR }} title="my gravatar picture"></img></div>
-	<button class="nav about shown" onclick="swapPage('.about')">About</button>
-	<button class="nav projects" onclick="swapPage('.projects')">Projects</button>
-	<button class="nav name" onclick="swapPage('.name')">Cyrin? Conway?</button>
-	<button class="nav html"  onclick="swapPage('.html')">$("html")</button>
-	<button class="nav python" onclick="swapPage('.python')">class coding (python):</button>
-	<button class="nav jobs" onclick="swapPage('.jobs')">Resume</button>
-	<button class="nav fund" onclick="swapPage('.fund')">Crowdfund Mi</button>
+	<a href="{{ url_for('index') }}"><button class="nav">Home</button></a>
+	<a href="{{ url_for('about') }}"><button class="nav">About Me</button></a>
+	<a href="{{ url_for('contact') }}"><button class="nav">Contact</button></a>
+	<a href="{{ url_for('name') }}"><button class="nav">Name</button></a>
+	<!-- kept as an example
 	<button class="nav contact" onclick="swapPage('.contact')">Contact</button>
+	-->

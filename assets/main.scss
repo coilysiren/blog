@@ -61,7 +61,9 @@ a {
     color: purple;
     text-decoration: inherit; }
 
-a:hover {text-decoration: underline;}
+nav a {color: black;}
+article a {color: purple}
+article a:hover {text-decoration: underline;}
 
 h1, h2, h3, h4, h5 {$primary_font;}
 
@@ -150,7 +152,6 @@ main {
 }
 
 article {
-    opacity: 0; 
     color: black;
     background-color: $body_color;
     position: absolute;
@@ -402,9 +403,9 @@ article p {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-right: 15px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         right: 15px;
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.66);
     }
 
     #me{display: none;}

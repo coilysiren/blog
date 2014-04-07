@@ -1,33 +1,6 @@
 <!-- index.html -->
 {% extends "base.html" %}
-	{% block content %} 
-		<article class="about shown animated fadeInDownBig">
-		    <h3>About Such Lynn</h3>
-		    <p>Hi I'm Lynn Cyrin, human girl, transgender woman of color, and tech nerd. I like social justice and long walks through the element inspector. I live in the Bay Area and work in both tech and activism (often at the same time).</p> 
-		    <p>Things to know about me! I do front end web development, and I'm working on getting into data science. I also like game development, but mostly as a hobby. I really really want to be a teaching professor eventually!</p>
-		    <p>Most of my free time is spent programming, the results of which you can see around my site~</p>
-		    <p><i class="fa fa-arrow-left"></i> On the left exist buttons you can click to navigate. The next page would be <a onclick="swapPage('.projects')">Projects</a>. Or if you are so inclined, perhaps take a look at my <a onclick="swapPage('.fund')">funding page?</a></p>
-		    <p>Also here is a kitten: <br> <br> <img class="imgMax160x160" src="https://lh6.googleusercontent.com/-rk8cCZPnU6M/UoY8Cucld3I/AAAAAAAAXg0/37MaSNXibdU/w500/kitten%2B1.jpg" title="one of very many internet kittens"></p>
-		</article>    
-		<article class="animated none jobs">
-		    <h3>Professional Info</h3>
-		    <p>For a full resume, go get my linkedin from my <a onclick="swapPage('.contact')">contact</a> section [or ask me to send you a PDF]. For an overiew, I've been...</p>
-		    <p><b>A Web Developer</b> for Maven Youth</p>
-		    <p><b>Frontline Application Support</b> for Community Behavioral Health Services</p>
-		    <p><b>A Student Ambassador</b> for the Global Precipitation Mission at NASA Goddard</p>
-		    <p><b>[Assistant] Develop[er] of Semiconducting Polymers</b> for the Department of Chemical and Biological Engineering at Drexel University</p>
-		    <p><b>An Information Custodian</b> for Tristate Home Health Care</p>
-		    <p><b>A Volunteer Instructor</b> for the National Building Museum</p>
-		    <p></p>
-		</article>            
-		<article class="animated none contact">
-		    <h3>Contact information and links</h3>
-		    <p><a href="mailto:firemagelynn@gmail.com"><i class="fa fa-envelope"></i> firemagelynn@gmail.com</a> email</p>
-		    <p><a href="https://twitter.com/LynnMagic"><i class="fa fa-twitter"></i> @lynnmagic</a></p>
-		    <p><a href="http://linkedin.com/in/sciencegirllynn"><i class="fa fa-linkedin"></i> Linkedin</a></p>
-		    <p><a href="https://github.com/LynnCo"><i class="fa fa-github"></i> Github</a></p>
-		    <p><i class="fa fa-skype"></i> Skype: lynn.nixi</p>
-		</article>
+	{% block content %}    
 		<article class="projects none animated">
 		    <h3>My Projects</h3>
 		    <p><b>Active</b></p>
@@ -48,16 +21,6 @@
 		            <li>Learning rails!</li>
 		        </ul>
 		    <p><a onclick="swapPage('.contact')">Feel free to ask me</a> about any of the active ones! I love working with people, either collaboratively, as a project manager, or as a mentor / teacher. By contrast, the inactive ones I don't really have time for right now</p>
-		</article>
-		<article class="name none animated">
-		    <h3>Name Change Press Release</h3>
-		    <p>So you might have seen me go by either Lynn Conway, or Lynn Cyrin? Why this thing? Three reasons!</p>
-		    <p><b>1)</b> <a href="http://en.wikipedia.org/wiki/Lynn_Conway">Other Lynn Conway</a>. We are entirely too similar. Lynn Conway transgender? Lynn Conway engineering? Lynn Conway lesbian? Nope, all true get both of us.</p>
-		    <p><b>2)</b> When I first transitioned I wanted to changed my entire name, but after being pestered by transphobic family and their mindless dislike for change, I decided to only change my first name + get rid of my middle name. I would have honestly prefered to change my last name also - and I finally feel entitled to do that?</p>
-		    <p><b>3)</b> "Cyrin" fits my personal brand a lot better ^^</p>
-		    <p><b>So what do I call you call me now?</b> - Lynn Cyrin ["sigh rin"]. My favorite thing about this name change is that I'm equally comfortable with you using my last name to address me in social contexts (although if you do that without giving me a heads up first I might not notice).</p>
-		    <p><b>Which one is my legal name? Am I going to get it changed?</b> - "Lynn Conway", and eventually I'll change it, yea.</p>
-		    <p><b>What about [PRETRANSITION NAME REDACTED]?</b> - Under no circumstances should anyone actually call me that. HR might need it for something, but that's about it.</p>
 		</article>
 		<article class="animated none html">
 		    <h3>Stuff about websites</h3>
