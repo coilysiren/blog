@@ -156,13 +156,13 @@ h3 {
 main {
     display: table;
     list-style-type: none;
-    padding-top: 0; 
+    padding-top: 0;
+    width: 100%; 
 }
 
 article {
     color: black;
     background-color: $body_color;
-    position: absolute;
     transition-property: opacity;
     transition-duration: .5s;
     transition-timing-function: ease-in;

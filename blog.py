@@ -19,19 +19,26 @@ flask.ext.scss.Scss(app)
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
-def index (): return flask.render_template('post.html', post_url='pages/index.html')
+def index (): 
+	#TODO: index should return about + 3 most recent posts
+	return flask.render_template('post.html', post_urls=['pages/about.html'])
 
 @app.route('/about')
-def about (): return flask.render_template('post.html', post_url='pages/about.html')
+def about (): return flask.render_template('post.html', post_urls=['pages/about.html'])
 
 @app.route('/contact')
-def contact (): return flask.render_template('post.html', post_url='pages/contact.html')
+def contact (): return flask.render_template('post.html', post_urls=['pages/contact.html'])
 
 @app.route('/name')
-def name (): return flask.render_template('post.html', post_url='pages/name.html')
+def name (): return flask.render_template('post.html', post_urls=['pages/name.html'])
+
+@app.route('/professional')
+@app.route('/projects')
+@app.route('/resume')
+def professional (): return flask.render_template('post.html', post_urls=['pages/resume.html', 'pages/projects.html', 'pages/html.html'])
 
 @app.errorhandler(404)
-def page_not_found (e): return flask.render_template('post.html', post_url='pages/404.html'), 404
+def page_not_found (e): return flask.render_template('post.html', post_urls=['pages/404.html']), 404
 
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
@@ -39,7 +46,7 @@ def show_post_by_title (post_title):
 	file_built = build_html(post_title) #build your html file
 	if file_built: post_url = 'rendered_posts/'+str(post_title)+'.html'
 	else: return page_not_found(404) #no such file exists
-	return flask.render_template('post.html', post_url=post_url)
+	return flask.render_template('post.html', post_urls=[post_url])
 
 @app.route('/recent/<post_number>')
 def show_post_by_recentness (post_number):

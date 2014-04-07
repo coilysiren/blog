@@ -1,7 +1,9 @@
 <!-- post.html -->
 {% extends "base.html" %}
 	{% block content %}
-		<article>
-		    {% include post_url %}
-		</article>  
+		{% for post_url in post_urls %}
+			<article>
+			    {% include post_url %}
+			</article>
+		{% endfor %}  
 	{% endblock %}

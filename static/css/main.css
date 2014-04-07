@@ -127,12 +127,12 @@
                                                           main {
                                                             display: table;
                                                             list-style-type: none;
-                                                            padding-top: 0; }
+                                                            padding-top: 0;
+                                                            width: 100%; }
 
                                                             article {
                                                               color: black;
                                                               background-color: rgba(253, 167, 32, 0.3);
-                                                              position: absolute;
                                                               transition-property: opacity;
                                                               transition-duration: 0.5s;
                                                               transition-timing-function: ease-in; }
