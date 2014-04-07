@@ -19,7 +19,7 @@ flask.ext.scss.Scss(app)
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
-def index (): return flask.render_template('index.html')
+def index (): return flask.render_template('post.html', post_url='pages/index.html')
 
 @app.route('/about')
 def about (): return flask.render_template('post.html', post_url='pages/about.html')
