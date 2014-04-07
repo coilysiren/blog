@@ -4,12 +4,14 @@ import os
 import flask
 import yaml
 import markdown
+import flask.ext.scss
 
 #start app and set configuration
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
 for key, value in yaml.load(file('config.yaml','r')).items():
 	app.config[key] = value
+flask.ext.scss.Scss(app)
 
 
 #views

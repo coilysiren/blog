@@ -1,5 +1,5 @@
 Flask==0.10.1
-Flask-FlatPages==0.5
+Flask-Scss==0.3
 Jinja2==2.7.2
 Markdown==2.4
 MarkupSafe==0.19
@@ -8,4 +8,6 @@ Werkzeug==0.9.4
 argparse==1.2.1
 gunicorn==18.0
 itsdangerous==0.24
+pyScss==1.2.0.post3
+six==1.6.1
 wsgiref==0.1.2

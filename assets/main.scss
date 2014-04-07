@@ -1,0 +1,480 @@
+/*
+main.css
+
+Organization:
+
+[HELPERS]
+    basic stuff, like add to invisble or disable none
+[GLOBAL]
+    global styling
+        font
+        font style
+        colors
+[BASE LAYOUT (TABLET)]
+    base layout
+        height / width
+        margin and padding
+        font size
+        shadows
+[DESKTOP]
+    desktop media queries and layout
+[MOBILE]
+    mobile media queries and layout
+[EXTERNAL]
+    styling for external resources. ex icons and fonts
+*/
+
+/*---------------
+    HELPERS 
+-----------------*/
+
+.visible {opacity: 1;}
+.invisible {opacity: 0;}
+.none {display: none;}
+.positionAbsolute {position: absolute;}
+.positionStatic {position: static;}
+.em2 {font-size: 2em;}
+.em3 {font-size: 3em;}
+.em4 {font-size: 4em;}
+.em5 {font-size: 5em;}
+
+.imgResponsive {}
+
+.imgMax160x160 {
+    max-width: 160px;
+    max-height: 160px;
+}
+
+/*---------------
+    GLOBAL
+-----------------*/
+
+a {
+    cursor: inherit;
+    color: purple;
+    text-decoration: inherit; }
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: black;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5 {font-family: "Press Start 2P", cursive;}
+
+h3 {
+    -webkit-margin-before: 0;
+    margin-top: 0; }
+
+html, body, .texture {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%; }
+
+body {
+    background-color: #c5ecd7;
+    overflow-x: hidden; }
+
+.texture {
+    z-index: -1;
+    background-image: url(../img/texture.png);
+    opacity: 0.8;
+    position: fixed; }
+
+#name {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(255,255,255,.2);
+}
+
+nav button {
+    position: relative;
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    border: none;
+    text-align: right;
+    background-color: #fda720;
+    font-family: "Press Start 2P", cursive;
+    transition-property: color, background-color;
+    transition-duration: .1s;
+    transition-timing-function: ease-in;
+}
+
+nav button:hover {
+    color: #ef5030;
+    background-color: black;
+}
+
+nav button:active {
+    background-color: #ef5030;
+    color: black;
+}
+
+#me {
+    position: relative;
+    background-color: rgba(255,255,255,.7);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    position: fixed;
+    padding-top: 0;
+    top: 0;
+    left: 0;
+    transition: width .1s ease-in;
+    background-color: #ef5030;
+}
+
+h3 {
+    font-family: "Press Start 2P", cursive;
+    color: black;
+    text-align: center;
+    background-color: #ef5030; 
+}
+
+main {
+    display: table;
+    list-style-type: none;
+    padding-top: 0; 
+}
+
+article {
+    opacity: 0; 
+    color: black;
+    background-color: rgba(253, 167, 32, 0.3);
+    position: absolute;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+
+article p {
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Droid Sans Mono", sans-serif;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; 
+}
+
+.list {
+    list-style-type: square;
+    font-family: "Droid Sans Mono", sans-serif;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/*-------------------------
+    BASE LAYOUT (TABLET)
+---------------------------*/
+
+/* LONG EDGE HORIZONTAL */
+
+@media all {
+
+    #name {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    nav button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        right: 15px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+    }
+
+    #me{display: none;}
+
+    nav {
+        width: 20%;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    main {
+        margin-left: 25%;
+    }
+
+    article {
+        padding-bottom: 5px;
+        margin: 30px;
+        margin-bottom: 20px;
+        width: 65%;
+        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    article p {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    .list {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+/* LONG EDGE VERTICLE */
+
+@media (orientation:portrait) {
+
+    #name {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    nav button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        right: 15px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+    }
+
+    #me{
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        position: static;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    main {
+        position: static;
+    }
+
+    article {
+        padding-bottom: 5px;
+        margin: 30px;
+        margin-bottom: 20px;
+        width: 65%;
+        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    article p {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    .list {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+
+/*---------------
+    DESKTOP
+-----------------*/
+
+@media all and (min-height: 600px) and (min-width: 1200px){
+
+    #name {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    nav button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        right: 15px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+    }
+
+    #me {
+        display: block;
+        height: 160px;
+        width: 160px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 5px 2px rgba(0,0,0,.3);
+    }
+
+    #me img {
+        height: 160px;
+        width: 160px;
+    }
+
+    nav {
+        width: 20%;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    main {
+        margin-left: 25%;
+    }
+
+    article {
+        padding-bottom: 5px;
+        margin: 30px;
+        margin-bottom: 20px;
+        width: 65%;
+        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    article p {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    .list {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+/*---------------
+    MOBILE
+-----------------*/
+
+/* LONG EDGE VERTICAL @media (orientation:portrait) */
+/* LONG EDGE HORIZONTAL @media (orientation:landscape) */
+
+@media all and (max-height: 400px) and (max-width: 700px){
+
+    html {
+        font-size: 0.7em;
+    }
+
+    #name {
+        font-size: 0.7em;
+    }
+
+    nav button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        right: 15px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
+    }
+
+    #me{display: none;}
+
+    nav {
+        width: 100%;
+        position: static;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    main {
+        position: static;
+        margin-left: 0;
+    }
+
+    article {
+        padding-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 90%;
+        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    article p {
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    .list {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+/*---------------
+    EXTERNAL
+-----------------*/
+
+.fa-linkedin {color: #4875B4;}
+.fa-twitter {color: #33CCFF;}
+.fa-skype {color: #12A5F4;}
+.fa-envelope {color: gray;}
+.fa-github {color: black;}
+
+{% if config.OFFLINE -%}
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Press Start 2P'), local('PressStart2P-Regular'), url(../locals/pressstart2p.tff) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans Mono'), local('DroidSansMono'), url(../locals/droidsansmono.tff) format('truetype');
+}
+{%- endif %}
