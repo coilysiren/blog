@@ -1,7 +1,9 @@
 <!-- head.html -->
 <!-- meta -->
     {% if config.DEBUG -%}  
-        <meta http-equiv="refresh" content="60">
+        {% if config.REFRESH -%}
+            <meta http-equiv="refresh" content="60">
+        {%- endif %}
     {%- endif %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
