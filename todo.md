@@ -2,4 +2,4 @@ I need to create a 'publish' command. What it will do is: set all config values 
 
 I also need to create a 'clean' command. git pull, start-venv, delete built assests, set configs to developement.
 
-Also thinking about putting the nav on the bottom
+fold the contact buttons into a footer
