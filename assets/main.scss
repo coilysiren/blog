@@ -65,7 +65,7 @@ nav a {color: black;}
 article a {color: purple}
 article a:hover {text-decoration: underline;}
 
-h1, h2, h3, h4, h5 {$primary_font;}
+h1, h2, h3, h4, h5 {font-family: $primary_font;}
 
 h1, h2, h3, h4, h5, p {
     -webkit-margin-before: 0;  
