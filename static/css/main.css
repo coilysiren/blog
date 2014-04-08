@@ -236,22 +236,26 @@
         .fa-github {
           color: black; }
 
-           {
-            % if config.OFFLINE -%; }
+          .twitter-tweet {
+            margin-left: auto !important;
+            margin-right: auto !important; }
 
-            @font-face {
-              font-family: 'Press Start 2P';
-              font-style: normal;
-              font-weight: 400;
-              src: local('Press Start 2P'), local('PressStart2P-Regular'),
-                            url(../locals/pressstart2p.tff) format('truetype'); }
+             {
+              % if config.OFFLINE -%; }
 
               @font-face {
-                font-family: 'Droid Sans Mono';
+                font-family: 'Press Start 2P';
                 font-style: normal;
                 font-weight: 400;
-                src: local('Droid Sans Mono'), local('DroidSansMono'),
-                                url(../locals/droidsansmono.tff) format('truetype'); }
+                src: local('Press Start 2P'), local('PressStart2P-Regular'),
+                                url(../locals/pressstart2p.tff) format('truetype'); }
 
-                 {
-                  %- endif %; }
+                @font-face {
+                  font-family: 'Droid Sans Mono';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local('Droid Sans Mono'), local('DroidSansMono'),
+                                    url(../locals/droidsansmono.tff) format('truetype'); }
+
+                   {
+                    %- endif %; }

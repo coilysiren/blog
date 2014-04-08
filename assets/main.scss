@@ -304,6 +304,9 @@ article p, article blockquote, .list {
 .fa-envelope {color: gray;}
 .fa-github {color: black;}
 
+//TWITTER MADE ME DO IT >_<
+.twitter-tweet {margin-left: auto !important; margin-right: auto !important;}
+
 {% if config.OFFLINE -%}
 @font-face {
   font-family: 'Press Start 2P';
