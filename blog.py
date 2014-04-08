@@ -59,13 +59,21 @@ def build_html (post_title):
 	html = 'templates/rendered_posts/'+str(post_title)+'.html'
 	md = 'posts/'+str(post_title)+'.md'
 	try: #look for an already created html file
+		if app.config['DEBUG']:
+			# very hacky solution. debug mode automatically 
+			# regenerates all the md -> html files
+			# (ie. this forces an IOError for this try statement)
+			try:
+				os.remove(html)
+				print('[build_html'+str(post_title)+'] regenerating post html')
+			except OSError: print('[build_html'+str(post_title)+'] no previous html file')
 		with open(html): pass; return 1
 	#if none
 	except IOError: 
 		#look for a markdown file to turn into html
-		try: markdown.markdownFromFile(input=md, output=html); return 1
+		try: markdown.markdownFromFile(input=md, output=html); print('[build_html'+str(post_title)+'] creating post'); return 1
 		#if no markdown file then 'fail'
-		except IOError: return 0 
+		except IOError: print('[build_html'+str(post_title)+'] no such post'); return 0 
 
 #can be run via foreman
 #or by running the python file directly:
