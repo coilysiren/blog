@@ -10,14 +10,12 @@ Organization:
         font
         font style
         colors
-[BASE LAYOUT (TABLET)]
+[BASE LAYOUT]
     base layout
         height / width
         margin and padding
         font size
         shadows
-[DESKTOP]
-    desktop media queries and layout
 [MOBILE]
     mobile media queries and layout
 [EXTERNAL]
@@ -52,6 +50,8 @@ $body_color = rgba(#fda720, 0.3);
 $primary_font = "Press Start 2P", cursive;
 $secondary_font = "Droid Sans Mono", sans-serif;
 
+$mobile_xy = 500px;
+
 /*---------------
     GLOBAL
 -----------------*/
@@ -64,8 +64,6 @@ a {
 nav a {color: black;}
 article a {color: purple}
 article a:hover {text-decoration: underline;}
-
-h1, h2, h3, h4, h5 {font-family: $primary_font;}
 
 h1, h2, h3, h4, h5, p {
     -webkit-margin-before: 0;  
@@ -82,15 +80,16 @@ html, body, .texture {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+}
 
 body {
-    background-color: #c5ecd7;
-    overflow-x: hidden; }
+    background-color: $body_color;
+    overflow-x: hidden;
+    font-family: $primary_font;
+ }
 
-.texture {
-    position: fixed; 
-}
+.texture {position: fixed;}
 
 .body_texture {
     background-image: url(../img/body.png);
@@ -103,7 +102,6 @@ body {
     margin-right: auto;
     text-align: center;
     background-color: $secondary_color;
-    font-family: $primary_font;
     opacity: 0.7;
     box-shadow: 0 5px 5px 2px rgba(0,0,0,.3);
 }
@@ -116,20 +114,14 @@ nav button {
     border: none;
     text-align: right;
     background-color: $secondary_color;
-    font-family: $primary_font;
-    transition-property: color, background-color;
-    transition-duration: .1s;
-    transition-timing-function: ease-in;
-}
-
-nav button:hover {
-    color: $primary_color;
-    background-color: black;
-}
-
-nav button:active {
-    background-color: $primary_color;
-    color: black;
+    &:hover {
+        color: $primary_color;
+        background-color: black;
+    }
+    &:active {
+        color: black;
+        background-color: $primary_color;
+    }
 }
 
 #me {
@@ -145,7 +137,6 @@ nav {
     padding-top: 0;
     top: 0;
     left: 0;
-    transition: width .1s ease-in;
     background-color: $primary_color;
     box-shadow: 0 15px 15px 7px rgba($secondary_color,.3);
 }
@@ -162,38 +153,20 @@ main {
     width: 100%; 
 }
 
-article {
-    color: black;
-    background-color: $body_color;
-    transition-property: opacity;
-    transition-duration: .5s;
-    transition-timing-function: ease-in;
-}
+article {background-color: $body_color;}
 
-article p {
-    background-repeat: no-repeat;
-    background-position: center;
+article p, article blockquote, .list {
     font-family: $secondary_font;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.15);
-    transition-property: background-color, color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; 
-}
-
-.list {
-    list-style-type: square;
-    font-family: $secondary_font;
-    color: black;
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-/*-------------------------
-    BASE LAYOUT (TABLET)
----------------------------*/
+.list {list-style-type: square;}
 
-// LONG EDGE HORIZONTAL
+/*-------------------
+    BASE LAYOUT
+---------------------*/
 
+//this media query is just for consistency
 @media all {
 
     #name {
@@ -210,7 +183,17 @@ article p {
         box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
     }
 
-    #me{display: none;}
+    #me {
+        display: block;
+        height: 160px;
+        width: 160px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    img {
+            height: 160px;
+          width: 160px;
+        }
+    }
 
     nav {
         width: 20%;
@@ -254,149 +237,11 @@ article p {
     }
 }
 
-// LONG EDGE VERTICLE
-
-@media (orientation:portrait) {
-
-    #name {
-        padding-top: 2px;
-        padding-bottom: 2px;
-    }
-
-    nav button {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        margin-bottom: 10px;
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
-    }
-
-    #me{
-        display: none;
-    }
-
-    nav {
-        width: 100%;
-        height: auto;
-        position: static;
-    }
-
-    h3 {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    main {
-        position: static;
-    }
-
-    article {
-        padding-bottom: 5px;
-        margin: 30px;
-        margin-bottom: 20px;
-        width: 65%;
-        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    article p {
-        margin-left: 25px;
-        margin-right: 25px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-
-    .list {
-        margin-left: 25px;
-        margin-right: 25px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-}
-
-
-/*---------------
-    DESKTOP
------------------*/
-
-@media all and (min-height: 600px) and (min-width: 1200px){
-
-    #name {
-        padding-top: 2px;
-        padding-bottom: 2px;
-    }
-
-    nav button {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        margin-bottom: 10px;
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.66);
-    }
-
-    #me {
-        display: block;
-        height: 160px;
-        width: 160px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    #me img {
-        height: 160px;
-        width: 160px;
-    }
-
-    nav {
-        width: 20%;
-    }
-
-    h3 {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    main {
-        margin-left: 25%;
-    }
-
-    article {
-        padding-bottom: 5px;
-        margin: 30px;
-        margin-bottom: 20px;
-        width: 65%;
-        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    article p {
-        margin-left: 25px;
-        margin-right: 25px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-
-    .list {
-        margin-left: 25px;
-        margin-right: 25px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-}
-
 /*---------------
     MOBILE
 -----------------*/
 
-// LONG EDGE VERTICAL
-
-@media all and (orientation:portrait) and (max-height: 500px){
+@media all and (max-height: $mobile_xy), (max-width: $mobile_xy){
     
     html {font-size: 0.7em;}
     
@@ -446,89 +291,8 @@ article p {
     article p {
         margin-left: 0px;
         margin-right: 0px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-
-    .list {
-        margin-left: 25px;
-        margin-right: 25px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
     }
 }
-
-// LONG EDGE HORIZONTAL
-
-@media all and (orientation:landscape) and (max-height: 500px){
-
-    html {font-size: 0.7em;}
-    
-    #name {
-        font-size: 0.7em;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    
-    nav button {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        margin-bottom: 5px;
-        box-shadow: 3px 3px 3px rgba(0,0,0,0.66);
-    }
-
-    #me{display: none;}
-
-    nav {
-        width: 100%;
-        height: auto;
-        padding-bottom: 5px;
-        position: static;
-    }
-
-    h3 {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-bottom: 5px;
-    }
-
-    main {
-        position: static;
-        margin-left: 0;
-    }
-
-    article {
-        padding-bottom: 5px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-    }
-
-    article p {
-        margin-left: 0px;
-        margin-right: 0px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-
-    .list {
-        margin-left: 25px;
-        margin-right: 25px;
-        font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-}}
 
 /*---------------
     EXTERNAL
