@@ -11,3 +11,5 @@ clean and standardize css, change to sass
 standardize assets and pages
 
 rendererd posts -> static, pages -> basedir
+
+re-impliment single page add and animated page swaps
