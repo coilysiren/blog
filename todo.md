@@ -6,4 +6,8 @@ info: http://stackoverflow.com/questions/13077241/execute-combine-multiple-linux
 
 fold the contact buttons into a footer
 
-clean and standardize css
+clean and standardize css, change to sass
+
+standardize assets and pages
+
+coffeescript
