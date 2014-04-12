@@ -1,6 +1,6 @@
 FLASK BLOG YAAAAAYYYYYY
 
-[CONFIG](config.yaml)
+[config](config.yaml)
 	
 	#REMEMBER BEFORE YOU PUSH!!!
 	DEBUG: False 
