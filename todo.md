@@ -5,3 +5,5 @@ I also need to create a 'clean' command. git pull, start-venv, delete built asse
 info: http://stackoverflow.com/questions/13077241/execute-combine-multiple-linux-commands-in-one-line
 
 fold the contact buttons into a footer
+
+clean and standardize css
