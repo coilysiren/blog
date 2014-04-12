@@ -12,4 +12,4 @@ standardize assets and pages
 
 rendererd posts -> static, pages -> basedir
 
-re-impliment single page add and animated page swaps
+re-impliment single page app and animated page swaps
