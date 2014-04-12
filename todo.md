@@ -10,4 +10,4 @@ clean and standardize css, change to sass
 
 standardize assets and pages
 
-coffeescript
+rendererd posts -> static, pages -> basedir
