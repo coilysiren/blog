@@ -2,7 +2,6 @@
 # var names in ALL CAPS
 # booleans are True or False
 # most things should be strings
-DEBUG: False
 OFFLINE: False
 REFRESH: False
 SITENAME: "a lynn blog"
