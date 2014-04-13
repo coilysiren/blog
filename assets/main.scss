@@ -84,7 +84,7 @@ html, body, .texture {
 }
 
 body {
-    background-color: $body_color;
+    background-color: white;
     overflow-x: hidden;
     font-family: $primary_font;
  }
@@ -145,6 +145,10 @@ h3 {
     text-align: center;
     background-color: $primary_color;
 }
+h4 {
+    text-align: center;
+    background-color: rgba($primary_color,0.7);
+}
 
 main {
     display: table;
@@ -155,12 +159,12 @@ main {
 
 article {background-color: $body_color;}
 
-article p, article blockquote, .list {
+article p, article blockquote, ul {
     font-family: $secondary_font;
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.list {list-style-type: square;}
+ul {list-style-type: square;}
 
 /*-------------------
     BASE LAYOUT
@@ -206,6 +210,15 @@ article p, article blockquote, .list {
         padding-bottom: 10px;
     }
 
+    h4 {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
     main {
         margin-left: 25%;
     }
@@ -227,7 +240,7 @@ article p, article blockquote, .list {
         padding-bottom: 15px;
     }
 
-    .list {
+    ul {
         margin-left: 25px;
         margin-right: 25px;
         font-size: 1em;
