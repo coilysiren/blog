@@ -1,6 +1,16 @@
-#blog.py
+'''
+blog.py
+
+Main routing file!
+
+Production: run via Procfile and foreman
+Developement: run via 'python blog.py'
+
+Developement always runs in debug mode
+'''
 
 import os
+import sys
 import flask
 import yaml
 import markdown
@@ -10,9 +20,7 @@ import flask.ext.scss
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
 for key, value in yaml.load(file('config.yaml','r')).items():
-	app.config[key] = value
-flask.ext.scss.Scss(app)
-
+    app.config[key] = value
 
 #views
 
@@ -20,8 +28,8 @@ flask.ext.scss.Scss(app)
 @app.route('/home')
 @app.route('/index')
 def index (): 
-	#TODO: index should return about + 3 most recent posts
-	return flask.render_template('post.html', post_urls=['pages/about.html'])
+    #TODO: index should return about + 3 most recent posts
+    return flask.render_template('post.html', post_urls=['pages/about.html'])
 
 @app.route('/about')
 def about (): return flask.render_template('post.html', post_urls=['pages/about.html'])
@@ -42,44 +50,42 @@ def page_not_found (e): return flask.render_template('post.html', post_urls=['pa
 
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
-	post_title = post_title.lower() #clean input
-	file_built = build_html(post_title) #build your html file
-	if file_built: post_url = 'rendered_posts/'+str(post_title)+'.html'
-	else: return page_not_found(404) #no such file exists
-	return flask.render_template('post.html', post_urls=[post_url])
+    post_title = post_title.lower() #clean input
+    file_built = build_html(post_title) #build your html file
+    if file_built: post_url = 'rendered_posts/'+str(post_title)+'.html'
+    else: return page_not_found(404) #no such file exists
+    return flask.render_template('post.html', post_urls=[post_url])
 
 @app.route('/recent/<post_number>')
 def show_post_by_recentness (post_number):
-	return "WIP"
+    return "WIP"
 
 #functions
 
 def build_html (post_title):
-	'''makes html from markdown files, or returns 0 if it cant'''
-	log = '[build_html('+str(post_title)+')] '
-	html = 'templates/rendered_posts/'+str(post_title)+'.html'
-	md = 'posts/'+str(post_title)+'.md'
-	try: #look for an already created html file
-		# very hacky solution. debug mode automatically 
-		# regenerates all the md -> html files
-		# (ie. this forces an IOError for this try statement)
-		try:
-			os.remove(html)
-			print(log+'regenerating post html')
-		except OSError: print(log+'no previous html file')
-		with open(html): pass; return 1
-	#if none
-	except IOError: 
-		#look for a markdown file to turn into html
-		try: markdown.markdownFromFile(input=md, output=html); print(log+'creating post'); return 1
-		#if no markdown file then 'fail'
-		except IOError: print(log+'no such post'); return 0
-		
-def 
-
+    '''makes html from markdown files, or returns 0 if it cant'''
+    log = '[build_html('+str(post_title)+')] '
+    html = 'templates/rendered_posts/'+str(post_title)+'.html'
+    md = 'posts/'+str(post_title)+'.md'
+    try: #look for an already created html file
+        # very hacky solution. debug mode automatically 
+        # regenerates all the md -> html files
+        # (ie. this forces an IOError for this try statement)
+        try:
+            os.remove(html)
+            print(log+'regenerating post html')
+        except OSError: print(log+'no previous html file')
+        with open(html): pass; return 1
+    #if none
+    except IOError: 
+        #look for a markdown file to turn into html
+        try: markdown.markdownFromFile(input=md, output=html); print(log+'creating post'); return 1
+        #if no markdown file then 'fail'
+        except IOError: print(log+'no such post'); return 0
+        
 #can be run via foreman
 #or by running the python file directly:
 if __name__ == '__main__':
-	command = sys.argv[1]
-	if command = 'publish': pass
-	if command = 'run': app.run(host='0.0.0.0', debug=True)
+    app.config['DEBUG'] = True
+    flask.ext.scss.Scss(app)
+    app.run(host='0.0.0.0')
