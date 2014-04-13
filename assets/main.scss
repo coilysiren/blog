@@ -319,18 +319,3 @@ ul {list-style-type: square;}
 
 //TWITTER MADE ME DO IT >_<
 .twitter-tweet {margin-left: auto !important; margin-right: auto !important;}
-
-{% if config.OFFLINE -%}
-@font-face {
-  font-family: 'Press Start 2P';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Press Start 2P'), local('PressStart2P-Regular'), url(../locals/pressstart2p.tff) format('truetype');
-}
-@font-face {
-  font-family: 'Droid Sans Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Sans Mono'), local('DroidSansMono'), url(../locals/droidsansmono.tff) format('truetype');
-}
-{%- endif %}

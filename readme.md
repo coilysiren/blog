@@ -1,11 +1,16 @@
 FLASK BLOG YAAAAAYYYYYY
 
-[CONFIG](config.yaml)
-	
-	#REMEMBER BEFORE YOU PUSH!!!
-	DEBUG: False 
-	OFFLINE: False
-		offline effects page gen at:
-		templates/head.html resources
-		static/css/main.css external
-	URL: check this, might be a testing one
+Folder structure
+
+	blog/
+		assets/ main.scss
+		posts/ post.md
+		pages/ page.md
+		templates/
+		static/
+			posts/ post.html
+			pages/ page.html
+			css/ main.css
+			js/
+			img/
+			
