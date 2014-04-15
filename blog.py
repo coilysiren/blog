@@ -142,8 +142,8 @@ def build_post (build):
         print('created post '+post) 
 
 if __name__ == '__main__':
-    #print('staring in DEBUG mode...')
-    #app.config['DEBUG'] = True
-    #refresh_content()
+    print('staring in DEBUG mode...')
+    app.config['DEBUG'] = True
+    refresh_content()
     flask.ext.scss.Scss(app)
     app.run()
