@@ -68,7 +68,7 @@ def name ():
 @app.route('/work')
 def professional ():
     print('loading /work') 
-    return flask.render_template('post.html', post_urls=['pages/resume.html', 'pages/projects.html', 'pages/html.html'])
+    return flask.render_template('post.html', post_urls=['pages/resume.html', 'pages/projects.html', 'pages/experience.html', 'pages/html.html'])
 
 @app.errorhandler(404)
 def page_not_found (e):
@@ -117,7 +117,7 @@ def refresh_content ():
     for article in content:
         html = 'templates/'+article[:-3]+'.html' #clip '.md'
         markdown.markdownFromFile(input=article, output=html)
-        print('creating article '+article) 
+        print('creating article '+article[:-3]+'.html') 
 
 def build_post (build):
     '''
