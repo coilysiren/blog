@@ -123,7 +123,7 @@ def build_post (build):
     makes html from markdown post files
     rebuilds the post with every request (in debug mode)
 
-    input: 'postname' ([not] post/postname.md)
+    input: 'postname' (not! post/postname.md)
     '''
     #check input
     if type(build) == str: build = [build] 
