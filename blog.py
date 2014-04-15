@@ -19,7 +19,7 @@ import flask.ext.scss
 
 #start app and set configuration
 
-
+print('loading BLOG!!!')
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
 for key, value in yaml.load(file('config.yaml','r')).items():
@@ -82,7 +82,7 @@ def show_post_by_title (post_title):
     try:
         with open('templates/posts/'+post_title+'.html'): pass
     except IOError: return page_not_found(404)
-    print('loading '+post_title)
+    print('loading /posts/'+post_title)
     return flask.render_template('post.html', post_urls=['posts/'+post_title+'.html'])
 
 @app.route('/recent/<post_number>')
