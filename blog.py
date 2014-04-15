@@ -95,7 +95,7 @@ def show_post_by_recentness (post_number):
 
 def refresh_content ():
     '''
-    makes html from markdown post files
+    makes html from markdown files
     starting a developement server rebuilds all articles
     '''
     #get content
