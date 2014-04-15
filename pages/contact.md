@@ -1,13 +1,13 @@
 ### Contact information and links
 
-[ firemagelynn@gmail.com](mailto:firemagelynn@gmail.com)
+[<i class="fa fa-envelope"></i> firemagelynn@gmail.com](mailto:firemagelynn@gmail.com)
 
-[ @lynnmagic](https://twitter.com/LynnMagic)
+[<i class="fa fa-twitter"></i> @lynnmagic](https://twitter.com/LynnMagic)
 
-[ gittip!](https://www.gittip.com/LynnMagic/)
+[<i class="fa fa-gittip"></i> gittip!](https://www.gittip.com/LynnMagic/)
 
-[ Linkedin](http://linkedin.com/in/sciencegirllynn)
+[<i class="fa fa-linkedin"></i> Linkedin](http://linkedin.com/in/sciencegirllynn)
 
-[ Github](https://github.com/LynnCo)
+[<i class="fa fa-github"></i> Github](https://github.com/LynnCo)
 
- Skype: lynn.nixi
+ <i class="fa fa-skype"></i> Skype: lynn.nixi
