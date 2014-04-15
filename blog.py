@@ -19,6 +19,7 @@ import flask.ext.scss
 
 #start app and set configuration
 
+
 print('loading BLOG!!!')
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
@@ -140,6 +141,10 @@ def build_post (build):
         html = 'templates/posts/'+post+'.html'
         markdown.markdownFromFile(input=md, output=html)
         print('created post '+post) 
+
+
+#debug mode start options
+
 
 if __name__ == '__main__':
     print('staring in DEBUG mode...')
