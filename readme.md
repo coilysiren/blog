@@ -3,14 +3,14 @@ FLASK BLOG YAAAAAYYYYYY
 Folder structure
 
 	blog/
-		assets/ main.scss
-		posts/ post.md
-		pages/ page.md
+		assets/ #main.scss
+		posts/ #post.md
+		pages/ #page.md
 		templates/
+			posts/
+			pages/
 		static/
-			posts/ post.html
-			pages/ page.html
-			css/ main.css
+			css/ 
 			js/
 			img/
 			
