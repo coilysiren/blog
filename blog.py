@@ -1,8 +1,9 @@
 '''
-blog.py
+__NAME__ = blog.py
+__DESC__ = Routing and content generation file
+__SIGN__ = Lynn Cyrin
 
-Main routing file!
-
+Use:
 [Production] '$ foreman start'
 [Developement] '$ python blog.py' (runs in debug mode)
 '''
@@ -15,105 +16,133 @@ import yaml
 import markdown
 import flask.ext.scss
 
+
 #start app and set configuration
+
+
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
 for key, value in yaml.load(file('config.yaml','r')).items():
     app.config[key] = value
 
-PAGE_DIR = '../pages/'
-POST_DIR = '../posts/'
 
 #views
+
 
 @app.route('/index')
 @app.route('/home')
 @app.route('/')
 def index (): 
     #TODO: index should return about + 3 most recent posts
-    return flask.render_template('post.html', post_urls=[PAGE_DIR+'about.html'])
+    print('loading /index')
+    return flask.render_template('post.html', post_urls=['pages/about.html'])
 
 @app.route('/about')
-def about (): return flask.render_template('post.html', post_urls=[PAGE_DIR+'about.html'])
+@app.route('/aboutme')
+@app.route('/me')
+def about ():
+    print('loading /about') 
+    return flask.render_template('post.html', post_urls=['pages/about.html'])
 
 @app.route('/contact')
-def contact (): return flask.render_template('post.html', post_urls=[PAGE_DIR+'contact.html'])
+@app.route('/email')
+@app.route('/twitter')
+@app.route('/facebook')
+@app.route('/skype')
+def contact ():
+    #need to put contact info on all pages also
+    print('loading /contact') 
+    return flask.render_template('post.html', post_urls=[PAGE_DIR+'contact.html'])
 
 @app.route('/name')
-def name (): return flask.render_template('post.html', post_urls=[PAGE_DIR+'name.html'])
+@app.route('/cyrin')
+@app.route('/conway')
+def name ():
+    print('loading /name') 
+    return flask.render_template('post.html', post_urls=[PAGE_DIR+'name.html'])
 
 @app.route('/professional')
 @app.route('/projects')
 @app.route('/resume')
-def professional (): return flask.render_template('post.html', post_urls=[PAGE_DIR+'resume.html', PAGE_DIR+'projects.html', PAGE_DIR+'html.html'])
+@app.route('/work')
+def professional ():
+    print('loading /work') 
+    return flask.render_template('post.html', post_urls=[PAGE_DIR+'resume.html', PAGE_DIR+'projects.html', PAGE_DIR+'html.html'])
 
 @app.errorhandler(404)
-def page_not_found (e): return flask.render_template('post.html', post_urls=[PAGE_DIR+'404.html']), 404
+def page_not_found (e):
+    print('page not found') 
+    return flask.render_template('post.html', post_urls=[PAGE_DIR+'404.html']), 404
 
 @app.route('/post/<post_title>')
+@app.route('/posts/<post_title>')
 def show_post_by_title (post_title):
     post_title = post_title.lower() #clean input
-    file_built = build_html(post_title) #build your html file
-    if file_built: post_url = 'rendered_posts/'+post_title+'.html'
-    else: return page_not_found(404) #no such file exists
-    return flask.render_template('post.html', post_urls=[post_url])
+    if app.config['DEBUG']: build_post(post_title) #build your html file
+    try:
+        with open('templates/posts/'+post_title+'.html'): pass
+    except IOError: return page_not_found(404)
+    print('loading '+post_title)
+    return flask.render_template('post.html', post_urls=['templates/posts/'+post_title+'.html'])
 
 @app.route('/recent/<post_number>')
 def show_post_by_recentness (post_number):
     return "WIP"
 
+
 #functions
 
-def build_posts (build=[]):
+
+def refresh_content ():
     '''
     makes html from markdown post files
-    debug mode rebuilds the post with every request
-    starting a developement server rebuilds all posts
-    
-    valid input: 
-        ['posts/candy.md', 'posts/awesome.md'] #list of posts
-        'all' #to build all posts
+    starting a developement server rebuilds all articles
+    '''
+    #get content
+    posts = glob.glob('posts/*')
+    pages = glob.glob('pages/*')
+    content = list()
+    #combine pages + posts
+    for article in posts:
+        content.append(article)
+    for article in pages:
+        content.append(article)
+    #remove previous html
+    all_built = glob.glob('templates/posts/*')
+    for post in all_built: os.remove(post)
+    all_built = glob.glob('templates/pages/*')
+    for post in all_built: os.remove(post)
+    #create new html
+    for article in content:
+        html = 'templates/'+article[:-3]+'.html' #clip '.md'
+        markdown.markdownFromFile(input=article, output=html)
+        print('creating article '+article) 
 
-    returns 0 if something broke
+def build_post (build):
+    '''
+    makes html from markdown post files
+    rebuilds the post with every request (in debug mode)
+
+    input: 'postname' ([not] post/postname.md)
     '''
     #check input
-    if build == 'all': posts = glob.glob('posts/*') #get all posts
-    elif build and type(build) == list: 
-        try: #check that all inputs are valid
-            for post_path in build:
-                with open(post_path): pass
-            posts = build #if everything ok!
-        except IOError: return 0 #if not then fail
-    else: print('[build_posts('+str(build)+')] invalid build input'); return 0
-    #remove previous
-    if build == 'all':
-        all_built = glob.glob('static/posts/*')
-        for post in all_built: os.remove(post)
-    else:
-        try:
-            for post in posts: os.remove('static/'+post)
-        except OSError: pass #post might not already exist
-    #create new
-
-    #html = 'static/post/'+str(post_title)+'.html'
-    #md = 'posts/'+str(post_title)+'.md'
-    try: #look for an already created html file
-        # very hacky solution. debug mode automatically 
-        # regenerates all the md -> html files
-        # (ie. this forces an IOError for this try statement)
-        try:
-            os.remove(html)
-            print(log+'regenerating post html')
-        except OSError: print(log+'no previous html file')
-        with open(html): pass; return 1
-    #if none
+    if type(build) == str: build = [build] 
+    try:
+        for post in build:
+            with open('posts/'+post+'.md'): pass #does this post exist?
+        posts = build
     except IOError: 
-        #look for a markdown file to turn into html
-        try: markdown.markdownFromFile(input=md, output=html); print(log+'creating post'); return 1
-        #if no markdown file then 'fail'
-        except IOError: print(log+'no such post'); return 0
-        
+        print('[build_html('+str(build)+')] invalid build input')
+        return 0
+    #create new posts
+    for post in posts:
+        md = 'posts/'+post+'.md'
+        html = 'templates/posts/'+post+'.html'
+        markdown.markdownFromFile(input=md, output=html)
+        print('created post '+post) 
+
 if __name__ == '__main__':
     app.config['DEBUG'] = True
     flask.ext.scss.Scss(app)
+    refresh_content()
     app.run(host='0.0.0.0') #havent gotten the host thing working yet
