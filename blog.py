@@ -37,29 +37,29 @@ def index ():
     print('loading /index')
     return flask.render_template('post.html', post_urls=['pages/about.html'])
 
-@app.route('/about')
-@app.route('/aboutme')
 @app.route('/me')
+@app.route('/aboutme')
+@app.route('/about')
 def about ():
     print('loading /about') 
     return flask.render_template('post.html', post_urls=['pages/about.html'])
 
-@app.route('/contact')
 @app.route('/email')
 @app.route('/twitter')
 @app.route('/facebook')
 @app.route('/skype')
+@app.route('/contact')
 def contact ():
     #need to put contact info on all pages also
     print('loading /contact') 
-    return flask.render_template('post.html', post_urls=[PAGE_DIR+'contact.html'])
+    return flask.render_template('post.html', post_urls=['pages/contact.html'])
 
-@app.route('/name')
 @app.route('/cyrin')
 @app.route('/conway')
+@app.route('/name')
 def name ():
     print('loading /name') 
-    return flask.render_template('post.html', post_urls=[PAGE_DIR+'name.html'])
+    return flask.render_template('post.html', post_urls=['pages/name.html'])
 
 @app.route('/professional')
 @app.route('/projects')
@@ -67,15 +67,15 @@ def name ():
 @app.route('/work')
 def professional ():
     print('loading /work') 
-    return flask.render_template('post.html', post_urls=[PAGE_DIR+'resume.html', PAGE_DIR+'projects.html', PAGE_DIR+'html.html'])
+    return flask.render_template('post.html', post_urls=['pages/resume.html', 'pages/projects.html', 'pages/html.html'])
 
 @app.errorhandler(404)
 def page_not_found (e):
     print('page not found') 
-    return flask.render_template('post.html', post_urls=[PAGE_DIR+'404.html']), 404
+    return flask.render_template('post.html', post_urls=['pages/404.html']), 404
 
-@app.route('/post/<post_title>')
 @app.route('/posts/<post_title>')
+@app.route('/post/<post_title>')
 def show_post_by_title (post_title):
     post_title = post_title.lower() #clean input
     if app.config['DEBUG']: build_post(post_title) #build your html file
@@ -83,7 +83,7 @@ def show_post_by_title (post_title):
         with open('templates/posts/'+post_title+'.html'): pass
     except IOError: return page_not_found(404)
     print('loading '+post_title)
-    return flask.render_template('post.html', post_urls=['templates/posts/'+post_title+'.html'])
+    return flask.render_template('post.html', post_urls=['posts/'+post_title+'.html'])
 
 @app.route('/recent/<post_number>')
 def show_post_by_recentness (post_number):
