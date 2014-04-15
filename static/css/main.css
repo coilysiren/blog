@@ -61,7 +61,7 @@
                                   height: 100%; }
 
                                   body {
-                                    background-color: rgba(253, 167, 32, 0.3);
+                                    background-color: white;
                                     overflow-x: hidden;
                                     font-family: "Press Start 2P", cursive; }
 
@@ -115,71 +115,82 @@
       text-align: center;
       background-color: #7AADA6; }
 
-      main {
-        display: table;
-        list-style-type: none;
-        padding-top: 0;
-        width: 100%; }
+      h4 {
+        text-align: center;
+        background-color: rgba(122, 173, 166, 0.7); }
 
-        article {
-          background-color: rgba(253, 167, 32, 0.3); }
+        main {
+          display: table;
+          list-style-type: none;
+          padding-top: 0;
+          width: 100%; }
 
-          article p, article blockquote, .list {
-            font-family: "Droid Sans Mono", sans-serif;
-            background-color: rgba(255, 255, 255, 0.15); }
+          article {
+            background-color: rgba(253, 167, 32, 0.3); }
 
-            .list {
-              list-style-type: square; }
+            article p, article blockquote, ul {
+              font-family: "Droid Sans Mono", sans-serif;
+              background-color: rgba(255, 255, 255, 0.15); }
 
-              @media all {
-                #name {
-                  padding-top: 2px;
-                  padding-bottom: 2px;   }
-                  nav button {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    padding-right: 15px;
-                    margin-bottom: 10px;
-                    right: 15%;
-                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.66);   }
-                    #me {
-                      display: block;
-                      height: 160px;
-                      width: 160px;
-                      margin-top: 10px;
-                      margin-bottom: 20px;   }
-                      #me img {
+              ul {
+                list-style-type: square; }
+
+                @media all {
+                  #name {
+                    padding-top: 2px;
+                    padding-bottom: 2px;   }
+                    nav button {
+                      padding-top: 5px;
+                      padding-bottom: 5px;
+                      padding-right: 15px;
+                      margin-bottom: 10px;
+                      right: 15%;
+                      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.66);   }
+                      #me {
+                        display: block;
                         height: 160px;
-                        width: 160px;   }
-                nav {
-                  width: 20%;
-                  height: 100%;   }
-                  h3 {
-                    font-size: 1.3em;
-                    padding-top: 10px;
-                    padding-bottom: 10px;   }
-                    main {
-                      margin-left: 25%;   }
-                      article {
-                        padding-bottom: 5px;
-                        margin: 30px;
-                        margin-bottom: 20px;
-                        width: 65%;
-                        box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);   }
-                        article p {
-                          margin-left: 25px;
-                          margin-right: 25px;
-                          font-size: 1em;
-                          padding-right: 15px;
-                          padding-left: 15px;
-                          padding-bottom: 15px;   }
-                          .list {
-                            margin-left: 25px;
-                            margin-right: 25px;
-                            font-size: 1em;
-                            padding-right: 15px;
-                            padding-left: 15px;
-                            padding-bottom: 15px;   }
+                        width: 160px;
+                        margin-top: 10px;
+                        margin-bottom: 20px;   }
+                        #me img {
+                          height: 160px;
+                          width: 160px;   }
+                  nav {
+                    width: 20%;
+                    height: 100%;   }
+                    h3 {
+                      font-size: 1.3em;
+                      padding-top: 10px;
+                      padding-bottom: 10px;   }
+                      h4 {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;   }
+                        main {
+                          margin-left: 25%;   }
+                          article {
+                            padding-bottom: 5px;
+                            margin: 30px;
+                            margin-bottom: 20px;
+                            width: 65%;
+                            box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);   }
+                            article p {
+                              margin-left: 25px;
+                              margin-right: 25px;
+                              font-size: 1em;
+                              padding-right: 15px;
+                              padding-left: 15px;
+                              padding-bottom: 15px;   }
+                              ul {
+                                margin-left: 25px;
+                                margin-right: 25px;
+                                font-size: 1em;
+                                padding-right: 15px;
+                                padding-left: 15px;
+                                padding-bottom: 15px;   }
 }
 
 @media all and (max-height: 500px), (max-width: 500px) {
@@ -239,23 +250,3 @@
           .twitter-tweet {
             margin-left: auto !important;
             margin-right: auto !important; }
-
-             {
-              % if config.OFFLINE -%; }
-
-              @font-face {
-                font-family: 'Press Start 2P';
-                font-style: normal;
-                font-weight: 400;
-                src: local('Press Start 2P'), local('PressStart2P-Regular'),
-                                url(../locals/pressstart2p.tff) format('truetype'); }
-
-                @font-face {
-                  font-family: 'Droid Sans Mono';
-                  font-style: normal;
-                  font-weight: 400;
-                  src: local('Droid Sans Mono'), local('DroidSansMono'),
-                                    url(../locals/droidsansmono.tff) format('truetype'); }
-
-                   {
-                    %- endif %; }
