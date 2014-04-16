@@ -1,4 +1,4 @@
-### How Lynn Became Our Story's Protagonist
+### [How Lynn Became Our Story's Protagonist](http://lynncyrin.me/post/origin-story)
 
 #### Preface
 
