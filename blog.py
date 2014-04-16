@@ -119,7 +119,7 @@ def refresh_content ():
         markdown.markdownFromFile(input=article, output=html)
         print('creating article '+article[:-3]+'.html') 
 
-def build_post (build):
+def build_post (post):
     '''
     makes html from markdown post files
     rebuilds the post with every request (in debug mode)
@@ -127,20 +127,16 @@ def build_post (build):
     input: 'postname' (not! post/postname.md)
     '''
     #check input
-    if type(build) == str: build = [build] 
     try:
-        for post in build:
-            with open('posts/'+post+'.md'): pass #does this post exist?
-        posts = build
-    except IOError: 
-        print('[build_html('+str(build)+')] invalid build input')
+        with open('posts/'+post+'.md'): pass #does this post exist?
+    except IOError:
+        print('[build_html('+str(post)+')] invalid build input')
         return 0
-    #create new posts
-    for post in posts:
-        md = 'posts/'+post+'.md'
-        html = 'templates/posts/'+post+'.html'
-        markdown.markdownFromFile(input=md, output=html)
-        print('created post '+post) 
+    #create new post
+    md = 'posts/'+post+'.md'
+    html = 'templates/posts/'+post+'.html'
+    markdown.markdownFromFile(input=md, output=html)
+    print('created post '+post) 
 
 
 #debug mode start options
