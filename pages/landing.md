@@ -1,0 +1,3 @@
+### About this website
+
+This is my blog thing? I really liked the blogs of other activists and figured that I'd set up my own. It has a bit more color than most people's... hopefully that works with your eyes! (if not then please [email me](http://lynncyrin.me/contact) about it I want everyone to be comfortable <3) As a tech person I decided I would [create most of this blog on my own](https://github.com/LynnCo/blog), it's a labor of love that I've put somewhere above 100 hours into so far. I hope you like it!
