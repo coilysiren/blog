@@ -10,6 +10,8 @@ h4 is title (need character length)
 
 h5 is description (need character length)
 
+for every post.md -> post.html post-metadata.html
+
 footer scrolling links
 
 upgrade to python 34
