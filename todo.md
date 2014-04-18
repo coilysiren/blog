@@ -10,7 +10,7 @@ h4 is title (need character length)
 
 h5 is description (need character length)
 
-display links at the bottom of the post, ex: [Links in this post] "twitter.com/lynncyrin", "wikipedia.org/racism". maybe as a "further reading!" thing?
+footer scrolling links
 
 upgrade to python 34
 
