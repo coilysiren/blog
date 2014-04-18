@@ -1,4 +1,4 @@
-### "I'm doing a lot of things, if you don't catch me now I'm liable to rocket into the stratosphere without you"
+### ["I'm doing a lot of things, if you don't catch me now I'm liable to rocket into the stratosphere without you"](http://lynncyrin.me/post/countdowntoliftoff)
 
 #### Starting final liftoff countdown
 
@@ -6,11 +6,11 @@
 
 The above title is a quote from me of a few months ago, while I was still presently homeless in a shelter with no money. I'm usually a very humble person but I break that rule whenever it comes to using quotes from a very difficult time in my life. Also it'll help take some of the edge off of what you may or may not be about to read.
 
-Content warning: my life is nontrivially intense. But I'm going to keep it short and try to skip over details whenever possible. Sexual and physical assualt mentions ahead.
+Content warning: my life is non-trivially intense. But I'm going to keep it short and try to skip over details whenever possible. Sexual and physical assault mentions ahead.
 
 #### [[ 4 ]]
 
-I AM BORN! I AM BROUGHT INTO THIS WORLD, VIA MY WONDERFUL MOTHER, KAREN CAMPBELL. Yea, life is given to me. I'm sure it was messy and wet ordeal. It was also the appparently just a little bit early, and the first of 6 (3 brothers via my mom, 2 sisters via my dad, all younger). So I'm born, and then...
+I AM BORN! I AM BROUGHT INTO THIS WORLD, VIA MY WONDERFUL MOTHER, KAREN CAMPBELL. Yea, life is given to me. I'm sure it was messy and wet ordeal. It was also the apparently just a little bit early, and the first of 6 (3 brothers via my mom, 2 sisters via my dad, all younger). So I'm born, and then...
 
 ???
 
@@ -20,7 +20,7 @@ So yea, 8. Things going on: living with my mom and 3 brothers, we are hella poor
 
 #### [[ 3 ]]
 
-Like, crazy good at school. Up until high school, there was not a class that I was not at the top of. Except maybe English, because English teachers are not a fan of the way that I write I guess. But I was of those 4.0 (so, straight A's aka 90%+ marks) GPA for the entirity of elementary school kids, which rocked. I'm sort of wondering why more good things didn't happen to me during this time frame, like skipping three years (I didn't skip any, I just recall being asked to do so three seperate times) and going off to study in a foreign country. Oh wait, I do know. It's because I was black.
+Like, crazy good at school. Up until high school, there was not a class that I was not at the top of. Except maybe English, because English teachers are not a fan of the way that I write I guess. But I was of those 4.0 (so, straight A's aka 90%+ marks) GPA for the entirety of elementary school kids, which rocked. I'm sort of wondering why more good things didn't happen to me during this time frame, like skipping three years (I didn't skip any, I just recall being asked to do so three separate times) and going off to study in a foreign country. Oh wait, I do know. It's because I was black.
 
 Now dear reader, let me give you snippet of the life of a "gifted" (which I always felt was a strange phrase but it was always applied to me) black child. I started out with my mom, she was very poor. Like, the food stamps check was all of our food for the month sort of poor. My dad on the other hand, was an accountant. When he found out how well I was doing, I was shipped off to live with my dad instead of my mom. Also I was sort of aggressive. So was he. We'll get into that in a bit.
 
@@ -28,9 +28,9 @@ The biggest feature of a poor black male **[1]** child's early life is violence.
 
 #### [[ 2 ]]
 
-High school was one step forward, two steps backward. Teen angst and a general increase in maturity meant less fights. But teen angst is caused by hormones, hormones whose effects I very much did not approve of [if you're new here: I'm trans. pronouns she / her, don't fuck it up thanks]. Mainly because of the hormones thing, I was very depressed. Still very good at school though (3.5 GPA)! Just... not as good, not top of class, mainly because of the depression. I was defintely "that smart nerdy emo gay kid" though. Which totally sounds like someone you'd want to hang out with, yea? Yea!
+High school was one step forward, two steps backward. Teen angst and a general increase in maturity meant less fights. But teen angst is caused by hormones, hormones whose effects I very much did not approve of [if you're new here: I'm trans. pronouns she / her, don't fuck it up thanks]. Mainly because of the hormones thing, I was very depressed. Still very good at school though (3.5 GPA)! Just... not as good, not top of class, mainly because of the depression. I was definitely "that smart nerdy emo gay kid" though. Which totally sounds like someone you'd want to hang out with, yea? Yea!
 
-What happens next is that my emotionally bankrupt "but well meaning" father decides he needs to fix the marginal drop in my academic preformance. His fixes were mostly violent. ...Actually, they were all violent. And by violent I mean physically abusive. CPS was called a few times - BY ME [the child!!!]. CPS [Child Protective Services] didn't really do anything except harass my dad into feeding us more. Which was funny [and by funny I mean sad] because he was / is a massively overweight **[2]** and VERY well paid accountant with underweight children - and his excuse was always that food costs too much.
+What happens next is that my emotionally bankrupt "but well meaning" father decides he needs to fix the marginal drop in my academic performance. His fixes were mostly violent. ...Actually, they were all violent. And by violent I mean physically abusive. CPS was called a few times - BY ME [the child!!!]. CPS [Child Protective Services] didn't really do anything except harass my dad into feeding us more. Which was funny [and by funny I mean sad] because he was / is a massively overweight **[2]** and VERY well paid accountant with underweight children - and his excuse was always that food costs too much.
 
 The institution of CPS still to this day annoys me for its lack of action. But really it's not CPS at large, it's the history and conditioning of black CPS workers having to deal with a black family. White CPS has historically been overbearing on black families, so black CPS is / was underbearing to compensate **[3]**. In my case, this was a mistake. But whatever, I fixed it myself eventually. And by "I fixed it myself" I mean that tensions escalated until one day I punched my dad in the face and ran away. 
 
