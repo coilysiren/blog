@@ -4,14 +4,22 @@ fold the contact buttons into a footer
 
 re-impliment single page app and animated page swaps
 
-move the dev stuff into its own python file
-
 h3 in post autolinks to itself
+
+h4 is title (need character length)
+
+h5 is description (need character length)
 
 upgrade to python 34
 
-upgrade css (a neverend task)
+upgrade css (a neverending task)
+
+priority css: tweet sizing for mobile
 
 add to title based on page
 
-http://www.htaccess-guide.com/deny-visitors-by-referrer/
+Need to equally space the nav
+
+And decrease the transition time on the button click. ...or enable it at all? I think it's disabled.
+
+http://www.htaccess-guide.com/deny-visitors-by-referrer/ FUCK 4 CHAN
