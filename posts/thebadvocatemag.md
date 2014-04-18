@@ -36,7 +36,7 @@ So honestly, the problem is entirely with the headline. Even if a black trans wo
 <blockquote class="twitter-tweet" lang="en"><p>.<a href="https://twitter.com/dnlreynolds">@dnlreynolds</a> and I wrote this piece for <a href="https://twitter.com/TheAdvocateMag">@TheAdvocateMag</a>. We interviewed <a href="https://twitter.com/carmen_carrera">@carmen_carrera</a> and <a href="https://twitter.com/MonicaBHillz">@MonicaBHillz</a>. <a href="http://t.co/2tWRw6PVl7">http://t.co/2tWRw6PVl7</a></p>&mdash; Parker Marie Molloy (@ParkerMolloy) <a href="https://twitter.com/ParkerMolloy/statuses/456761372215234560">April 17, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-None of these individuals black trans women. I was a bit put off by this
+Neither of the writers is a black trans women. I was a bit put off by this
 
 <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/TheTinaVasquez">@TheTinaVasquez</a> <a href="https://twitter.com/MowMeNow">@MowMeNow</a> WHAT. THE. FUCK.&#10;&#10;WHAT THE FUCK&#10;&#10;ARE YOU EVEN SERIOUS</p>&mdash; Lynn Cyrin (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/456931438655307776">April 17, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
