@@ -8,7 +8,7 @@ The above title is a quote from me of a few months ago, while I was still presen
 
 Content warning: my life is non-trivially intense. But I'm going to keep it short and try to skip over details whenever possible. Sexual and physical assault mentions ahead.
 
-<div class='readmore'></div>
+<readmore></readmore>
 
 #### [[ 4 ]]
 

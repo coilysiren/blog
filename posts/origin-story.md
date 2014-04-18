@@ -8,7 +8,7 @@ I've been meaning to write this post for WEEKS now. It's been consistently delay
 
 So I've mentioned having been homeless often enough that I think most people have heard about it, and that's where I'm going to start this off. What do I mean by "homeless" though? Well, there are 3 main types of modern urban homelessness that I know about: couch surfing, sleeping in your car, sleeping in a shelter, sleeping outside. They represent a spectrum of approximately how much society values the welfare of that particular individual, as we don't live in an ideal society that guarantees every person the luxury of a place to sleep that is relatively safe and stable (whether or not we COULD sounds like a fun economics question). But I was couch surfing, and in a shelter (two of them actually). Couch surfing I think most people can imagine. On the other hand sleeping in a shelter can be a very surreal experience, especially when you juxtapose the two shelters I was in. 
 
-<div class='readmore'></div>
+<readmore></readmore>
 
 **1st** - women's domestic violence shelter. Fairly calm place. 3 meals a day. Your own bedroom, bathroom shared with 3 people. Average age 35. Lots of children running around. Curfew was 10pm.
 
