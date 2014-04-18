@@ -1,6 +1,6 @@
 ### [Calling in a Popular LGBT Advocacy Magazine](http://lynncyrin.me/post/thebadvocatemag)
 
-So there was an issue today with [a popular LGBT Advocacy Magazine](http://www.advocate.com/) not having an understanding of the intersection of African American and transgender identites. The issue is ALMOST entirely with the headline of an article they published, headline shown here:
+So there was an issue today with [a popular LGBT Advocacy Magazine](http://www.advocate.com/) not having an understanding of the intersection of African American and transgender identities. The issue is ALMOST entirely with the headline of an article they published, headline shown here:
 
 <blockquote class="twitter-tweet" lang="en"><p>Is the T Word the New N Word? <a href="http://t.co/ZRFJWG4f6c">http://t.co/ZRFJWG4f6c</a></p>&mdash; The Advocate (@TheAdvocateMag) <a href="https://twitter.com/TheAdvocateMag/statuses/456759875347816449">April 17, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -10,7 +10,7 @@ Firstly, no, it's not. Let there be no misunderstanding there. They are so drama
 <blockquote class="twitter-tweet" lang="en"><p>JESUS CHRIST WHITE PEOPLE GET IT TOGETHER&#10;&#10;IM TRANS&#10;&#10;AND BLACK&#10;&#10;THEYRE DIFFERENT&#10;&#10;<a href="https://twitter.com/TheAdvocateMag">@TheAdvocateMag</a> ??? &quot;Is the &#39;t-word&#39; the new &#39;n-word?&#39;&quot;</p>&mdash; Lynn Cyrin (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/456797767529013249">April 17, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Note: it's not only white people who have this problem, but I use "white people" interchangably with "racists" (because in fact, all white people are to some degree racist - but we won't get into that here). The wonderful [Tina Vasquez](https://twitter.com/TheTinaVasquez) had a similar response to me, although she was quite a bit more eloquent about it. Some exerpts:
+Note: it's not only white people who have this problem, but I use "white people" interchangeably with "racists" (because in fact, all white people are to some degree racist - but we won't get into that here). The wonderful [Tina Vasquez](https://twitter.com/TheTinaVasquez) had a similar response to me, although she was quite a bit more eloquent about it. Some excerpts:
 
 <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/meadowgirl">@meadowgirl</a> I am not surprised this kind of shit is coming from <a href="https://twitter.com/TheAdvocateMag">@TheAdvocateMag</a>. What the ever loving fuck, though? WHAT THE FUCK.</p>&mdash; Tina Vasquez (@TheTinaVasquez) <a href="https://twitter.com/TheTinaVasquez/statuses/456910198691491840">April 17, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
