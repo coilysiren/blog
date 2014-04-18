@@ -50,7 +50,7 @@ Yep, girl. I discover than I'm a girl at 19 and it is instantly as if a glowing 
 
 From here on, the story takes a fairly positive turn, [but perhaps you've read that bit already?](http://lynncyrin.me/post/origin-story)
 
-**- Keep those fires burning, from Lynn with love**
+**-- Keep those fires burning, from Lynn with love**
 
 Notes:
 
