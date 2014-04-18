@@ -31,16 +31,21 @@ Organization:
 .none {display: none;}
 .positionAbsolute {position: absolute;}
 .positionStatic {position: static;}
+.center {margin-left: auto; margin-right:}
 .em2 {font-size: 2em;}
 .em3 {font-size: 3em;}
 .em4 {font-size: 4em;}
 .em5 {font-size: 5em;}
-
 .imgResponsive {}
 
 .imgMax160x160 {
     max-width: 160px;
     max-height: 160px;
+}
+
+.imgMax320x320 {
+    max-width: 320px;
+    max-height: 320px;
 }
 
 $primary_color = #7AADA6;
