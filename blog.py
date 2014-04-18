@@ -36,7 +36,7 @@ for key, value in yaml.load(file('config.yaml','r')).items():
 def index (): 
     #TODO: index should return about + 3 most recent posts
     print('loading /index')
-    return flask.render_template('post.html', post_urls=['pages/landing.html', 'posts/origin-story.html', 'pages/about.html'])
+    return flask.render_template('post.html', post_urls=['pages/landing.html', 'posts/countdowntoliftoff.html', 'posts/origin-story.html', 'pages/about.html'])
 
 @app.route('/me')
 @app.route('/aboutme')
