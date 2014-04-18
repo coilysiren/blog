@@ -10,6 +10,8 @@ Firstly, no, it's not. Let there be no misunderstanding there. They are so drama
 <blockquote class="twitter-tweet" lang="en"><p>JESUS CHRIST WHITE PEOPLE GET IT TOGETHER&#10;&#10;IM TRANS&#10;&#10;AND BLACK&#10;&#10;THEYRE DIFFERENT&#10;&#10;<a href="https://twitter.com/TheAdvocateMag">@TheAdvocateMag</a> ??? &quot;Is the &#39;t-word&#39; the new &#39;n-word?&#39;&quot;</p>&mdash; Lynn Cyrin (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/456797767529013249">April 17, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<div class='readmore'></div>
+
 Note: it's not only white people who have this problem, but I use "white people" interchangeably with "racists" (because in fact, all white people are to some degree racist - but we won't get into that here). The wonderful [Tina Vasquez](https://twitter.com/TheTinaVasquez) had a similar response to me, although she was quite a bit more eloquent about it. Some excerpts:
 
 <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/meadowgirl">@meadowgirl</a> I am not surprised this kind of shit is coming from <a href="https://twitter.com/TheAdvocateMag">@TheAdvocateMag</a>. What the ever loving fuck, though? WHAT THE FUCK.</p>&mdash; Tina Vasquez (@TheTinaVasquez) <a href="https://twitter.com/TheTinaVasquez/statuses/456910198691491840">April 17, 2014</a></blockquote>

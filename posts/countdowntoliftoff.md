@@ -8,6 +8,8 @@ The above title is a quote from me of a few months ago, while I was still presen
 
 Content warning: my life is non-trivially intense. But I'm going to keep it short and try to skip over details whenever possible. Sexual and physical assault mentions ahead.
 
+<div class='readmore'></div>
+
 #### [[ 4 ]]
 
 I AM BORN! I AM BROUGHT INTO THIS WORLD, VIA MY WONDERFUL MOTHER, KAREN CAMPBELL. Yea, life is given to me. I'm sure it was messy and wet ordeal. It was also the apparently just a little bit early, and the first of 6 (3 brothers via my mom, 2 sisters via my dad, all younger). So I'm born, and then...
