@@ -140,6 +140,7 @@ def build_post (post):
 if __name__ == '__main__':
     print('staring in DEBUG mode...')
     app.config['DEBUG'] = True
+    app.config['URL'] = "http://0.0.0.0:5000/"
     refresh_content()
     flask.ext.scss.Scss(app)
     app.run()
