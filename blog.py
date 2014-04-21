@@ -38,17 +38,12 @@ def index ():
     print('loading /index')
     return flask.render_template('post.html', post_urls=['pages/landing.html', 'posts/countdowntoliftoff.html', 'posts/origin-story.html', 'pages/about.html'])
 
-@app.route('/me')
 @app.route('/aboutme')
 @app.route('/about')
 def about ():
     print('loading /about') 
     return flask.render_template('post.html', post_urls=['pages/about.html'])
 
-@app.route('/email')
-@app.route('/twitter')
-@app.route('/facebook')
-@app.route('/skype')
 @app.route('/contact')
 def contact ():
     #need to put contact info on all pages also
