@@ -1,5 +1,7 @@
 page and post as different templates
 
+links work locally
+
 make tests
 
 fold the contact buttons into a footer
