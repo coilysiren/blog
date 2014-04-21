@@ -1,3 +1,5 @@
+page and post as different templates
+
 make tests
 
 fold the contact buttons into a footer
