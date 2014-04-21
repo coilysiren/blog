@@ -2,7 +2,17 @@
 <!-- base.html -->
 <html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
     <head>
-    	{% include 'head.html' %}
+    	<!-- base -->
+        	<title>{% block title %}{{ config.SITENAME }}{% endblock %}</title>
+    		<meta name="description" content="{% block desc %}{{ config.DESC }}{% endblock %}">
+    	<!-- fb -->
+	    	<meta property="og:title" content="{{ self.title() }}"/>
+	    	<meta property="og:description" content="{{ self.desc() }}"/>
+    	<!-- twitter -->
+	    	<meta name="twitter:title" content="{{ self.title() }}">
+	    	<meta name="twitter:description" content="{{ self.desc() }}">
+	    <!-- the rest -->
+    		{% include 'head.html' %}
 	</head>
 	<body>
 		<div class="texture body_texture"></div>
@@ -12,4 +22,5 @@
 		<main>
 			{% block content %}{% endblock %}
 		</main>
+			<!-- lazyness: -->
 			{% include 'google_analytics.html' %}
