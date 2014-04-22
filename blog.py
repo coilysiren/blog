@@ -8,6 +8,7 @@ Use:
 [Developement] '$ python blog.py' (runs in debug mode)
 '''
 
+import re
 import os
 import sys
 import glob
@@ -38,7 +39,7 @@ def index ():
     page_desc = app.config['DESC']
     #TODO: index should return about + 3 most recent posts
     print('loading /index')
-    post_urls = ['pages/landing.html', 'posts/countdowntoliftoff.html', 'posts/origin-story.html', 'pages/about.html']
+    post_urls = ['pages/landing.html', 'posts/countdowntoliftoff_snipped.html', 'posts/origin-story_snipped.html', 'pages/about.html']
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/aboutme')
@@ -98,6 +99,10 @@ def page_not_found (e):
     page_desc = 'Page Not Found'
     return flask.render_template('post.html', post_urls=post_urls), 404
 
+@app.route('/posts')
+def posts_page ():
+    return "WIP"
+
 @app.route('/posts/<post_title>')
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
@@ -140,10 +145,31 @@ def refresh_content ():
     all_built = glob.glob('templates/pages/*')
     for post in all_built: os.remove(post)
     #create new html
+    base_html = list()
     for article in content:
         html = 'templates/'+article[:-3]+'.html' #clip '.md'
         markdown.markdownFromFile(input=article, output=html)
+        base_html.append(html)
         print('creating article '+article[:-3]+'.html') 
+    #create post snippets
+    for base_name in base_html:
+        #only snip posts (i.e. not pages)
+        if not re.search("post", base_name): continue
+        #define snip name
+        snip_name = base_name[:-5]+'_snipped.html'
+        with open(base_name, 'r') as base_file:
+            all_lines = base_file.readlines()
+            #look for a "readmore" match
+            readmore = 0
+            for i, line in enumerate(all_lines):
+                #we're looking for the first line with readmore
+                if re.search("readmore", line): readmore = i
+            if readmore: snippet = all_lines[:readmore]
+            else: continue
+            #save it!
+            with open(snip_name, 'w') as snippet_file:
+                snippet_file.writelines(snippet) 
+                print("created snippet: "+snip_name)
 
 def build_post (post):
     '''
@@ -171,7 +197,6 @@ def build_post (post):
 if __name__ == '__main__':
     print('staring in DEBUG mode...')
     app.config['DEBUG'] = True
-    app.config['URL'] = "http://0.0.0.0:5000/"
     refresh_content()
     flask.ext.scss.Scss(app)
     app.run()
