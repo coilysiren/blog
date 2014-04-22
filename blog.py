@@ -34,52 +34,83 @@ for key, value in yaml.load(file('config.yaml','r')).items():
 @app.route('/home')
 @app.route('/')
 def index (): 
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
     #TODO: index should return about + 3 most recent posts
     print('loading /index')
-    return flask.render_template('post.html', post_urls=['pages/landing.html', 'posts/countdowntoliftoff.html', 'posts/origin-story.html', 'pages/about.html'])
+    post_urls = ['pages/landing.html', 'posts/countdowntoliftoff.html', 'posts/origin-story.html', 'pages/about.html']
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/aboutme')
 @app.route('/about')
 def about ():
-    print('loading /about') 
-    return flask.render_template('post.html', post_urls=['pages/about.html'])
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
+    print('loading /about')
+    post_urls = ['pages/about.html']
+    page_title += ' // About Me'
+    page_desc += ' // Information about me'
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/contact')
 def contact ():
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
     #need to put contact info on all pages also
-    print('loading /contact') 
-    return flask.render_template('post.html', post_urls=['pages/contact.html'])
+    print('loading /contact')
+    post_urls = ['pages/contact.html']
+    page_title += ' // Contact'
+    page_desc += ' // Contact information and links'
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/cyrin')
 @app.route('/conway')
 @app.route('/name')
 def name ():
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
     print('loading /name') 
-    return flask.render_template('post.html', post_urls=['pages/name.html'])
+    post_urls = ['pages/name.html']
+    page_title += ' // Cyrin? Conway?'
+    page_desc += ' // About my [last] name'
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/professional')
 @app.route('/projects')
 @app.route('/resume')
 @app.route('/work')
 def professional ():
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
     print('loading /work') 
-    return flask.render_template('post.html', post_urls=['pages/resume.html', 'pages/projects.html', 'pages/experience.html', 'pages/html.html'])
+    post_urls = ['pages/resume.html', 'pages/projects.html', 'pages/experience.html', 'pages/html.html']
+    page_title += ' // My Work'
+    page_desc += ' // Work, projects, resume, etc...'
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.errorhandler(404)
 def page_not_found (e):
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
     print('page not found') 
-    return flask.render_template('post.html', post_urls=['pages/404.html']), 404
+    post_urls = ['pages/404.html']
+    page_title += ' // 404'
+    page_desc = 'Page Not Found'
+    return flask.render_template('post.html', post_urls=post_urls), 404
 
 @app.route('/posts/<post_title>')
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
     post_title = post_title.lower() #clean input
     if app.config['DEBUG']: build_post(post_title) #build your html file
     try:
         with open('templates/posts/'+post_title+'.html'): pass
     except IOError: return page_not_found(404)
     print('loading /posts/'+post_title)
-    return flask.render_template('post.html', post_urls=['posts/'+post_title+'.html'])
+    post_urls = ['posts/'+post_title+'.html']
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/recent/<post_number>')
 def show_post_by_recentness (post_number):
