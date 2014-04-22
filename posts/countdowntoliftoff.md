@@ -1,10 +1,10 @@
-### ["I'm doing a lot of things, if you don't catch me now I'm liable to rocket into the stratosphere without you"](http://lynncyrin.me/post/countdowntoliftoff)
+### [I'm liable to rocket into the stratosphere without you](http://lynncyrin.me/post/countdowntoliftoff)
 
 #### Starting final liftoff countdown
 
 #### [[ 5 ]]
 
-The above title is a quote from me of a few months ago, while I was still presently homeless in a shelter with no money. I'm usually a very humble person but I break that rule whenever it comes to using quotes from a very difficult time in my life. Also it'll help take some of the edge off of what you may or may not be about to read.
+The above title is a quote from me of a few months ago, while I was still presently homeless in a shelter with no money. The full qoute is "I'm doing a lot of things, if you don't catch me now I'm liable to rocket into the stratosphere without you". I'm usually a very humble person but I break that rule whenever it comes to using quotes from a very difficult time in my life. Also it'll help take some of the edge off of what you may or may not be about to read.
 
 Content warning: my life is non-trivially intense. But I'm going to keep it short and try to skip over details whenever possible. Sexual and physical assault mentions ahead.
 
@@ -56,8 +56,8 @@ From here on, the story takes a fairly positive turn, [but perhaps you've read t
 
 Notes:
 
-* [1] I'm transfeminine and will sometimes refer to myself as male in the past tense depending on how long ago it was. This reference point was nearly a decade ago. But - DO NOT EVER ask me about "previous maleness". Also, as a general rule if you are not trans you are still required to refer to pre-transition trans women with she / her pronouns, unless stated otherwise.
+* **[1]** I'm transfeminine and will sometimes refer to myself as male in the past tense depending on how long ago it was. This reference point was nearly a decade ago. But - DO NOT EVER ask me about "previous maleness". Also, as a general rule if you are not trans you are still required to refer to pre-transition trans women with she / her pronouns, unless stated otherwise.
 
-* [2] Let me openly admit here that I am in fact fat-phobic, but generally only with men and also I like to think that I'm still a bit less fat-phobic than the average person. It's something that I work on, A LOT. If I fuck up please point it out.
+* **[2]** Let me openly admit here that I am in fact fat-phobic, but generally only with men and also I like to think that I'm still a bit less fat-phobic than the average person. It's something that I work on, A LOT. If I fuck up please point it out.
 
-* [3] This problem is an artifact of racism. Racism whose primary cause is white people. But even worse than that, I myself am being racist in this paragraph. Me, black, being racist towards other black people. This coming from someone who is very inclined to reblog things with #KillAllWhitePpl. **I** am still a racist. So if you are white and think you aren't racist, you had better sit the fuck down.
+* **[3]** This problem is an artifact of racism. Racism whose primary cause is white people. But even worse than that, I myself am being racist in this paragraph. Me, black, being racist towards other black people. This coming from someone who is very inclined to reblog things with #KillAllWhitePpl. **I** am still a racist. So if you are white and think you aren't racist, you had better sit the fuck down.

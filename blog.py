@@ -158,16 +158,23 @@ def refresh_content ():
         #define snip name
         snip_name = base_name[:-5]+'_snipped.html'
         #get file
-        with open(base_name, 'r') as base_file: all_lines = base_file.readlines()
+        with open(base_name, 'r') as base_file: 
+            all_lines = base_file.readlines()
         #look for the first line with readmore
         readmore = 0
         for i, line in enumerate(all_lines):
             if re.search("readmore", line): readmore = i
         #snip if you found readmore
-        if readmore: snippet = all_lines[:readmore]
-        else: continue
+        if not readmore: continue
+        snippet = all_lines[:readmore]
+        #Add in a link to actually go read more!!!
+        url = base_name[16:-5] #cut the path and filetype
+        #this flippin html was painful to write
+        link_to_more = '<h4><a href="http://lynncyrin.me/post/'+url+'">[ Read More! ]</a></h4>\n'
+        snippet.append(link_to_more)
         #save yer snip
-        with open(snip_name, 'w') as snippet_file: snippet_file.writelines(snippet) 
+        with open(snip_name, 'w') as snippet_file: 
+            snippet_file.writelines(snippet) 
         print("created snippet: "+snip_name)
 
 def build_post (post):
