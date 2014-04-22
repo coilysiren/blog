@@ -1,5 +1,11 @@
 <!-- post.html -->
 {% extends "base.html" %}
+	{% block title %}
+		{{ config.SITENAME }} // a post
+	{% endblock %}
+	{% block desc %}
+		{{ config.DESC }} makes a post about a thing
+	{% endblock %}
 	{% block content %}
 		{% for post_url in post_urls %}
 			<article>
