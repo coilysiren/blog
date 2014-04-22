@@ -1,3 +1,7 @@
+boundaries and politics statement
+
+clean symbols in urls
+
 page and post as different templates
 
 links work locally
@@ -14,7 +18,17 @@ h4 is title (need character length)
 
 h5 is description (need character length)
 
-for every post.md -> post.html post-metadata.html
+for every post.md -> post.html + post.yaml
+	
+	contains metadata i.e:
+	
+	search terms
+	
+	title and desc
+	
+	tags
+	
+	date?
 
 footer scrolling links
 
