@@ -157,19 +157,18 @@ def refresh_content ():
         if not re.search("post", base_name): continue
         #define snip name
         snip_name = base_name[:-5]+'_snipped.html'
-        with open(base_name, 'r') as base_file:
-            all_lines = base_file.readlines()
-            #look for a "readmore" match
-            readmore = 0
-            for i, line in enumerate(all_lines):
-                #we're looking for the first line with readmore
-                if re.search("readmore", line): readmore = i
-            if readmore: snippet = all_lines[:readmore]
-            else: continue
-            #save it!
-            with open(snip_name, 'w') as snippet_file:
-                snippet_file.writelines(snippet) 
-                print("created snippet: "+snip_name)
+        #get file
+        with open(base_name, 'r') as base_file: all_lines = base_file.readlines()
+        #look for the first line with readmore
+        readmore = 0
+        for i, line in enumerate(all_lines):
+            if re.search("readmore", line): readmore = i
+        #snip if you found readmore
+        if readmore: snippet = all_lines[:readmore]
+        else: continue
+        #save yer snip
+        with open(snip_name, 'w') as snippet_file: snippet_file.writelines(snippet) 
+        print("created snippet: "+snip_name)
 
 def build_post (post):
     '''
