@@ -1,12 +1,8 @@
-boundaries and politics statement
+post nav! next, last, random???
 
-clean symbols in urls
+markdown file content checker!!!
 
-page and post as different templates
-
-links work locally
-
-make tests
+boundaries and politics statement (a post!)
 
 fold the contact buttons into a footer
 
@@ -30,18 +26,16 @@ for every post.md -> post.html + post.yaml
 	
 	date?
 
-footer scrolling links
+scroll to links within an article
 
 upgrade to python 34
 
 upgrade css (a neverending task)
 
-priority css: tweet sizing for mobile
+	articles need a border
 
-add to title based on page
+	tweet sizing for mobile
 
 Need to equally space the nav
 
-And decrease the transition time on the button click. ...or enable it at all? I think it's disabled.
-
-http://www.htaccess-guide.com/deny-visitors-by-referrer/ FUCK 4 CHAN
+And decrease the transition time on the button click. ...or enable it at all? I think it's disabled
