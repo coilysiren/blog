@@ -1,41 +1,47 @@
-post nav! next, last, random???
+[[ POSTS ]]
 
-markdown file content checker!!!
+	boundaries and politics statement
 
-boundaries and politics statement (a post!)
+	you fight or you die
 
-fold the contact buttons into a footer
+	futures
 
-re-impliment single page app and animated page swaps
+[[ UI / UX ]]
 
-h3 in post autolinks to itself
+	Need to equally space the nav
 
-h4 is title (need character length)
+	And decrease the transition time on the button click. ...or enable it at all? I think it's disabled
 
-h5 is description (need character length)
+	post navigation. next, last, random???
 
-for every post.md -> post.html + post.yaml
-	
-	contains metadata i.e:
-	
-	search terms
-	
-	title and desc
-	
-	tags
-	
-	date?
+	re-impliment single page app and animated page swaps
 
-scroll to links within an article
-
-upgrade to python 34
-
-upgrade css (a neverending task)
+	scroll to links within an article
 
 	articles need a border
 
 	tweet sizing for mobile
 
-Need to equally space the nav
+	readmore needs to hug buttom of article
 
-And decrease the transition time on the button click. ...or enable it at all? I think it's disabled
+	h3 / h4 need more padding
+
+[[ Tech ]]
+
+	markdown file content checker. 1) metadata 2) h3 3) ...?
+
+	fold the contact buttons into a footer
+
+	h3 in post autolinks to itself
+
+	for every post.md -> post.html + post_meta.yaml
+				
+		title and desc
+		
+		tags
+
+		search terms
+		
+		publish date
+
+	upgrade to python 34
