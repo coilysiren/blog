@@ -11,9 +11,9 @@ Use:
 import re
 import os
 import sys
+import yaml
 import glob
 import flask
-import yaml
 import markdown
 import flask.ext.scss
 
@@ -37,43 +37,31 @@ for key, value in yaml.load(file('config.yaml','r')).items():
 def index (): 
     page_title = app.config['SITENAME']
     page_desc = app.config['DESC']
-    #TODO: index should return about + 3 most recent posts
-    print('loading /index')
     post_urls = ['pages/landing.html', 'posts/countdowntoliftoff_snipped.html', 'posts/origin-story_snipped.html', 'posts/thebadvocatemag_snipped.html', 'pages/about.html']
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/aboutme')
 @app.route('/about')
 def about ():
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
-    print('loading /about')
+    page_title = app.config['SITENAME']+' // About Me'
+    page_desc = app.config['DESC']+' // Information about me'
     post_urls = ['pages/about.html']
-    page_title += ' // About Me'
-    page_desc += ' // Information about me'
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/contact')
 def contact ():
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
-    #need to put contact info on all pages also
-    print('loading /contact')
+    page_title = app.config['SITENAME']+' // Contact'
+    page_desc = app.config['DESC']+' // Contact information and links'
     post_urls = ['pages/contact.html']
-    page_title += ' // Contact'
-    page_desc += ' // Contact information and links'
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/cyrin')
 @app.route('/conway')
 @app.route('/name')
 def name ():
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
-    print('loading /name') 
+    page_title = app.config['SITENAME']+' // Cyrin? Conway?'
+    page_desc = app.config['DESC']+' // About my [last] name'
     post_urls = ['pages/name.html']
-    page_title += ' // Cyrin? Conway?'
-    page_desc += ' // About my [last] name'
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/professional')
@@ -81,27 +69,17 @@ def name ():
 @app.route('/resume')
 @app.route('/work')
 def professional ():
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
-    print('loading /work') 
+    page_title = app.config['SITENAME']+' // My Work'
+    page_desc = app.config['DESC']+' // Work, projects, resume, etc...'
     post_urls = ['pages/resume.html', 'pages/projects.html', 'pages/experience.html', 'pages/html.html']
-    page_title += ' // My Work'
-    page_desc += ' // Work, projects, resume, etc...'
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.errorhandler(404)
 def page_not_found (e):
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
-    print('page not found') 
-    post_urls = ['pages/404.html']
-    page_title += ' // 404'
+    page_title = app.config['SITENAME']+' // Error 404'
     page_desc = 'Page Not Found'
-    return flask.render_template('post.html', post_urls=post_urls), 404
-
-@app.route('/posts')
-def posts_page ():
-    return "WIP"
+    post_urls = ['pages/404.html']
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls), 404
 
 @app.route('/posts/<post_title>')
 @app.route('/post/<post_title>')
@@ -117,8 +95,12 @@ def show_post_by_title (post_title):
     post_urls = ['posts/'+post_title+'.html']
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
-@app.route('/recent/<post_number>')
-def show_post_by_recentness (post_number):
+@app.route('/posts')
+def posts_page ():
+    return "WIP"
+
+@app.route('/tagged/<tag>')
+def show_posts_by_tag (tag):
     return "WIP"
 
 
@@ -169,7 +151,6 @@ def refresh_content ():
         snippet = all_lines[:readmore]
         #Add in a link to actually go read more!!!
         url = base_name[16:-5] #cut the path and filetype
-        #this flippin html was painful to write
         link_to_more = '<h4><a href="http://lynncyrin.me/post/'+url+'">[ Read More! ]</a></h4>\n'
         snippet.append(link_to_more)
         #save yer snip
@@ -182,7 +163,7 @@ def build_post (post):
     makes html from markdown post files
     rebuilds the post with every request (in debug mode)
 
-    input: 'postname' (not! post/postname.md)
+    input: 'postname' (not post/postname.md)
     '''
     #check input
     try:
@@ -201,7 +182,6 @@ def build_post (post):
 
 
 if __name__ == '__main__':
-    print('staring in DEBUG mode...')
     app.config['DEBUG'] = True
     refresh_content()
     flask.ext.scss.Scss(app)
