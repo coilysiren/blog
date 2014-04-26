@@ -26,9 +26,17 @@
 
 	h3 / h4 need more padding
 
+	article footer to show publish date and tags
+
 [[ Tech ]]
 
-	markdown file content checker. 1) metadata 2) h3 3) ...?
+	markdown file content checker 
+
+		metadata
+
+		h3
+
+		readmore x2
 
 	fold the contact buttons into a footer
 
@@ -42,6 +50,8 @@
 
 		search terms
 		
-		publish date
+		publish date (ex: 01/05/2014)
 
 	upgrade to python 34
+
+	sort posts by tag
