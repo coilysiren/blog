@@ -1,3 +1,11 @@
+title: Origin Story
+description: I AM BECOME BORN YAY
+published: never
+tags: life
+    hats
+    candy
+    bats
+
 ### [How Lynn Became Our Story's Protagonist](http://lynncyrin.me/post/origin-story)
 
 #### Preface
@@ -20,17 +28,17 @@ The 1.5 meals part of the second shelter is actually a pretty important point. B
 
 That was a short advocacy aside, because I was not actually employed during the time I was homeless. I was instead working on training my coding skills. In my opinion, learning to code while homeless is a ton easier than working retail while homeless. But objectively, here's an example day of mine (in the 2nd shelter):
 
-*	**8am** Mandatory to be out of the shelter by this time
-*	**8a - 9a** Writing code on my [paper] notebook while sitting outside (+1)
-*	**9a - 12p** Writing code on my laptop in the library (+3)
-*	**12p - 1p** Hunt for free food
-*	**1p - 3p** Sleep (somewhere random)
-*	**3p - 6p** Writing code on laptop at the LGBT center similar (+3)
-*	**630p** In by curfew
-*	**7p - 9p** boring stuff stuff (eat, clean, draft emails, etc...)
-*	**9p - 11p** Sleep (in shelter)
-*	**12p - 3a** write code on notebook in shelter (+3)
-*	**3a** Sleep (in shelter)
+*   **8am** Mandatory to be out of the shelter by this time
+*   **8a - 9a** Writing code on my [paper] notebook while sitting outside (+1)
+*   **9a - 12p** Writing code on my laptop in the library (+3)
+*   **12p - 1p** Hunt for free food
+*   **1p - 3p** Sleep (somewhere random)
+*   **3p - 6p** Writing code on laptop at the LGBT center similar (+3)
+*   **630p** In by curfew
+*   **7p - 9p** boring stuff stuff (eat, clean, draft emails, etc...)
+*   **9p - 11p** Sleep (in shelter)
+*   **12p - 3a** write code on notebook in shelter (+3)
+*   **3a** Sleep (in shelter)
 
 So there are a few things to note here. First, I was 'at work' for 10 hours a day generally. This is actually a low point in that respect, when I was in the other shelter it was 12 hours and when I was couch surfing it was 14. Second, I had my laptop no more than 10 feet away from me at any given time (showers were not an exception), but it wasn't always safe to use it. Writing code on paper can be good experience to have sometimes though! Third, I kept this sort of schedule up for about 4 months. That is the, write / read code for 10+ hours a day while eating minimally and living in super unstable housing (shelters are inherently unstable but also I had to move once every month during this time period). And this was **everything** that I did. I didn't leave out spots for eating and self care, they simply didn't happen.
 
@@ -46,12 +54,12 @@ So the feminist hackers contributed to me, and I contributed to them. I started 
 
 So I said just a bit ago that my life plan was set up such that if one amazing thing happened, I would then be empowered enough to stitch together a better life. Except what happened was **much** better than that, so much better that I'm not even sure how to handle it. Also, it all happened in March, but really it happened over the course of two weeks. It being? Well, I:
 
-*	Got someone interested in me in a way felt very akin to a sponsorship. Or, as I've been describing it socially: "halfway between an adoption [i.e. like adopting a child from an adoption agency] and a venture capitalist investment"
-*	Got into **2** really amazing internships with local organizations ([here is one](http://www.transthrive.org/)), and with each one doing work that could very well lead to a career
-*	Got into a 2 year free housing program courtesy of the state
-*	Got accepted as a [Gnome OPW](http://gnome.org/opw/) intern working on [Linux stuff](http://yoctoproject.org/)
-*	Opened up about me needing [financial] support, and started getting $250/week [**!!!**] [on gittip](https://www.gittip.com/lynnmagic)
-*	Got accepted into Mills College as a Dean's Scholar	
+*   Got someone interested in me in a way felt very akin to a sponsorship. Or, as I've been describing it socially: "halfway between an adoption [i.e. like adopting a child from an adoption agency] and a venture capitalist investment"
+*   Got into **2** really amazing internships with local organizations ([here is one](http://www.transthrive.org/)), and with each one doing work that could very well lead to a career
+*   Got into a 2 year free housing program courtesy of the state
+*   Got accepted as a [Gnome OPW](http://gnome.org/opw/) intern working on [Linux stuff](http://yoctoproject.org/)
+*   Opened up about me needing [financial] support, and started getting $250/week [**!!!**] [on gittip](https://www.gittip.com/lynnmagic)
+*   Got accepted into Mills College as a Dean's Scholar 
 
 And probably a few other things that I'm forgetting, or that happened a bit out of this time frame (ex: [my mentorship and class mobility project](https://github.com/LynnCo/AGuideToClassMobility)). If any single one of those had happened to me, I could have weaved it into a successful life. But ALL OF THEM HAPPENED. **AND PRETTY MUCH AT THE SAME TIME!** The bulk of this occurred 2 to 3 weeks ago and honestly I still haven't really taken stock of all of it.
 
