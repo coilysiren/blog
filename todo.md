@@ -1,3 +1,9 @@
+[[ PARAMS ]]
+
+	Title - 48 chars soft max, 64 chars hard max
+
+	Description - 160 chars max (so a tweet)
+
 [[ POSTS ]]
 
 	boundaries and politics statement
