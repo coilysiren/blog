@@ -84,13 +84,13 @@ def page_not_found (e):
 @app.route('/posts/<post_title>')
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
     post_title = post_title.lower() #clean input
     try:
         with open('templates/posts/'+post_title+'.html'): pass
     except IOError: return page_not_found(404)
-    print('loading /posts/'+post_title)
+    meta = yaml.load(file('templates/posts/'+post_title+'_meta.yaml','r'))
+    page_title = app.config['SITENAME']+' // '+meta['title']
+    page_desc = meta['desc']
     post_urls = ['posts/'+post_title+'.html']
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
