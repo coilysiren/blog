@@ -6,7 +6,7 @@
 
 [<i class="fa fa-gittip"></i> gittip!](https://www.gittip.com/LynnMagic/)
 
-[<i class="fa fa-linkedin"></i> Linkedin](http://linkedin.com/in/sciencegirllynn)
+[<i class="fa fa-linkedin"></i> Linkedin](http://linkedin.com/in/lynncyrin)
 
 [<i class="fa fa-github"></i> Github](https://github.com/LynnCo)
 
