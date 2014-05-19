@@ -24,7 +24,7 @@ import flask.ext.scss
 
 
 print('loading BLOG!!!')
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, static_folder='static', static_url_path='')
 app.config.from_object(__name__)
 for key, value in yaml.load(file('config.yaml','r')).items():
     app.config[key] = value
@@ -95,6 +95,10 @@ def show_post_by_title (post_title):
     page_desc = meta['desc']
     post_urls = ['posts/'+post_title+'.html']
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
+
+@app.route('/static/<path:filename>') 
+def base_static(filename): 
+    return flask.send_from_directory(app.root_path + '/static/', filename)
 
 @app.route('/posts')
 def posts_page ():
@@ -214,7 +218,7 @@ def create_rss (posts):
            pubDate = datetime.datetime(2003, 9, 6, 21, 49))
         rss.items.append(item)
     #write to xml
-    rss.write_xml(open("rss.xml", "w"))
+    rss.write_xml(open("static/rss.xml", "w"))
     print('created xml rss.xml')
 
 
