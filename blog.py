@@ -39,7 +39,7 @@ for key, value in yaml.load(file('config.yaml','r')).items():
 def index (): 
     page_title = app.config['SITENAME']
     page_desc = app.config['DESC']
-    post_urls = ['pages/landing.html', 'posts/countdowntoliftoff_snipped.html', 'posts/origin-story_snipped.html', 'posts/thebadvocatemag_snipped.html', 'pages/about.html']
+    post_urls = ['pages/landing.html', 'posts/origin-story_snipped.html', 'pages/about.html']
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/aboutme')
