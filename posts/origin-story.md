@@ -2,6 +2,7 @@ title: Origin Story
 desc: Detailing the exciting and dynamic origin of your cutest protagonist. Code is written, home is un-lessed, destiny is acquired.
 date: 4/16/2014
 tags: life
+link: http://lynncyrin.me/post/origin-story
 
 ### [How Lynn Became Our Story's Protagonist](http://lynncyrin.me/post/origin-story)
 

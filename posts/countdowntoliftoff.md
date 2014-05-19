@@ -2,6 +2,7 @@ title: Countdown to Liftoff
 desc: Sometimes the hardest part of the trip is getting off the ground in the first place. Especially when the ground is hella racist.
 date: 4/18/2014
 tags: life
+link: http://lynncyrin.me/post/countdowntoliftoff
 
 ### [I'm liable to rocket into the stratosphere without you](http://lynncyrin.me/post/countdowntoliftoff)
 

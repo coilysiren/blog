@@ -2,6 +2,7 @@ title: The BAdvocate Mag
 desc: Rainbow is not the new black, white people please sit the fuck down.
 date: 4/17/2014
 tags: callouts
+link: http://lynncyrin.me/post/thebadvocatemag
 
 ### [Calling in a Popular LGBT Advocacy Magazine](http://lynncyrin.me/post/thebadvocatemag)
 
