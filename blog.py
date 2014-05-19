@@ -15,6 +15,8 @@ import yaml
 import glob
 import flask
 import markdown
+import datetime
+import PyRSS2Gen
 import flask.ext.scss
 
 
@@ -129,6 +131,8 @@ def refresh_content ():
     for article in content:
         build_post(article[:-3])
         create_snippet('templates/'+article[:-3]+'.html')
+    #create rss.xml
+    create_rss(content)
 
 def create_snippet (article):
     '''snips posts at <readmore>'''
@@ -187,6 +191,32 @@ def build_post (post):
     with open(yaml_path, 'w') as yaml_file:
         yaml.dump(meta, yaml_file)    
     print('created metadata '+yaml_path)     
+
+def create_rss (posts):
+    #initalize feed
+    rss = PyRSS2Gen.RSS2(
+        title = app.config['SITENAME'],
+        link = app.config['URL'],
+        description = app.config['DESC'],
+        lastBuildDate = datetime.datetime.now(),
+        items = [])
+    #create content items
+    for post_title in posts:
+        #only add posts to rss feed
+        if not re.search("post", post_title): continue
+        #load post metadata into rss item
+        meta = yaml.load(file('templates/'+post_title[:-3]+'_meta.yaml','r'))
+        item = PyRSS2Gen.RSSItem(
+           title = meta['title'],
+           link = meta['link'],
+           description = meta['desc'],
+           guid = PyRSS2Gen.Guid(meta['link']),
+           pubDate = datetime.datetime(2003, 9, 6, 21, 49))
+        rss.items.append(item)
+    #write to xml
+    rss.write_xml(open("rss.xml", "w"))
+    print('created xml rss.xml')
+
 
 #debug mode start options
 
