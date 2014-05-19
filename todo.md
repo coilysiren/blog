@@ -16,21 +16,15 @@
 
 	Need to equally space the nav
 
-	And decrease the transition time on the button click. ...or enable it at all? I think it's disabled
-
 	post navigation. next, last, random???
 
 	re-impliment single page app and animated page swaps
 
 	scroll to links within an article
 
-	articles need a border
-
 	tweet sizing for mobile
 
 	readmore needs to hug buttom of article
-
-	h3 / h4 need more padding
 
 	article footer to show publish date and tags
 
@@ -61,3 +55,7 @@
 	upgrade to python 34
 
 	sort posts by tag
+
+	get google to recognize new posts and dates
+
+	RSS
