@@ -67,9 +67,11 @@ a {
     text-decoration: inherit; }
 
 nav a {color: black;}
-article a {color: purple}
+p a {color: purple; text-shadow: 0 0 0.05em purple;}
 article a:hover {text-decoration: underline;}
-h3 a {color: black}
+h3 a {color: black;}
+h3 a:hover {text-decoration: none;color: purple;}
+h3 a {transition: color 0.33s;}
 
 h1, h2, h3, h4, h5, p {
     -webkit-margin-before: 0;  
@@ -80,7 +82,8 @@ h1, h2, h3, h4, h5, p {
 
 h3 {
     -webkit-margin-before: 10px;  
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+    text-shadow: 0 0 0.05em purple;}
 
 html, body, .texture {
     padding: 0;
@@ -120,6 +123,7 @@ nav button {
     border: none;
     text-align: right;
     background-color: $secondary_color;
+    transition: color 0.5s, background-color 0.5s;
     &:hover {
         color: $primary_color;
         background-color: black;
@@ -211,18 +215,22 @@ ul {list-style-type: square;}
     }
 
     h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
         font-size: 1.3em;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     h4 {
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 3px;
-        padding-bottom: 3px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 
     main {
@@ -230,20 +238,27 @@ ul {list-style-type: square;}
     }
 
     article {
-        padding-bottom: 5px;
-        margin: 30px;
-        margin-bottom: 5%;
+        border-style: solid;
+        border-color: $primary_color;
+        border-width: 7px;
+        border-radius: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         width: 65%;
         box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
     }
 
     article p {
+        margin-top: 15px;
+        margin-bottom: 10px;
         margin-left: 25px;
         margin-right: 25px;
         font-size: 1em;
         padding-right: 15px;
         padding-left: 15px;
+        padding-top: 10px;
         padding-bottom: 15px;
+        border-radius: 20px;
     }
 
     ul {
@@ -299,6 +314,8 @@ ul {list-style-type: square;}
     }
 
     article {
+        border-style: none;
+        border-radius: 0;
         padding-bottom: 5px;
         margin-top: 10px;
         margin-bottom: 20px;
