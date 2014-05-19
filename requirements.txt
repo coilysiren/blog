@@ -3,6 +3,7 @@ Flask-Scss==0.3
 Jinja2==2.7.2
 Markdown==2.4
 MarkupSafe==0.19
+PyRSS2Gen==1.1
 PyYAML==3.11
 Werkzeug==0.9.4
 argparse==1.2.1
