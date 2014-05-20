@@ -70,8 +70,9 @@ nav a {color: black;}
 p a {color: purple; text-shadow: 0 0 0.05em purple;}
 article a:hover {text-decoration: underline;}
 h3 a {color: black;}
-h3 a:hover {text-decoration: none;color: purple;}
+h3 a:hover {text-decoration: none; color: purple;}
 h3 a {transition: color 0.33s;}
+i {text-shadow: none;}
 
 h1, h2, h3, h4, h5, p {
     -webkit-margin-before: 0;  
@@ -339,6 +340,8 @@ ul {list-style-type: square;}
 .fa-skype {color: #12A5F4;}
 .fa-envelope {color: gray;}
 .fa-github {color: black;}
+.fa-rss-square {color: orange;}
+.fa {font-size: 1.5em;}
 
 //TWITTER MADE ME DO IT >_<
 .twitter-tweet {margin-left: auto !important; margin-right: auto !important;}
