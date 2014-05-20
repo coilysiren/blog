@@ -10,4 +10,6 @@
 
 [<i class="fa fa-github"></i> Github](https://github.com/LynnCo)
 
+[<i class="fa fa-rss-square"></i> RSS](http://lynncyrin.me/static/rss.xml)
+
  <i class="fa fa-skype"></i> Skype: lynn.nixi
