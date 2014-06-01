@@ -2,7 +2,9 @@
 
 [<i class="fa fa-envelope"></i> firemagelynn@gmail.com](mailto:firemagelynn@gmail.com)
 
-[<i class="fa fa-twitter"></i> @lynnmagic](https://twitter.com/LynnMagic)
+[<i class="fa fa-twitter"></i> @lynncyrin](https://twitter.com/lynncyrin) <- work
+
+[<i class="fa fa-twitter"></i> @lynnmagic](https://twitter.com/LynnMagic) <- all other things
 
 [<i class="fa fa-gittip"></i> gittip!](https://www.gittip.com/LynnMagic/)
 
