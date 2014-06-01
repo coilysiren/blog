@@ -20,7 +20,9 @@ import PyRSS2Gen
 import flask.ext.scss
 
 
+
 #start app and set configuration
+
 
 
 print('loading BLOG!!!')
@@ -30,33 +32,47 @@ for key, value in yaml.load(file('config.yaml','r')).items():
     app.config[key] = value
 
 
+
 #views
 
 
+
+#[PAGES]
+
+
+#index page
 @app.route('/index')
 @app.route('/home')
 @app.route('/')
 def index (): 
+    #need to get rid of the page_title + page_desc repitition
     page_title = app.config['SITENAME']
     page_desc = app.config['DESC']
+    #things to display on the landing page
     post_urls = ['pages/landing.html', 'posts/origin-story_snipped.html', 'pages/about.html']
+    #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
+#about page
 @app.route('/aboutme')
 @app.route('/about')
 def about ():
     page_title = app.config['SITENAME']+' // About Me'
     page_desc = app.config['DESC']+' // Information about me'
     post_urls = ['pages/about.html']
+    #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
+#contact page
 @app.route('/contact')
 def contact ():
     page_title = app.config['SITENAME']+' // Contact'
     page_desc = app.config['DESC']+' // Contact information and links'
     post_urls = ['pages/contact.html']
+    #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
+#about my name page
 @app.route('/cyrin')
 @app.route('/conway')
 @app.route('/name')
@@ -64,8 +80,10 @@ def name ():
     page_title = app.config['SITENAME']+' // Cyrin? Conway?'
     page_desc = app.config['DESC']+' // About my [last] name'
     post_urls = ['pages/name.html']
+    #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
+#work page
 @app.route('/professional')
 @app.route('/projects')
 @app.route('/resume')
@@ -73,8 +91,14 @@ def name ():
 def professional ():
     page_title = app.config['SITENAME']+' // My Work'
     page_desc = app.config['DESC']+' // Work, projects, resume, etc...'
+    #work content sections
     post_urls = ['pages/resume.html', 'pages/projects.html', 'pages/experience.html', 'pages/html.html']
+    #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
+
+
+#[/PAGES]
+
 
 @app.errorhandler(404)
 def page_not_found (e):
@@ -109,7 +133,9 @@ def show_posts_by_tag (tag):
     return "WIP"
 
 
+
 #functions
+
 
 
 def refresh_content ():
@@ -222,7 +248,9 @@ def create_rss (posts):
     print('created xml rss.xml')
 
 
+
 #debug mode start options
+
 
 
 if __name__ == '__main__':
