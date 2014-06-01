@@ -6,6 +6,8 @@
 
 [[ POSTS ]]
 
+	fake and gay
+	
 	boundaries and politics statement
 
 	you fight or you die
@@ -21,10 +23,6 @@
 	re-impliment single page app and animated page swaps
 
 	scroll to links within an article
-
-	tweet sizing for mobile
-
-	readmore needs to hug buttom of article
 
 	article footer to show publish date and tags
 
@@ -42,20 +40,6 @@
 
 	h3 in post autolinks to itself
 
-	for every post.md -> post.html + post_meta.yaml
-				
-		title and desc
-		
-		tags
+	RSS needs correct datetime
 
-		search terms
-		
-		publish date (ex: 01/05/2014)
-
-	upgrade to python 34
-
-	sort posts by tag
-
-	get google to recognize new posts and dates
-
-	RSS
+	atomic rss?
