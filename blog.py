@@ -47,7 +47,7 @@ def index ():
 def about ():
     page_title = app.config['SITENAME']+' // About Me'
     page_desc = app.config['DESC']+' // Information about me'
-    post_urls = ['pages/about.html']
+    post_urls = ['pages/about.html', 'pages/contact.html']
     #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
