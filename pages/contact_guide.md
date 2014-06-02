@@ -1,6 +1,6 @@
 ### Guide for Contacting me
 
-Contacting me refers to communicating with me in any way. Be it verbal, electronic, twitter @'s, emails... anything.
+Contacting me refers to communicating with me in any way. Be it verbal, electronic, twitter @'s, emails... anything. Links for contacting me are below this guide.
 
 #### RE: Praise
 
