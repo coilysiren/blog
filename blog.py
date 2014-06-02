@@ -56,7 +56,7 @@ def about ():
 def contact ():
     page_title = app.config['SITENAME']+' // Contact'
     page_desc = app.config['DESC']+' // Contact information and links'
-    post_urls = ['pages/contact.html', 'pages/contact_guide.html']
+    post_urls = ['pages/contact_guide.html', 'pages/contact.html']
     #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
