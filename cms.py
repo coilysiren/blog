@@ -1,12 +1,5 @@
-'''
-__name__ = cms.py
-__desc__ = Content generation and management script
-__sign__ = Lynn Cyrin
-
-Use:
-import cms
-run = cms.cms(config)
-'''
+# !/usr/bin/python
+# -*- coding: UTF-8
 
 #builtin scripts
 import re
@@ -21,7 +14,18 @@ import PyRSS2Gen
 
 
 class cms (object):
-    '''creates and manages blog content'''
+    '''
+    __name__ = cms.py
+    __desc__ = creates and manages blog content
+    __sign__ = Lynn Cyrin
+
+    Usage:
+    import cms
+    run = cms.cms(config)
+
+    this file deals with special characters! 
+    take a look at cms.cms.to_ascii
+    '''
 
     def __init__ (self, config):
         cms.config = config
@@ -67,7 +71,7 @@ class cms (object):
         #save yer snip
         with open(snip_name, 'w') as snippet_file: 
             snippet_file.writelines(snippet) 
-        print("created snippet "+snip_name)
+        print("[LOG] created snippet "+snip_name)
 
     def build_post (self, post):
         '''
@@ -82,12 +86,15 @@ class cms (object):
         #get markdown
         with open(md_path, 'r') as md_data:
             text = md_data.read()
+        #check encoding
+        try: unicode(text) #python wont convert utf-8 to unicode
+        except UnicodeDecodeError: text = self.encoding_fixer(text)
         #create html file
         md = markdown.Markdown(extensions = ['meta'])
         html_data = md.convert(text)
         with open(html_path, 'w') as html_file:
             html_file.write(html_data)
-        print('created post '+post) 
+        print('[LOG] created post '+post) 
         #pages don't get metadata
         if not re.search("post", post): return 0
         #de-unicode-ify the metadata
@@ -102,7 +109,7 @@ class cms (object):
         #create metadata file
         with open(yaml_path, 'w') as yaml_file:
             yaml.dump(meta, yaml_file)    
-        print('created metadata '+yaml_path)     
+        print('[LOG] created metadata '+yaml_path)     
 
     def create_rss (self, posts):
         #initalize feed
@@ -127,4 +134,53 @@ class cms (object):
             rss.items.append(item)
         #write to xml
         rss.write_xml(open("static/rss.xml", "w"))
-        print('created xml rss.xml')
+        print('[LOG] created xml rss.xml')
+
+    def encoding_fixer (self, text):
+        uft8_chars = list() #a list of index positions
+        #find out where out bad encoding is
+        for i, char in enumerate(text):
+            try: unicode(char)
+            except UnicodeDecodeError:
+                #show where the issue was
+                print('[WARNING] utf-8 text detected at: '+text[i-20:i-1])
+                uft8_chars.append(i) #log its position
+        #build the new text peice by peice
+        new_text = str()
+        for i, char in enumerate(text): #for every character...
+            #if this spot has bad encoding, fix it!
+            if i in uft8_chars: new_text += self.to_ascii(char)
+            #if not then just add the add character
+            else: new_text += text[i]
+        return new_text
+
+    def to_ascii (self, char):
+        '''
+        changes certain special utf-8 characters into ascii
+
+        ok so, some of these characters actually decode straight to
+        \\xe2\\x80\\x## (where ## are two different characters). Those 
+        separate into a list of 3 items (i.e. \\xe2, \\x80, \\x##) 
+        where the first two items are always the same.
+
+        Note that those are all single slashes that I had to escape...
+
+        The third item can be used to determine the type of character 
+        you have. Given that the first two items are always the same, 
+        they are assigned to "null" and result in the deletion of the 
+        character at that space. 
+
+        The third item is then assigned to the proper ascii character.
+        '''        
+        #known conversions
+        dash = "–"
+        start_qoute = "”"; end_qoute = "“"
+        dot_dot_dot = "…"
+        null = ["\\xe2","\\x80"]
+        #check if our character is in our known conversions
+        if char == dash[2]: return "-"
+        elif char == start_qoute[2]: return '"'
+        elif char == end_qoute[2]: return '"'
+        elif char == dot_dot_dot[2]: return '...'
+        elif char in null: return ""
+        else: print('[WARNING] Encoding type not found'); return ""
