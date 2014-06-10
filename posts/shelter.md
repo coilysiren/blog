@@ -1,7 +1,7 @@
 title: "Homelessness"
 desc: People really don't understand what it means to be homeless, so please let me explain it to you
 date: 6/7/2014
-tags: advocacy
+tags: advocacy, life
 link: http://lynncyrin.me/post/shelter
 
 ### [What happens when you criminalize homelessness](http://lynncyrin.me/post/shelter)
