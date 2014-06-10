@@ -71,7 +71,7 @@ class cms (object):
         #save yer snip
         with open(snip_name, 'w') as snippet_file: 
             snippet_file.writelines(snippet) 
-        print("[LOG] created snippet "+snip_name)
+        print("[LOG] created "+snip_name[16:-13]+' snippet')
 
     def build_post (self, post):
         '''
@@ -94,7 +94,7 @@ class cms (object):
         html_data = md.convert(text)
         with open(html_path, 'w') as html_file:
             html_file.write(html_data)
-        print('[LOG] created post '+post) 
+        print('[LOG] created '+post[6:]+' post') 
         #pages don't get metadata
         if not re.search("post", post): return 0
         #de-unicode-ify the metadata
@@ -109,7 +109,7 @@ class cms (object):
         #create metadata file
         with open(yaml_path, 'w') as yaml_file:
             yaml.dump(meta, yaml_file)    
-        print('[LOG] created metadata '+yaml_path)     
+        print('[LOG] created '+yaml_path[16:-10]+' metadata')     
 
     def create_rss (self, posts):
         #initalize feed
