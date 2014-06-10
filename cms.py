@@ -117,7 +117,7 @@ class cms (object):
             title = cms.config['SITENAME'],
             link = cms.config['URL'],
             description = cms.config['DESC'],
-            lastBuildDate = datetime.datetime.now(),
+            lastBuildDate = datetime.datetime.today(),
             items = [])
         #create content items
         for post_title in posts:
@@ -125,12 +125,16 @@ class cms (object):
             if not re.search("post", post_title): continue
             #load post metadata into rss item
             meta = yaml.load(file('templates/'+post_title[:-3]+'_meta.yaml','r'))
+            #we only want to add tech posts to the RSS right now
+            if not "tech" in meta['tags']: continue
+            #meta['date'] = '{month}/{date}/{year}'
+            date = re.split('/',meta['date'])
             item = PyRSS2Gen.RSSItem(
                title = meta['title'],
                link = meta['link'],
                description = meta['desc'],
                guid = PyRSS2Gen.Guid(meta['link']),
-               pubDate = datetime.datetime(2003, 9, 6, 21, 49))
+               pubDate = datetime.datetime(int(date[2]), int(date[0]), int(date[1])))
             rss.items.append(item)
         #write to xml
         rss.write_xml(open("static/rss.xml", "w"))
