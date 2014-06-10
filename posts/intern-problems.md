@@ -86,9 +86,6 @@ This plan was aborted quickly
 
 But I quickly ran into a few more issues
 
-<blockquote class="twitter-tweet" lang="en"><p>OMG I HATE COMPUTERS</p>&mdash; lynn_cyrin.py (@lynncyrin) <a href="https://twitter.com/lynncyrin/statuses/476276082736250880">June 10, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <blockquote class="twitter-tweet" lang="en"><p>sudo -s&#10;su user&#10;&#10;try to ssh, ssh no longer works&#10;&#10;wonder why&#10;&#10;try to close terminal, it instead sends me to root&#10;&#10;wut</p>&mdash; lynn_cyrin.py (@lynncyrin) <a href="https://twitter.com/lynncyrin/statuses/476276138944122880">June 10, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
