@@ -60,7 +60,7 @@ This upset me just a tad bit, I asked him to leave
 
 The girl whose bed he was sitting on asked him to leave
 
-He then challenges out right to get him to leave
+He then challenges our right to get him to leave
 
 I ask him to leave again, more assertively this time
 
