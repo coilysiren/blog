@@ -4,7 +4,7 @@ date: 4/17/2014
 tags: advocacy
 link: http://lynncyrin.me/post/thebadvocatemag
 
-### [Calling in a Popular LGBT Advocacy Magazine](http://lynncyrin.me/post/thebadvocatemag)
+### [A callout for a Popular LGBT Advocacy Magazine](http://lynncyrin.me/post/thebadvocatemag)
 
 So there was an issue today with [a popular LGBT Advocacy Magazine](http://www.advocate.com/) not having an understanding of the intersection of African American and transgender identities. The issue is ALMOST entirely with the headline of an article they published, headline shown here:
 
