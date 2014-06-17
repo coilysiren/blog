@@ -32,4 +32,4 @@ This is akin to stories told by people talking about [#notyourresource](https://
 
 #### TL;DR 
 
-The article had good intentions, but needs work. I could probably write up a few more points but alas, life, work, thing that I'm actually being paid for to be done!
+The article had good intentions, but needs work. I could probably write up a few more points but alas, life, work, things that I'm actually being paid for to be done! --- OR! or. [you could pay me for it ^_^](https://www.gittip.com/LynnMagic/)
