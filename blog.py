@@ -114,10 +114,14 @@ def base_static(filename):
 
 @app.route('/posts')
 def posts_page ():
-    return "WIP"
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
+    post_urls = list()
+    for post in glob.glob('posts/*'): post_urls.append((post[:-3]+"_snipped.html"))
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/tagged/<tag>')
-def show_posts_by_tag (tag):
+def tagged_page (tag):
     return "WIP"
 
 
