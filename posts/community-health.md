@@ -22,7 +22,7 @@ First, health. So what makes online communities 'healthy'? Without trying to get
 
 #### Happiness
 
-Having happy community members is its own reward, or at least I'm told that's how human biology works. Opening up Twitter to everyone being sads is generally not how I want to start my day. Within the communities I engage in, the biggest events the effect community happiness and thus community health are generally negative. Things like [physical assault](http://clatl.com/freshloaf/archives/2014/07/03/transgender-woman-attacked-in-l5p) and [sexal harassment](http://adainitiative.org/2014/04/ada-initiative-no-longer-partnering-with-github/)
+Having happy community members is its own reward, or at least I'm told that's how human biology works. Opening up Twitter to everyone being sads is generally not how I want to start my day. Within the communities I engage in, the biggest events the effect community happiness and thus community health are generally negative. Things like [physical assault](http://clatl.com/freshloaf/archives/2014/07/03/transgender-woman-attacked-in-l5p) and [sexual harassment](http://adainitiative.org/2014/04/ada-initiative-no-longer-partnering-with-github/)
 
 #### Resources
 
@@ -66,8 +66,8 @@ Callouts are fiery destructive things - and purposefully so. The purpose of call
 
 (/end fake tweets)
 
-So now hopefully you have an idea of what sorts of things are good for community health! Now go forth, and build healthy communities~ I may keep writing on this, and if I do the next post will be about growth. 
+So now hopefully you have an idea of what sorts of things are good for community health! Now go forth, and build healthy communities~ I'll keep writing about this, and the next post will be about growth.
 
-Meanwhile, [maybe read this other post](http://lynncyrin.me/post/health-tracker) where I talk about maybe making a community health tracker! *(pls!!!!!!)*
+Meanwhile, [maybe read this other post](http://lynncyrin.me/post/health-tracker) where I talk about making a community health tracker!
 
 **-- Lynn, net entity**

@@ -28,7 +28,7 @@ Those use cases are all sad because that's just how my communities have been tre
 * your friends add themselves to the "feminist hacker" group
 * the website then does its thing, reading you and your friends tweets and trying to guess at what you all are feeling and what you are talking about
 * there will be a "feminist hackers" group page on the website that you can visit and it'll tell you what it's guessing
-* [idea] the group page can possibly have some sort of privacy associated with it if you don't want to whole internet to know they you are having sad day?
+* [idea] the group page can have some sort of privacy associated with it if you don't want to whole internet to know they you are having sad day?
 
 Now hopefully that sounds as cool to you as it does to me :D here's some words from people who also thought it was cool!
 
@@ -43,6 +43,6 @@ Now hopefully that sounds as cool to you as it does to me :D here's some words f
 
 #### TODO
 
-I just thought of this today, so I'm still gauging interest. So please do show this page to people, tell me what you think, tell me if it's something you would maybe help with!Interested persons should tweet @lynnmagic or possibly email me at firemagelynn@gmail.com ~
+I just thought of this today, so I'm still gauging interest. So please do show this page to people, tell me what you think, tell me if it's something you would help with! Interested persons should tweet @lynnmagic or email me at firemagelynn@gmail.com ~
 
 **-- Lynn, internet magician**
