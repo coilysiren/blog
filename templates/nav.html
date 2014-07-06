@@ -4,6 +4,9 @@
 	<a href="{{ url_for('index') }}"><button class="nav">Home</button></a>
 	<a href="{{ url_for('about') }}"><button class="nav">About Me</button></a>
 	<a href="{{ url_for('posts_page') }}"><button class="nav">All posts</button></a>
+	<a href="{{ url_for('tagged_page', tag='life') }}"><button class="nav">"Life"</button></a>
+	<a href="{{ url_for('tagged_page', tag='advocacy') }}"><button class="nav">"Advocacy"</button></a>
+	<a href="{{ url_for('tagged_page', tag='tech') }}"><button class="nav">"Tech"</button></a>
 	<a href="{{ url_for('contact') }}"><button class="nav">Contact</button></a>
 	<a href="{{ url_for('name') }}"><button class="nav">Name</button></a>
 	<a href="{{ url_for('professional') }}"><button class="nav">Work</button></a>

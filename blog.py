@@ -129,8 +129,14 @@ def posts_page ():
 
 @app.route('/tagged/<tag>')
 def tagged_page (tag):
-    return "WIP"
-
+    page_title = app.config['SITENAME']
+    page_desc = app.config['DESC']
+    post_urls = list()
+    for post in glob.glob('posts/*'): 
+        meta = yaml.load(file('templates/'+post[:-3]+'_meta.yaml','r'))
+        if tag in meta['tags']:
+            post_urls.append((post[:-3]+"_snipped.html"))
+    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 #debug mode start options
 
