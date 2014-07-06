@@ -54,7 +54,7 @@ def index ():
 def about ():
     page_title = app.config['SITENAME']+' // About Me'
     page_desc = app.config['DESC']+' // Information about me'
-    post_urls = ['pages/about.html', 'pages/contact.html']
+    post_urls = ['pages/about.html', 'pages/contact.html', 'pages/name.html']
     #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
@@ -66,34 +66,6 @@ def contact ():
     post_urls = ['pages/contact_guide.html', 'pages/contact.html']
     #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
-
-#about my name page
-@app.route('/cyrin')
-@app.route('/conway')
-@app.route('/name')
-def name ():
-    page_title = app.config['SITENAME']+' // Cyrin? Conway?'
-    page_desc = app.config['DESC']+' // About my [last] name'
-    post_urls = ['pages/name.html']
-    #dont edit return line
-    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
-
-#work page
-@app.route('/professional')
-@app.route('/projects')
-@app.route('/resume')
-@app.route('/work')
-def professional ():
-    page_title = app.config['SITENAME']+' // My Work'
-    page_desc = app.config['DESC']+' // Work, projects, resume, etc...'
-    #work content sections
-    post_urls = ['pages/resume.html', 'pages/projects.html', 'pages/experience.html', 'pages/html.html']
-    #dont edit return line
-    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
-
-
-#[/PAGES]
-
 
 @app.errorhandler(404)
 def page_not_found (e):
@@ -118,14 +90,6 @@ def show_post_by_title (post_title):
 @app.route('/static/<path:filename>') 
 def base_static(filename): 
     return flask.send_from_directory(app.root_path + '/static/', filename)
-
-@app.route('/posts')
-def posts_page ():
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
-    post_urls = list()
-    for post in glob.glob('posts/*'): post_urls.append((post[:-3]+"_snipped.html"))
-    return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
 @app.route('/tagged/<tag>')
 def tagged_page (tag):
