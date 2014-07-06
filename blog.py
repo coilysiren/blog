@@ -8,6 +8,8 @@ Use:
 [Developement] '$ python blog.py' (runs in debug mode)
 '''
 
+#builtin scripts
+import glob
 #external scripts
 import yaml
 import flask
@@ -37,7 +39,12 @@ def index ():
     page_title = app.config['SITENAME']
     page_desc = app.config['DESC']
     #things to display on the landing page
-    post_urls = ['pages/landing.html', 'posts/origin-story_snipped.html', 'posts/intern-problems_snipped.html', 'posts/desconstructing-sanfranciscos-class-war_snipped.html', 'posts/lynnlovesdetroit_snipped.html', 'pages/about.html']
+    post_urls = list()
+    post_urls.append('pages/landing.html')
+    post_urls.append('posts/origin-story_snipped.html')
+    post_urls.append('posts/intern-problems_snipped.html')
+    post_urls.append('posts/health-tracker_snipped.html')
+    post_urls.append('pages/about.html')
     #dont edit return line
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
