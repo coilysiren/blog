@@ -7,6 +7,7 @@ PyRSS2Gen==1.1
 PyYAML==3.11
 Werkzeug==0.9.4
 argparse==1.2.1
+boto==2.29.1
 gunicorn==18.0
 itsdangerous==0.24
 pyScss==1.2.0.post3
