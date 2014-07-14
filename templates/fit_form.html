@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+    {% block head %}
+    {% endblock %}
+    {% block navigation %}
+        {% include 'banner.html' %}
+    {% endblock %}
+    {% block content %}
+        <main class='fit_form'>
+            <article class='fit_form'>
+                {% include form_url %}
+            </article>
+        </main>
+    {% endblock %}
