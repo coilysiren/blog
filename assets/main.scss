@@ -23,7 +23,7 @@ Organization:
 */
 
 /*---------------
-    HELPERS 
+    HELPERS
 -----------------*/
 
 .visible {opacity: 1;}
@@ -31,12 +31,7 @@ Organization:
 .none {display: none;}
 .positionAbsolute {position: absolute;}
 .positionStatic {position: static;}
-.center {margin-left: auto; margin-right:}
-.em2 {font-size: 2em;}
-.em3 {font-size: 3em;}
-.em4 {font-size: 4em;}
-.em5 {font-size: 5em;}
-.imgResponsive {}
+.center {margin-left: auto; margin-right: auto;}
 
 .imgMax160x160 {
     max-width: 160px;
@@ -75,14 +70,14 @@ h3 a {transition: color 0.33s;}
 i {text-shadow: none;}
 
 h1, h2, h3, h4, h5, p {
-    -webkit-margin-before: 0;  
+    -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-    margin-top: 0;  
+    margin-top: 0;
     margin-bottom: 0;
     color: black }
 
 h3 {
-    -webkit-margin-before: 10px;  
+    -webkit-margin-before: 10px;
     margin-bottom: 10px;
     text-shadow: 0 0 0.05em purple;}
 
@@ -149,7 +144,6 @@ nav {
     top: 0;
     left: 0;
     background-color: $primary_color;
-    box-shadow: 0 15px 15px 7px rgba($secondary_color,.3);
 }
 
 h3 {
@@ -165,17 +159,20 @@ main {
     display: table;
     list-style-type: none;
     padding-top: 0;
-    width: 100%; 
+    width: 100%;
 }
 
 article {background-color: $body_color;}
 
-article p, article blockquote, ul {
+p, blockquote, ul {
     font-family: $secondary_font;
     background-color: rgba(255, 255, 255, 0.15);
 }
 
 ul {list-style-type: square;}
+
+.heading {font-family: $primary_font}
+.content {font-family: $secondary_font}
 
 /*-------------------
     BASE LAYOUT
@@ -187,6 +184,15 @@ ul {list-style-type: square;}
     #name {
         padding-top: 2px;
         padding-bottom: 2px;
+    }
+
+    .fit_form #name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    nav.post {
+        box-shadow: 0 15px 15px 7px rgba($secondary_color,.3);
     }
 
     nav button {
@@ -210,9 +216,14 @@ ul {list-style-type: square;}
         }
     }
 
-    nav {
+    nav.post {
         width: 20%;
         height: 100%;
+    }
+
+    nav.fit_form {
+        position: static;
+        width: 100%;
     }
 
     h3 {
@@ -234,8 +245,13 @@ ul {list-style-type: square;}
         margin-bottom: 0;
     }
 
-    main {
+    main.post {
         margin-left: 25%;
+    }
+
+    main.fit_form {
+        position: static;
+        margin-left: 0;
     }
 
     article {
@@ -249,7 +265,13 @@ ul {list-style-type: square;}
         box-shadow: 15px 15px 5px 5px rgba(0, 0, 0, 0.1);
     }
 
-    article p {
+    article.fit_form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+    p {
         margin-top: 15px;
         margin-bottom: 10px;
         margin-left: 25px;
@@ -262,7 +284,7 @@ ul {list-style-type: square;}
         border-radius: 20px;
     }
 
-    article blockquote {
+    blockquote {
         margin-left: 60px;
         margin-right: 60px;
         font-style: italic;
@@ -287,15 +309,19 @@ ul {list-style-type: square;}
 -----------------*/
 
 @media all and (max-height: $mobile_xy), (max-width: $mobile_xy){
-    
+
     html {font-size: 0.7em;}
-    
+
     #name {
         font-size: 0.7em;
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    
+
+    nav.post {
+        box-shadow: none;
+    }
+
     nav button {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -306,7 +332,7 @@ ul {list-style-type: square;}
 
     #me{display: none;}
 
-    nav {
+    nav.post {
         width: 100%;
         height: auto;
         padding-bottom: 5px;
@@ -319,7 +345,7 @@ ul {list-style-type: square;}
         margin-bottom: 5px;
     }
 
-    main {
+    main.post {
         position: static;
         margin-left: 0;
     }
@@ -335,7 +361,11 @@ ul {list-style-type: square;}
         width: 100%;
     }
 
-    article p {
+    article.fit_form {
+        width: 80%;
+    }
+
+    p {
         margin-left: 0px;
         margin-right: 0px;
     }
