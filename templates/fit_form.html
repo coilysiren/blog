@@ -2,7 +2,11 @@
     {% block head %}
     {% endblock %}
     {% block navigation %}
-        {% include 'banner.html' %}
+        <nav class='fit_form'>
+            <a href="{{ url_for('index') }}">
+                <div id="name"><h1>Lynn Cyrin</h1></div>
+            </a>
+        </nav>
     {% endblock %}
     {% block content %}
         <main class='fit_form'>
