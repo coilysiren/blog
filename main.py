@@ -104,8 +104,8 @@ def base_static(filename):
 
 @app.route('/tagged/<tag>')
 def tagged_page (tag):
-    page_title = app.config['SITENAME']
-    page_desc = app.config['DESC']
+    page_title = app.config['SITENAME']+' // '+tag
+    page_desc = 'Posts tagged '+tag
     post_urls = list()
     for post in glob.glob('posts/*'):
         meta = yaml.load(file('templates/'+post[:-3]+'_meta.yaml','r'))
