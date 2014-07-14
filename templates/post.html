@@ -1,15 +1,10 @@
-<!-- post.html -->
 {% extends "base.html" %}
-	{% block title %}
-		{{ page_title }}
-	{% endblock %}
-	{% block desc %}
-		{{ page_desc }}
-	{% endblock %}
 	{% block content %}
-		{% for post_url in post_urls %}
-			<article>
-			    {% include post_url %}
-			</article>
-		{% endfor %}  
+		<main class='post'>
+			{% for post_url in post_urls %}
+				<article class='post'>
+				    {% include post_url %}
+				</article>
+			{% endfor %}
+		</main>
 	{% endblock %}

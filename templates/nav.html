@@ -1,4 +1,4 @@
-<!-- nav.html -->
+<nav class='post'>
 	<a href="{{ url_for('index') }}"><div id="name"><h1>Lynn Cyrin</h1></div></a><br>
 	<div id="me"><img src="{{ config.AVATAR }}" title="my gravatar picture"></div>
 	<a href="{{ url_for('index') }}"><button class="nav">Home</button></a>
@@ -7,6 +7,4 @@
 	<a href="{{ url_for('tagged_page', tag='life') }}"><button class="nav">"Life"</button></a>
 	<a href="{{ url_for('tagged_page', tag='advocacy') }}"><button class="nav">"Advocacy"</button></a>
 	<a href="{{ url_for('tagged_page', tag='tech') }}"><button class="nav">"Tech"</button></a>
-	<!-- kept as an example
-	<button class="nav contact" onclick="swapPage('.contact')">Contact</button>
-	-->
+</nav>
