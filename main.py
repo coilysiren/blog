@@ -8,11 +8,14 @@ Use:
 [Developement] '$ python blog.py' (runs in debug mode)
 '''
 
+
 #builtin scripts
+import os
 import glob
 #external scripts
 import yaml
 import flask
+import stripe
 import flask.ext.scss
 #custom scripts
 import cms
@@ -21,7 +24,15 @@ import cms
 #start app and set configuration
 
 
+# stripe
+stripe_keys = {
+    'secret_key': os.environ['SECRET_KEY'],
+    'publishable_key': os.environ['PUBLISHABLE_KEY']
+}
+stripe.api_key = stripe_keys['secret_key']
+# init app
 app = flask.Flask(__name__, static_folder='static', static_url_path='')
+# my configs
 app.config.from_object(__name__)
 for key, value in yaml.load(file('config.yaml','r')).items():
     app.config[key] = value
@@ -34,7 +45,7 @@ for key, value in yaml.load(file('config.yaml','r')).items():
 @app.route('/index')
 @app.route('/home')
 @app.route('/')
-def index (): 
+def index ():
     #need to get rid of the page_title + page_desc repitition
     page_title = app.config['SITENAME']
     page_desc = app.config['DESC']
@@ -87,8 +98,8 @@ def show_post_by_title (post_title):
     post_urls = ['posts/'+post_title+'.html']
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
 
-@app.route('/static/<path:filename>') 
-def base_static(filename): 
+@app.route('/static/<path:filename>')
+def base_static(filename):
     return flask.send_from_directory(app.root_path + '/static/', filename)
 
 @app.route('/tagged/<tag>')
@@ -96,11 +107,12 @@ def tagged_page (tag):
     page_title = app.config['SITENAME']
     page_desc = app.config['DESC']
     post_urls = list()
-    for post in glob.glob('posts/*'): 
+    for post in glob.glob('posts/*'):
         meta = yaml.load(file('templates/'+post[:-3]+'_meta.yaml','r'))
         if tag in meta['tags']:
             post_urls.append((post[:-3]+"_snipped.html"))
     return flask.render_template('post.html', page_title=page_title, page_desc=page_desc, post_urls=post_urls)
+
 
 #debug mode start options
 

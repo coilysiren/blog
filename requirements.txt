@@ -11,5 +11,7 @@ boto==2.29.1
 gunicorn==18.0
 itsdangerous==0.24
 pyScss==1.2.0.post3
+requests==0.13.2
 six==1.6.1
+stripe==1.18.0
 wsgiref==0.1.2
