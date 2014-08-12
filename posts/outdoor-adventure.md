@@ -61,8 +61,5 @@ link: http://lynncyrin.me/post/outdoor-adventure
 <blockquote class="twitter-tweet" lang="en"><p>THE FLYING DEMONS ARE SWARMING ME</p>&mdash; lynn, adventurer (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/498488177292619777">August 10, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet" lang="en"><p>Almost back to HQ... <a href="http://t.co/S0TD19VGOV">pic.twitter.com/S0TD19VGOV</a></p>&mdash; lynn, adventurer (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/498488982003412995">August 10, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <blockquote class="twitter-tweet" lang="en"><p>VICTORY IS MINE <a href="http://t.co/PfY01VVG0h">pic.twitter.com/PfY01VVG0h</a></p>&mdash; lynn, adventurer (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/498490022744432640">August 10, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
