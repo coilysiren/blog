@@ -58,7 +58,7 @@ def contact ():
     return flask.render_template('post.html',
         page_title=app.config['SITENAME']+' // Contact',
         page_desc=app.config['DESC']+' // Contact information and links',
-        post_urls=['pages/contact_guide.html', 'pages/contact.html'])
+        post_urls=['pages/contact.html', 'pages/gamer_tags.html', 'pages/contact_guide.html',])
 
 @app.route('/posts/<post_title>')
 @app.route('/post/<post_title>')
