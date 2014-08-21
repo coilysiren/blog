@@ -1,5 +1,7 @@
 ### Gamer Tags!
 
+If you want to add me, give a heads up on social media (preferably twitter) first! I don't add people unless I know who they are, and I get randoms trying to add me fairly often.
+
 [![GW2 Icon](http://www.sinnlos-gehts-los.de/images/GuildWars2-32x32.png) Guild Wars 2](http://guildwars2.com)
 
 * **IGN:** Cyrin.7193
