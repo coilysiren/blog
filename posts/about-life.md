@@ -6,13 +6,15 @@ link: http://lynncyrin.me/post/about-life
 
 ### [About Life](http://lynncyrin.me/post/about-life)
 
+#### Preface
+
 So I think what I have written here is essentially a philosophy of life. It may read as depressed, but it should be noted that I definitely am not sad right now. I'm just... feeling incredibly realistic. If you read it all, try to read it with rational thoughts - as opposed to emotions.
 
-((TW: Death, Suicide))
+((TW: Death, Suicide)) <readmore></readmore>
 
-<readmore></readmore>
+#### So a particularly bad commute today...
 
-So a particularly bad commute today made me realize a few things. By "particularly bad" I mean I spent most of my commute thinking "I'm going to die, this is killing me, I'm going to die." The thing that felt like it was going to kill me at this particular time was a migraine and stomach ache (unmemorable things in and of themselves but they were bad enough to feel like they were going to kill me, so...). While I was experiencing that though, my brain shifted into big picture / meta mode, and I realized a few things that I think are very important:
+...made me realize a few things. By "particularly bad" I mean I spent most of my commute thinking "I'm going to die, this is killing me, I'm going to die." The thing that felt like it was going to kill me at this particular time was a migraine and stomach ache (unmemorable things in and of themselves but they were bad enough to feel like they were going to kill me, so...). While I was experiencing that though, my brain shifted into big picture / meta mode, and I realized a few things that I think are very important:
 
 * Obviously everyone dies eventually
 * If something is painful enough to make you chant "I'm doing to die" (if nonverbally) then that's probably your body telling you that you are going to die sooner than you would otherwise
