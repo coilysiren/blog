@@ -157,30 +157,32 @@
                     font-family: "Droid Sans Mono", sans-serif; }
 
                     @media all {
-                      #name {
-                        padding-top: 2px;
-                        padding-bottom: 2px;   }
-                        .fit_form #name {
-                          padding-top: 10px;
-                          padding-bottom: 10px;   }
-                          nav.post {
-                            box-shadow: 0 15px 15px 7px rgba(253, 167, 32, 0.3);   }
-                            nav button {
-                              padding-top: 5px;
-                              padding-bottom: 5px;
-                              padding-right: 15px;
-                              margin-bottom: 10px;
-                              right: 15%;
-                              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.66);   }
-                              #me {
-                                display: block;
-                                height: 160px;
-                                width: 160px;
-                                margin-top: 10px;
-                                margin-bottom: 20px;   }
-                                #me img {
+                      .post-image {
+                        max-width: 600px;   }
+                        #name {
+                          padding-top: 2px;
+                          padding-bottom: 2px;   }
+                          .fit_form #name {
+                            padding-top: 10px;
+                            padding-bottom: 10px;   }
+                            nav.post {
+                              box-shadow: 0 15px 15px 7px rgba(253, 167, 32, 0.3);   }
+                              nav button {
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                padding-right: 15px;
+                                margin-bottom: 10px;
+                                right: 15%;
+                                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.66);   }
+                                #me {
+                                  display: block;
                                   height: 160px;
-                                  width: 160px;   }
+                                  width: 160px;
+                                  margin-top: 10px;
+                                  margin-bottom: 20px;   }
+                                  #me img {
+                                    height: 160px;
+                                    width: 160px;   }
                       nav.post {
                         width: 20%;
                         height: 100%;   }
@@ -255,46 +257,48 @@
 @media all and (max-height: 500px), (max-width: 500px) {
   html {
     font-size: 0.7em;   }
-    #name {
-      font-size: 0.7em;
-      padding-top: 5px;
-      padding-bottom: 5px;   }
-      nav.post {
-        box-shadow: none;   }
-        nav button {
-          padding-top: 5px;
-          padding-bottom: 5px;
-          padding-right: 15px;
-          margin-bottom: 5px;
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.66);   }
-          #me {
-            display: none;   }
-            nav.post {
-              width: 100%;
-              height: auto;
-              padding-bottom: 5px;
-              position: static;   }
-              h3 {
-                padding-top: 5px;
+    .post-image {
+      max-width: 200px;   }
+      #name {
+        font-size: 0.7em;
+        padding-top: 5px;
+        padding-bottom: 5px;   }
+        nav.post {
+          box-shadow: none;   }
+          nav button {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            margin-bottom: 5px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.66);   }
+            #me {
+              display: none;   }
+              nav.post {
+                width: 100%;
+                height: auto;
                 padding-bottom: 5px;
-                margin-bottom: 5px;   }
-                main.post {
-                  position: static;
-                  margin-left: 0;   }
-                  article {
-                    border-style: none;
-                    border-radius: 0;
-                    padding-bottom: 5px;
-                    margin-top: 20px;
-                    margin-bottom: 30px;
-                    margin-left: 0;
-                    margin-right: 0;
-                    width: 100%;   }
-                    article.fit_form {
-                      width: 80%;   }
-                      p {
-                        margin-left: 0px;
-                        margin-right: 0px;   }
+                position: static;   }
+                h3 {
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  margin-bottom: 5px;   }
+                  main.post {
+                    position: static;
+                    margin-left: 0;   }
+                    article {
+                      border-style: none;
+                      border-radius: 0;
+                      padding-bottom: 5px;
+                      margin-top: 20px;
+                      margin-bottom: 30px;
+                      margin-left: 0;
+                      margin-right: 0;
+                      width: 100%;   }
+                      article.fit_form {
+                        width: 80%;   }
+                        p {
+                          margin-left: 0px;
+                          margin-right: 0px;   }
 }
 
 .fa-linkedin {

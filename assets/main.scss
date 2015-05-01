@@ -186,6 +186,10 @@ ul {list-style-type: square;}
 //this media query is just for consistency
 @media all {
 
+    .post-image {
+        max-width: 600px;
+    }
+
     #name {
         padding-top: 2px;
         padding-bottom: 2px;
@@ -323,6 +327,10 @@ ul {list-style-type: square;}
 @media all and (max-height: $mobile_xy), (max-width: $mobile_xy){
 
     html {font-size: 0.7em;}
+
+    .post-image {
+        max-width: 200px;
+    }
 
     #name {
         font-size: 0.7em;

@@ -6,7 +6,7 @@ link: http://lynncyrin.me/post/fixing-not-broken
 
 ### [Making Better Decisions about When to Refactor your Code](/post/fixing-not-broken)
 
-<div style="text-align: center;"> <img style="max-width:600px;" src="http://i.imgur.com/qP2hSPf.jpg" alt="A commit message saying 'remove S3 stuff'"></div>
+<div style="text-align: center;"> <img class="post-image" src="http://i.imgur.com/qP2hSPf.jpg" alt="A commit message saying 'remove S3 stuff'"></div>
 
 So that, that's the commit message of a developer doing something they probably shouldn't. Like, if you're going to refactor your code to move away from the leading solution for a particular problem, you had better do a lot of thinking on how you are going to do it. I didn't, and made a huge mess. Here's what happened:
 
@@ -20,7 +20,7 @@ I wanted to move away from using [AWS S3](http://aws.amazon.com/s3) as the image
 
 There are a few other reasons (S3 not being specific to images, and being popular enough that exploits are very well known, ...), but those are the big ones. They seemed like good enough reasons at the time to start looking into alternatives. I started with [Cloudinary](http://cloudinary.com) and ended with...
 
-<div style="text-align: center;"> <img style="max-width:600px;" src="http://i.imgur.com/zlWpJSF.jpg" alt="A commit message saying 'Revert remove S3 stuff'"></div>
+<div style="text-align: center;"> <img class="post-image" src="http://i.imgur.com/zlWpJSF.jpg" alt="A commit message saying 'Revert remove S3 stuff'"></div>
 
 ...going back to S3. Although it took me about a week's worth of work and a ton of frustration before I went back. Mainly because of 3 issues
 

@@ -1,5 +1,5 @@
 <h3><a href="/post/fixing-not-broken">Making Better Decisions about When to Refactor your Code</a></h3>
-<div style="text-align: center;"> <img style="max-width:600px;" src="http://i.imgur.com/qP2hSPf.jpg" alt="A commit message saying 'remove S3 stuff'"></div>
+<div style="text-align: center;"> <img class="post-image" src="http://i.imgur.com/qP2hSPf.jpg" alt="A commit message saying 'remove S3 stuff'"></div>
 
 <p>So that, that's the commit message of a developer doing something they probably shouldn't. Like, if you're going to refactor your code to move away from the leading solution for a particular problem, you had better do a lot of thinking on how you are going to do it. I didn't, and made a huge mess. Here's what happened:</p>
 <p><readmore></readmore></p>
@@ -10,7 +10,7 @@
 <li>Giving out throwaway account credentials for S3 is impossible since AWS requires a credit card on signup, which also makes getting AWS running at a basic level take more effort than [things that don't require a CC on signup]. Setting up <a href="http://aws.amazon.com/iam">IAM</a> doesn't really help in this regard.</li>
 </ul>
 <p>There are a few other reasons (S3 not being specific to images, and being popular enough that exploits are very well known, ...), but those are the big ones. They seemed like good enough reasons at the time to start looking into alternatives. I started with <a href="http://cloudinary.com">Cloudinary</a> and ended with...</p>
-<div style="text-align: center;"> <img style="max-width:600px;" src="http://i.imgur.com/zlWpJSF.jpg" alt="A commit message saying 'Revert remove S3 stuff'"></div>
+<div style="text-align: center;"> <img class="post-image" src="http://i.imgur.com/zlWpJSF.jpg" alt="A commit message saying 'Revert remove S3 stuff'"></div>
 
 <p>...going back to S3. Although it took me about a week's worth of work and a ton of frustration before I went back. Mainly because of 3 issues</p>
 <ul>
