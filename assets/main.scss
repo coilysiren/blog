@@ -43,14 +43,14 @@ Organization:
     max-height: 320px;
 }
 
-$primary_color = #7AADA6;
-$secondary_color = #fda720;
-$body_color = rgba(#fda720, 0.3);
+$primary_color: #7AADA6;
+$secondary_color: #fda720;
+$body_color: rgba(#fda720, 0.3);
 
-$primary_font = "Press Start 2P", cursive;
-$secondary_font = "Droid Sans Mono", sans-serif;
+$primary_font: "Press Start 2P", cursive;
+$secondary_font: "Droid Sans Mono", sans-serif;
 
-$mobile_xy = 500px;
+$mobile_xy: 500px;
 
 /*---------------
     GLOBAL
@@ -298,8 +298,9 @@ ul {list-style-type: square;}
         margin-left: 25px;
         margin-right: 25px;
         font-size: 1em;
-        padding-right: 15px;
-        padding-left: 15px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 15px;
         padding-bottom: 15px;
     }
 }
