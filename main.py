@@ -60,6 +60,18 @@ def contact ():
         page_desc=app.config['DESC']+' // Contact information and links',
         post_urls=['pages/contact.html', 'pages/gamer_tags.html', 'pages/contact_guide.html',])
 
+@app.route('/resume')
+def resume():
+    return flask.send_from_directory(app.root_path + '/resume/', 'resume.html')
+
+@app.route('/resume.pdf')
+def resume_pdf():
+    return flask.send_from_directory(app.root_path + '/resume/', 'resume.pdf')
+
+@app.route('/resume.css')
+def resume_css():
+    return flask.send_from_directory(app.root_path + '/resume/', 'resume.css')
+
 @app.route('/posts/<post_title>')
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
