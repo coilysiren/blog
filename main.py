@@ -15,15 +15,18 @@ import glob
 import yaml
 import flask
 #custom scripts
-import cms
+from cms import cms
 
 app = flask.Flask(__name__, static_folder='static', static_url_path='')
-app.config = {
-    "SITENAME": "Lynn Blog",
-    "AVATAR": "http://www.gravatar.com/avatar/b1cde28ce033c8cd6f4be4059efbe00b.png?size=160",
-    "URL": "http://lynncyrin.me",
-    "DESC": "The blog of a Queer, Feminist, Programmer - Lynn Cyrin",
-}
+
+SITENAME = "Lynn Blog"
+AVATAR = "http://www.gravatar.com/avatar/b1cde28ce033c8cd6f4be4059efbe00b.png?size=160"
+URL = "http://lynncyrin.me"
+DESC = "The blog of a Queer, Feminist, Programmer - Lynn Cyrin"
+
+app.config.from_object(__name__)
+
+create_cms = cms(app.config)
 
 #index page
 @app.route('/index')
@@ -113,5 +116,4 @@ def page_not_found (e):
 
 if __name__ == '__main__':
     app.config['DEBUG'] = True
-    create_cms = cms.cms(app.config)
     app.run()
