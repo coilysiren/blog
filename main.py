@@ -4,6 +4,7 @@ import glob
 import yaml
 import sass
 import flask
+from flask_misaka import Misaka
 #custom scripts
 from cms import cms
 
@@ -16,7 +17,8 @@ DESC = "The blog of a Queer, Feminist, Programmer - Lynn Cyrin"
 
 app.config.from_object(__name__)
 
-create_cms = cms(app.config)
+Cms(app)
+Misaka(app)
 
 #index page
 @app.route('/index')
@@ -34,10 +36,12 @@ def index ():
 #about page
 @app.route('/about')
 def about ():
-    return flask.render_template('post.html',
+    return flask.render_template(
+        'post.html',
         page_title=app.config['SITENAME']+' // About Me',
         page_desc=app.config['DESC']+' // Information about me',
-        post_urls=['pages/about.html', 'pages/contact.html', 'pages/name.html'])
+        post_urls=['pages/about.html', 'pages/contact.html', 'pages/name.html']
+    )
 
 #contact page
 @app.route('/contact')
