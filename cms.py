@@ -111,32 +111,30 @@ class Cms (object):
         print('[LOG] created '+yaml_path[16:-10]+' metadata')
 
     def create_rss (self, config):
+        last_modified = os.path.getmtime(max(glob.iglob('templates/posts/*'), key=os.path.getmtime))
+        last_modified_datetime = datetime.datetime.fromtimestamp(last_modified)
+
         #initalize feed
         rss = PyRSS2Gen.RSS2(
             title = config['SITENAME'],
             link = config['URL'],
             description = config['DESC'],
-            lastBuildDate = datetime.datetime.today(),
+            lastBuildDate = last_modified_datetime,
             items = [])
-        #create content items
+
+        # create content items
+        posts = []
         for post_title in posts:
-            #only add posts to rss feed
-            if not re.search("post", post_title): continue
-            #load post metadata into rss item
-            meta = yaml.load(file('templates/'+post_title[:-3]+'_meta.yaml','r'))
-            #we only want to add tech posts to the RSS right now
-            if not "tech" in meta['tags']: continue
-            #meta['date'] = '{month}/{date}/{year}'
-            last_modified = os.path.getmtime(max(glob.iglob('templates/posts/*'), key=os.path.getmtime))
-            date = re.split('/',meta['date'])
+            meta = {}
             item = PyRSS2Gen.RSSItem(
-               title = meta['title'],
-               link = meta['link'],
-               description = meta['desc'],
-               guid = PyRSS2Gen.Guid(meta['link']),
-               pubDate = datetime.datetime.fromtimestamp(last_modified)
+               title = meta.get('title'),
+               link = meta.get('link'),
+               description = meta.get('desc'),
+               guid = PyRSS2Gen.Guid(meta.get('link')),
+               pubDate = last_modified_datetime
             )
             rss.items.append(item)
+
         #write to xml
-        rss.write_xml(open("static/rss.xml", "w"))
-        print('[LOG] created xml rss.xml')
+        with open("static/rss.xml", "w") as f:
+            rss.write_xml(f)
