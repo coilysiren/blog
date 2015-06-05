@@ -1,8 +1,8 @@
-title: Origin Story
-desc: Detailing the exciting and dynamic origin of your cutest protagonist. Code is written, home is un-lessed, destiny is acquired.
-date: 4/16/2014
-tags: life, tech
-link: http://lynncyrin.me/post/origin-story
+<metadata style="display: none;">
+    <title>Origin Story</title>
+    <desc>Detailing the exciting and dynamic origin of your cutest protagonist. Code is written, home is un-lessed, destiny is acquired.</desc>
+    <tags>life, tech</tags>
+</metadata>
 
 ### [How Lynn Became Our Story's Protagonist](http://lynncyrin.me/post/origin-story)
 
@@ -14,7 +14,7 @@ I've been meaning to write this post for WEEKS now. It's been consistently delay
 
 #### CRISIS STRIKES!
 
-So I've mentioned having been homeless often enough that I think most people have heard about it, and that's where I'm going to start this off. What do I mean by "homeless" though? Well, there are 4 main types of modern urban homelessness that I know about: couch surfing, sleeping in your car, sleeping in a shelter, sleeping outside. They represent a spectrum of approximately how much society values the welfare of that particular individual, as we don't live in an ideal society that guarantees every person the luxury of a place to sleep that is relatively safe and stable (whether or not we COULD sounds like a fun economics question). But I was couch surfing, and in a shelter (two of them actually). Couch surfing I think most people can imagine. On the other hand sleeping in a shelter can be a very surreal experience, especially when you juxtapose the two shelters I was in. 
+So I've mentioned having been homeless often enough that I think most people have heard about it, and that's where I'm going to start this off. What do I mean by "homeless" though? Well, there are 4 main types of modern urban homelessness that I know about: couch surfing, sleeping in your car, sleeping in a shelter, sleeping outside. They represent a spectrum of approximately how much society values the welfare of that particular individual, as we don't live in an ideal society that guarantees every person the luxury of a place to sleep that is relatively safe and stable (whether or not we COULD sounds like a fun economics question). But I was couch surfing, and in a shelter (two of them actually). Couch surfing I think most people can imagine. On the other hand sleeping in a shelter can be a very surreal experience, especially when you juxtapose the two shelters I was in.
 
 **1st** - women's domestic violence shelter. Fairly calm place. 3 meals a day. Your own bedroom, bathroom shared with 3 people. Average age 35. Lots of children running around. Curfew was 10pm.
 
@@ -57,7 +57,7 @@ So I said just a bit ago that my life plan was set up such that if one amazing t
 *   Got into a 2 year free housing program courtesy of the state
 *   Got accepted as a [Gnome OPW](http://gnome.org/opw/) intern working on [Linux stuff](http://yoctoproject.org/)
 *   Opened up about me needing [financial] support, and started getting $250/week [**!!!**] [on gittip](https://www.gittip.com/lynnmagic)
-*   Got accepted into Mills College as a Dean's Scholar 
+*   Got accepted into Mills College as a Dean's Scholar
 
 And probably a few other things that I'm forgetting, or that happened a bit out of this time frame (ex: [my mentorship and class mobility project](https://github.com/LynnCo/AGuideToClassMobility)). If any single one of those had happened to me, I could have weaved it into a successful life. But ALL OF THEM HAPPENED. **AND PRETTY MUCH AT THE SAME TIME!** The bulk of this occurred 2 to 3 weeks ago and honestly I still haven't really taken stock of all of it.
 
