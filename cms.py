@@ -23,7 +23,7 @@ class cms (object):
     import cms
     run = cms.cms(config)
 
-    this file deals with special characters! 
+    this file deals with special characters!
     take a look at cms.cms.to_ascii
     '''
 
@@ -55,7 +55,7 @@ class cms (object):
         if not re.search("post", article): return 0 #only snip posts (i.e. not pages)
         snip_name = article[:-5]+'_snipped.html' #define snip name
         #get file
-        with open(article, 'r') as base_file: 
+        with open(article, 'r') as base_file:
             all_lines = base_file.readlines()
         #look for the first line with readmore
         readmore = 0
@@ -69,8 +69,8 @@ class cms (object):
         link_to_more = '<h4><a href="http://lynncyrin.me/post/'+url+'">[ Read More! ]</a></h4>\n'
         snippet.append(link_to_more)
         #save yer snip
-        with open(snip_name, 'w') as snippet_file: 
-            snippet_file.writelines(snippet) 
+        with open(snip_name, 'w') as snippet_file:
+            snippet_file.writelines(snippet)
         print("[LOG] created "+snip_name[16:-13]+' snippet')
 
     def build_post (self, post):
@@ -94,22 +94,22 @@ class cms (object):
         html_data = md.convert(text)
         with open(html_path, 'w') as html_file:
             html_file.write(html_data)
-        print('[LOG] created '+post[6:]+' post') 
+        print('[LOG] created '+post[6:]+' post')
         #pages don't get metadata
         if not re.search("post", post): return 0
         #de-unicode-ify the metadata
         meta = dict()
-        for k, v_list in md.Meta.items(): 
+        for k, v_list in md.Meta.items():
             if len(v_list) == 1:
                 meta[str(k)] = str(v_list[0])
             else:
-                meta[str(k)] = list() 
+                meta[str(k)] = list()
                 for v in v_list:
                     meta[str(k)].append(str(v))
         #create metadata file
         with open(yaml_path, 'w') as yaml_file:
-            yaml.dump(meta, yaml_file)    
-        print('[LOG] created '+yaml_path[16:-10]+' metadata')     
+            yaml.dump(meta, yaml_file)
+        print('[LOG] created '+yaml_path[16:-10]+' metadata')
 
     def create_rss (self, posts):
         #initalize feed
@@ -163,19 +163,19 @@ class cms (object):
         changes certain special utf-8 characters into ascii
 
         ok so, some of these characters actually decode straight to
-        \\xe2\\x80\\x## (where ## are two different characters). Those 
-        separate into a list of 3 items (i.e. \\xe2, \\x80, \\x##) 
+        \\xe2\\x80\\x## (where ## are two different characters). Those
+        separate into a list of 3 items (i.e. \\xe2, \\x80, \\x##)
         where the first two items are always the same.
 
         Note that those are all single slashes that I had to escape...
 
-        The third item can be used to determine the type of character 
-        you have. Given that the first two items are always the same, 
-        they are assigned to "null" and result in the deletion of the 
-        character at that space. 
+        The third item can be used to determine the type of character
+        you have. Given that the first two items are always the same,
+        they are assigned to "null" and result in the deletion of the
+        character at that space.
 
         The third item is then assigned to the proper ascii character.
-        '''        
+        '''
         #known conversions
         dash = "–"
         start_qoute = "”"; end_qoute = "“"
