@@ -1,14 +1,3 @@
-'''
-__name__ = blog.py
-__desc__ = Routing and content generation file
-__sign__ = Lynn Cyrin
-
-Use:
-[Production] '$ foreman start'
-[Developement] '$ python blog.py' (runs in debug mode)
-'''
-
-
 #builtin scripts
 import glob
 #external scripts
