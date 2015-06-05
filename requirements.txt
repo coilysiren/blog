@@ -1,5 +1,5 @@
 Flask==0.10.1
-Flask-Scss==0.3
+Flask-Misaka==0.3.0
 Jinja2==2.7.2
 Markdown==2.4
 MarkupSafe==0.19
@@ -7,9 +7,12 @@ PyRSS2Gen==1.1
 PyYAML==3.11
 Werkzeug==0.9.4
 argparse==1.2.1
+beautifulsoup4==4.3.2
 boto==2.29.1
 gunicorn==18.0
 itsdangerous==0.24
+libsass==0.8.2
+misaka==1.0.2
 pyScss==1.2.0.post3
 requests==0.13.2
 six==1.6.1
