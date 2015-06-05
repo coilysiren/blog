@@ -46,8 +46,8 @@ class Cms (object):
         # for article in content:
         #     self.build_post(article[:-3])
         #     self.create_snippet('templates/'+article[:-3]+'.html')
-        # #create rss.xml
-        # self.create_rss(content, app.config)
+        # create rss.xml
+        self.create_rss(app.config)
 
     def create_snippet (self, article):
         '''snips posts at <readmore>'''
@@ -110,7 +110,7 @@ class Cms (object):
             yaml.dump(meta, yaml_file)
         print('[LOG] created '+yaml_path[16:-10]+' metadata')
 
-    def create_rss (self, posts, config):
+    def create_rss (self, config):
         #initalize feed
         rss = PyRSS2Gen.RSS2(
             title = config['SITENAME'],
@@ -127,13 +127,15 @@ class Cms (object):
             #we only want to add tech posts to the RSS right now
             if not "tech" in meta['tags']: continue
             #meta['date'] = '{month}/{date}/{year}'
+            last_modified = os.path.getmtime(max(glob.iglob('templates/posts/*'), key=os.path.getmtime))
             date = re.split('/',meta['date'])
             item = PyRSS2Gen.RSSItem(
                title = meta['title'],
                link = meta['link'],
                description = meta['desc'],
                guid = PyRSS2Gen.Guid(meta['link']),
-               pubDate = datetime.datetime(int(date[2]), int(date[0]), int(date[1])))
+               pubDate = datetime.datetime.fromtimestamp(last_modified)
+            )
             rss.items.append(item)
         #write to xml
         rss.write_xml(open("static/rss.xml", "w"))
