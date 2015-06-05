@@ -10,7 +10,9 @@
 
 [<i class="fa fa-linkedin"></i> Linkedin](http://linkedin.com/in/lynncyrin)
 
-[<i class="fa fa-github"></i> Github](https://github.com/LynnCo)
+[<i class="fa fa-git"></i> Github](https://github.com/LynnCo)
+
+[<i class="fa fa-git"></i> Gitlab](https://github.com/LynnCo)
 
 [<i class="fa fa-rss-square"></i> RSS](http://lynncyrin.me/static/rss.xml)
 
