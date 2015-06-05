@@ -6,7 +6,7 @@ import sass
 import flask
 from flask_misaka import Misaka
 #custom scripts
-from cms import cms
+from cms import Cms
 
 app = flask.Flask(__name__, static_folder='static', static_url_path='')
 
