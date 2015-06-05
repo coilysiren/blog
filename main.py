@@ -14,7 +14,6 @@ import glob
 #external scripts
 import yaml
 import flask
-import flask.ext.scss
 #custom scripts
 import cms
 
@@ -86,6 +85,10 @@ def show_post_by_title (post_title):
         page_desc=meta['desc'],
         post_urls=['posts/'+post_title+'.html'])
 
+@app.route('/static/main.scss')
+def render_css():
+    return sass.compile(filename='static/main.scss', output_style='compressed')
+
 @app.route('/static/<path:filename>')
 def base_static(filename):
     return flask.send_from_directory(app.root_path + '/static/', filename)
@@ -116,5 +119,4 @@ def page_not_found (e):
 if __name__ == '__main__':
     app.config['DEBUG'] = True
     create_cms = cms.cms(app.config)
-    flask.ext.scss.Scss(app)
     app.run()
