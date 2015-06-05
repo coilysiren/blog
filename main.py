@@ -17,18 +17,13 @@ import flask
 #custom scripts
 import cms
 
-
-#start app and set configuration
-
-
 app = flask.Flask(__name__, static_folder='static', static_url_path='')
-app.config.from_object(__name__)
-for key, value in yaml.load(file('config.yaml','r')).items():
-    app.config[key] = value
-
-
-#views
-
+app.config = {
+    "SITENAME": "Lynn Blog",
+    "AVATAR": "http://www.gravatar.com/avatar/b1cde28ce033c8cd6f4be4059efbe00b.png?size=160",
+    "URL": "http://lynncyrin.me",
+    "DESC": "The blog of a Queer, Feminist, Programmer - Lynn Cyrin",
+}
 
 #index page
 @app.route('/index')
