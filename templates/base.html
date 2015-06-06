@@ -5,7 +5,16 @@
 		{% block head %}{% include 'head.html' %}{% endblock %}
 	</head>
 	<body>
-		<div class="texture body_texture"></div>
         {% block navigation %}{% include 'nav.html' %}{% endblock %}
-		{% block content %}{% endblock %}
-		{% include 'google_analytics.html' %}
+		{% block body %}
+                <main>
+                    {% for post_url in post_urls %}
+                        <article>
+                            {% filter markdown %}
+                                {% include post_url %}
+                            {% endfilter %}
+                        </article>
+                    {% endfor %}
+                </main>
+        {% endblock %}
+        {% block footer_resources %}{% include 'footer_resources.html' %}{% endblock %}

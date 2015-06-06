@@ -1,4 +1,4 @@
-<metadata style="display: none;">
+<metadata>
     <title>Origin Story</title>
     <desc>Detailing the exciting and dynamic origin of your cutest protagonist. Code is written, home is un-lessed, destiny is acquired.</desc>
     <tags>life, tech</tags>

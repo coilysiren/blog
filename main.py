@@ -27,11 +27,14 @@ def index ():
     return flask.render_template('post.html',
         page_title=app.config['SITENAME'],
         page_desc=app.config['DESC'],
-        post_urls=['pages/landing.html',
-            'posts/origin-story_snipped.html',
-            'posts/intern-problems_snipped.html',
-            'posts/health-tracker_snipped.html',
-            'pages/about.html'])
+        posts = [
+            'pages/landing.md',
+            'posts/origin-story.md',
+            'posts/intern-problems.md',
+            'posts/health-tracker.md',
+            'pages/about.md'
+        ]
+    )
 
 #about page
 @app.route('/about')
@@ -77,12 +80,9 @@ def show_post_by_title (post_title):
         page_desc=meta['desc'],
         post_urls=['posts/'+post_title+'.html'])
 
-@app.route('/static/main.scss')
-def render_css():
-    return sass.compile(filename='static/main.scss', output_style='compressed')
-
 @app.route('/static/<path:filename>')
 def base_static(filename):
+    print(app.root_path + '/static/' + filename)
     return flask.send_from_directory(app.root_path + '/static/', filename)
 
 @app.route('/tagged/<tag>')
