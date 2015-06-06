@@ -1,43 +1,45 @@
-Kitten Resume
-===============
+Lynn Cyrin
+===========
 
-[Markdown](https://raw.github.com/mwhite/resume/master/resume.md) -> [PDF](https://raw.github.com/mwhite/resume/master/resume.pdf), [HTML](http://mwhite.github.com/resume), and more
-<http://github.com/mwhite/resume>
+I'm a web developer looking for freelance or part time work either remotely, or in the Portland, Oregon area. [...]
 
-Interests
----------
+Skills
+------
 
-* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Languauges
+    - Python
+    - kitten
 
+Projects
+--------
 
-Work Experience
----------------
+*   **Quirell** // Project Manager, Lead Developer // Remote, November 2014 to Present
+    [quirell.net](http://quirell.net)
+    -   Built a social network primarily utilizing Python, Flask, NoSQL (Neo4j)
+    -   Ran a $5000 (?) crowdfunding campaign to fund prototype developement (link?)
+    -   Managed a dozen developers during the intial planning process
+    -   Worked with developers from Daispora*, rstat.us, IndieWebCamp, MediaGoblin
+    -   Used Gitlab issues, Trello for task management
+    -   Used Ubuntu, Heroku, Git for environment management and source control
+    -   Used Documentation Driven Developement principles, and testing with Py.test
+    -   Created a user information database with Neo4j, cached with Redis
+    -   Created a modern and responsive frontend with CSS (Sass) and JQuery
 
-*   **Word Processor** (Redmond, WA)
+*   **CollectQT** // Founder, Web Developer // Remote, August 2014 - Present
+    [collectqt.me](http://collectqt.me)
+    * Founded a distributed activist worker owner collective
+    * Managed a 4 to 8 person team of worker owners over the course of a year
+    * Managed workers in a variety of roles (writer, artist, designer, developer)
+    * Extensive use of Trello, IRC, Slack, and Skype for team management
+    * Responsible for the creation of web assets (social media accounts, blogs, websites)
+    * Created logos and branding material with GIMP / Photoshop, Inkscape / Illustrator
 
-    *Junior Resumé Maker*, 2006 - 2007
-
-    -   Intermingled presentation and content
-    -   Styling was a pain, so either didn't do it or found a half-decent
-        template and didn't mess with it
-
-*   **\LaTeX\ + pdflatex**
-
-    *Senior Resumé Maker*, 2008 - 2010
-
-    -   Edited verbose \LaTeX\ documents in a text editor
-    -   Mixed content and presentation to achieve pixel-perfection
-    -   Installed and configured the unusual TeX setups required by the
-        best-looking \LaTeX\ resumés
-
-*   **LinkedIn, StackOverflow Careers, vizualize.me, etc**
-
-    *Web Resumé Intern*, August 2010
-
-    -   Entered data, adapting to different data models and formatting
-        limitations
-    -   Attempted to customize PDF exports and remove default resumé elements,
-        to no avail
+ATUnit - Project Manager, Technical Advisor
+http://gitlab.com/atunit/atunit
+June 2014 - December 2014
+    * Particpated in planning for payment community website (ex: Patreon, Gratipay)
+    * Managed a team of 20+ developers in the creation of an minimally viable product
+    * Advised on technology solutions and the availability of technical community resources
 
 *   **Markdown with Pandoc**
 
@@ -65,7 +67,4 @@ Skills
 ------
 
 *   Very experienced with Python, Markdown, \LaTeX
-
 *   Familiar with GNU Make, bash
-
-
