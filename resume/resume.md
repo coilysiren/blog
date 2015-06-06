@@ -28,7 +28,7 @@ Projects
     -   Built a social network primarily utilizing Python, Flask, NoSQL (Neo4j)
     -   Ran a $5000 (?) crowdfunding campaign to fund prototype developement (link?)
     -   Managed a dozen developers during the intial planning process
-    -   Worked with developers from Daispora*, rstat.us, IndieWebCamp, MediaGoblin
+    -   Worked with developers from diaspora*, rstat.us, IndieWebCamp, MediaGoblin
     -   Used Gitlab issues, Trello for task management
     -   Used Ubuntu, Heroku, Git for environment management and source control
     -   Used Documentation Driven Developement principles, and testing with Py.test
