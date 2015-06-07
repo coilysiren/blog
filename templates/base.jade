@@ -8,8 +8,8 @@ html(lang="en")
             include nav.jade
         block body
             main
-                for post in posts
+                for file in posts
                     article
-                        include post
+                        include file-include.html
         block footer
             include footer.html
