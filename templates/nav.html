@@ -1,10 +1,28 @@
-<nav class='post'>
-	<a href="{{ url_for('index') }}"><div id="name"><h1>Lynn Cyrin</h1></div></a><br>
-	<div id="me"><img src="{{ config.AVATAR }}" alt="my gravatar picture"></div>
-	<a href="{{ url_for('index') }}"><button class="nav">Home</button></a>
-	<a href="{{ url_for('about') }}"><button class="nav">About Me</button></a>
-	<a href="{{ url_for('contact') }}"><button class="nav">Contact</button></a>
-	<a href="{{ url_for('tagged_page', tag='life') }}"><button class="nav">"Life"</button></a>
-	<a href="{{ url_for('tagged_page', tag='advocacy') }}"><button class="nav">"Advocacy"</button></a>
-	<a href="{{ url_for('tagged_page', tag='tech') }}"><button class="nav">"Tech"</button></a>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Lynn Cyrin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tagged<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/tagged/life">Life</a></li>
+            <li><a href="/tagged/advocacy">Advocacy</a></li>
+            <li><a href="/tagged/tech">Tech</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
