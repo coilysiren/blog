@@ -106,9 +106,8 @@ def tagged_page (tag):
             post_content = f.read()
         meta = cms.get_metadata(post_content, post_path)
         if tag in meta['tags']:
-            posts.append(post_path[9:])
-    print('posts to render: '+str(posts))
-    return flask.render_template('base.html',
+            posts.append(post_content)
+    return flask.render_template('base.jade',
         page_title=app.config['SITENAME']+' // '+tag,
         page_desc='Posts tagged '+tag,
         posts=posts)
