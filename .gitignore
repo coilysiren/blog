@@ -2,3 +2,4 @@ venv
 *.pyc
 *~
 static/rss.xml
+static/css/main.css
