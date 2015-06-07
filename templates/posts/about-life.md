@@ -1,10 +1,10 @@
-title: About Life
-desc: The dramatic amount of stress I deal with made me realize a few things. ((TW: Death, Suicide))
-date: 8/29/2014
-tags: life
-link: http://lynncyrin.me/post/about-life
+<div class="metadata">
+    <span>title: About Life</span>
+    <span>desc: The dramatic amount of stress I deal with made me realize a few things. ((TW: Death, Suicide))</span>
+    <span>tags: life</span>
+</div>
 
-### [About Life](http://lynncyrin.me/post/about-life)
+### [About Life](/post/about-life)
 
 #### Preface
 

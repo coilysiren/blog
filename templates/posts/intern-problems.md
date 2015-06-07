@@ -1,10 +1,10 @@
-title: Intern Problems
-desc: Detailing the exciting life of an intern working on projects whose scope will always and forever be over her head (but that's ok!)
-date: 6/10/2014
-tags: tech
-link: http://lynncyrin.me/post/intern-problems
+<div class="metadata">
+    <span>title: Intern Problems</span>
+    <span>desc: Detailing the exciting life of an intern working on projects whose scope will always and forever be over her head (but that's ok!)</span>
+    <span>tags: tech</span>
+</div>
 
-### [I'll make my own autobuilder! With... [insert futurama joke here]](http://lynncyrin.me/post/intern-problems)
+### [I'll make my own autobuilder! With... [insert futurama joke here]](/post/intern-problems)
 
 --- EDITORS NOTE: Most of the content here is purely satirical and should not be confused with actual plans or opinions
 

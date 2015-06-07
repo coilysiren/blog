@@ -8,10 +8,10 @@
         {% block navigation %}{% include 'nav.html' %}{% endblock %}
 		{% block body %}
                 <main>
-                    {% for post_url in post_urls %}
+                    {% for post in posts %}
                         <article>
-                            {% filter markdown %}
-                                {% include post_url %}
+                            {% filter markdown|snippet %}
+                                {%- include post -%}
                             {% endfilter %}
                         </article>
                     {% endfor %}

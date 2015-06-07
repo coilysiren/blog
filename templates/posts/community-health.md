@@ -1,10 +1,10 @@
-title: Community Health
-desc: Build a better internet! Be aware of your community's health
-date: 7/5/2014
-tags: advocacy
-link: http://lynncyrin.me/post/community-health
+<div class="metadata">
+    <span>title: Community Health</span>
+    <span>desc: Build a better internet! Be aware of your community's health</span>
+    <span>tags: advocacy</span>
+</div>
 
-### [Build a Better Internet // Community Health](http://lynncyrin.me/post/community-health)
+### [Build a Better Internet // Community Health](/post/community-health)
 
 After reading a post (that I do not feel entitled to link to) about social justice community dynamics I feel like I should write about my experiences / opinions with respect to existing and interacting with online communities. In this post in particular I'm going to talk about community health!
 

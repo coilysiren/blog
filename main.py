@@ -17,18 +17,27 @@ DESC = "The blog of a Queer, Feminist, Programmer - Lynn Cyrin"
 
 app.config.from_object(__name__)
 
-Cms(app)
+cms = Cms(app)
 Misaka(app)
+
+# @app.before_request
+def _before_request(self):
+    if not flask.request.endpoint in ['']:
+        print(flask.request.method+' '+str(flask.request.path)+' endpoint '+str(flask.request.endpoint)+'()')
+
+@app.template_filter("snippet")
+def snippet(post_content):
+    for seperator in ('<readmore/>', '<br>', '<br/>', '</p>'):
+        if seperator in post_content:
+            break
+    return flask.Markup(post_content.split(seperator, 1)[0])
 
 #index page
 @app.route('/index')
 @app.route('/')
 def index ():
-    return flask.render_template('post.html',
-        page_title=app.config['SITENAME'],
-        page_desc=app.config['DESC'],
+    return flask.render_template('base.html',
         posts = [
-            'pages/landing.md',
             'posts/origin-story.md',
             'posts/intern-problems.md',
             'posts/health-tracker.md',
@@ -43,16 +52,17 @@ def about ():
         'post.html',
         page_title=app.config['SITENAME']+' // About Me',
         page_desc=app.config['DESC']+' // Information about me',
-        post_urls=['pages/about.html', 'pages/contact.html', 'pages/name.html']
+        posts=['pages/about.md', 'pages/contact.md']
     )
 
 #contact page
 @app.route('/contact')
 def contact ():
-    return flask.render_template('post.html',
+    return flask.render_template(
+        'post.html',
         page_title=app.config['SITENAME']+' // Contact',
         page_desc=app.config['DESC']+' // Contact information and links',
-        post_urls=['pages/contact.html'])
+        posts=['pages/contact.md'])
 
 @app.route('/resume')
 def resume():
@@ -70,39 +80,45 @@ def resume_css():
 @app.route('/post/<post_title>')
 def show_post_by_title (post_title):
     post_title = post_title.lower() #clean input
+
     try:
-        with open('templates/posts/'+post_title+'.html'): pass
+        with open('templates/posts/'+post_title+'.md') as f:
+            post = f.read()
     except IOError:
         return page_not_found(404)
-    meta = yaml.load(file('templates/posts/'+post_title+'_meta.yaml','r'))
+
+    meta = cms.get_metadata(post, post_title)
+
     return flask.render_template('post.html',
         page_title=app.config['SITENAME']+' // '+meta['title'],
         page_desc=meta['desc'],
-        post_urls=['posts/'+post_title+'.html'])
+        posts=['posts/'+post_title+'.md'])
 
 @app.route('/static/<path:filename>')
 def base_static(filename):
-    print(app.root_path + '/static/' + filename)
     return flask.send_from_directory(app.root_path + '/static/', filename)
 
 @app.route('/tagged/<tag>')
 def tagged_page (tag):
-    post_urls = list()
-    for post in glob.glob('posts/*'):
-        meta = yaml.load(file('templates/'+post[:-3]+'_meta.yaml','r'))
+    posts = list()
+    for post_path in glob.glob('templates/posts/*'):
+        with open(post_path) as f:
+            post_content = f.read()
+        meta = cms.get_metadata(post_content, post_path)
         if tag in meta['tags']:
-            post_urls.append((post[:-3]+"_snipped.html"))
-    return flask.render_template('post.html',
+            posts.append(post_path[9:])
+    print('posts to render: '+str(posts))
+    return flask.render_template('base.html',
         page_title=app.config['SITENAME']+' // '+tag,
         page_desc='Posts tagged '+tag,
-        post_urls=post_urls)
+        posts=posts)
 
 @app.errorhandler(404)
 def page_not_found (e):
     return flask.render_template('post.html',
         page_title=app.config['SITENAME']+' // Error 404',
         page_desc='Page Not Found',
-        post_urls=['pages/404.html'])
+        posts=['pages/404.md'])
 
 
 #debug mode start options

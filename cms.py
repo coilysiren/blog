@@ -19,23 +19,22 @@ class Cms (object):
     def __init__ (self, app):
 
         # logging
-        app.before_request(self._before_request)
+        # app.before_request(self._before_request)
 
         # content building
         self.create_rss(app.config)
-        app.template_filter(Cms.snippet)
-        flask_misaka.Misaka(app)
+        flask_misaka.Misaka(
+            app,
+            autolink=True,
+            lax_html=True,
+            )
         #
         from watchdog.observers import Observer
         watch = Observer()
         watch.schedule(If_scss_changes(), os.path.dirname(__file__)+'/static/')
         watch.start()
 
-    def _before_request(self):
-        if not flask.request.endpoint in ['']:
-            print(flask.request.method+' '+str(flask.request.path)+' endpoint '+str(flask.request.endpoint)+'()')
-
-    def create_rss (self, config):
+    def create_rss(self, config):
         last_modified = os.path.getmtime(max(glob.iglob('templates/posts/*'), key=os.path.getmtime))
         last_modified_datetime = datetime.datetime.fromtimestamp(last_modified)
 
@@ -76,8 +75,28 @@ class Cms (object):
         print(' * Built css')
 
     @staticmethod
-    def snippet(post_content):
-        for seperator in ('<readmore/>', '<br>', '<br/>', '</p>'):
-            if seperator in post_content:
-                break
-        return flask.Markup(post_content.split(seperator))
+    def get_metadata(post, path):
+        import yaml
+        from bs4 import BeautifulSoup
+        html = BeautifulSoup(post)
+
+        # parse markdown file
+        meta = dict()
+        try:
+            for span in html.find(attrs={'class':'metadata'}).findChildren():
+                try:
+                    span_content = str(span.contents[0])
+                    meta_dictionary = yaml.load(span_content)
+                except yaml.parser.ParseError, IndexError:
+                    print(path+' contains a ParseError')
+                else:
+                    meta.update(meta_dictionary)
+        except AttributeError:
+            pass
+
+        # fill in any holes
+        meta['title'] = meta.get('title', '')
+        meta['desc'] = meta.get('desc', '')
+        meta['tags'] = meta.get('tags', '')
+
+        return meta

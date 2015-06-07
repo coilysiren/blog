@@ -1,16 +1,15 @@
-<metadata>
-    <title>Origin Story</title>
-    <desc>Detailing the exciting and dynamic origin of your cutest protagonist. Code is written, home is un-lessed, destiny is acquired.</desc>
-    <tags>life, tech</tags>
-</metadata>
+<!-- mew ??? -->
+<div class="metadata">
+    <span>title: Origin Story</span>
+    <span>desc: Detailing the exciting and dynamic origin of your cutest protagonist. Code is written, home is un-lessed, destiny is acquired.</span>
+    <span>tags: life, tech</span>
+</div>
 
-### [How Lynn Became Our Story's Protagonist](http://lynncyrin.me/post/origin-story)
+### [How Lynn Became Our Story's Protagonist](/posts/origin-story)
 
 #### Preface
 
-I've been meaning to write this post for WEEKS now. It's been consistently delayed because of all the wonderful things that have happened to me super recently, but also because I to some extent I really dislike writing about this sort of thing. But I feel like I should, and that it'll be helpful.
-
-<readmore></readmore>
+I've been meaning to write this post for WEEKS now. It's been consistently delayed because of all the wonderful things that have happened to me super recently, but also because I to some extent I really dislike writing about this sort of thing. But I feel like I should, and that it'll be helpful.<readmore/>
 
 #### CRISIS STRIKES!
 

@@ -1,10 +1,10 @@
-title: Countdown to Liftoff
-desc: Sometimes the hardest part of the trip is getting off the ground in the first place. Especially when the ground is hella racist.
-date: 4/18/2014
-tags: life
-link: http://lynncyrin.me/post/countdowntoliftoff
+<div class="metadata">
+    <span>title: Countdown to Liftoff</span>
+    <span>desc: Sometimes the hardest part of the trip is getting off the ground in the first place. Especially when the ground is hella racist.</span>
+    <span>tags: life, tech</span>
+</div>
 
-### [Starting final liftoff countdown](http://lynncyrin.me/post/countdowntoliftoff)
+### [Starting final liftoff countdown](/post/countdowntoliftoff)
 
 #### [[ 5 ]]
 
@@ -38,7 +38,7 @@ High school was one step forward, two steps backward. Teen angst and a general i
 
 What happens next is that my emotionally bankrupt "but well meaning" father decides he needs to fix the marginal drop in my academic performance. His fixes were mostly violent. ...Actually, they were all violent. And by violent I mean physically abusive. CPS was called a few times - BY ME [the child!!!]. CPS [Child Protective Services] didn't really do anything except harass my dad into feeding us more. Which was funny [and by funny I mean sad] because he was / is a massively overweight **[2]** and VERY well paid accountant with underweight children - and his excuse was always that food costs too much.
 
-The institution of CPS still to this day annoys me for its lack of action. But really it's not CPS at large, it's the history and conditioning of black CPS workers having to deal with a black family. White CPS has historically been overbearing on black families, so black CPS is / was underbearing to compensate **[3]**. In my case, this was a mistake. But whatever, I fixed it myself eventually. And by "I fixed it myself" I mean that tensions escalated until one day I punched my dad in the face and ran away. 
+The institution of CPS still to this day annoys me for its lack of action. But really it's not CPS at large, it's the history and conditioning of black CPS workers having to deal with a black family. White CPS has historically been overbearing on black families, so black CPS is / was underbearing to compensate **[3]**. In my case, this was a mistake. But whatever, I fixed it myself eventually. And by "I fixed it myself" I mean that tensions escalated until one day I punched my dad in the face and ran away.
 
 Oh, and another sexual assault happens in here somewhere. It was pretty meh. And so, on to college!
 

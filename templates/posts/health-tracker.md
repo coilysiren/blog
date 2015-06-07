@@ -1,10 +1,10 @@
-title: Community Health Tracker
-desc: Know when your friends are happy, sad, sleeping or awa... wait no. Just happy and sad!
-date: 7/5/2014
-tags: tech
-link: http://lynncyrin.me/post/health-tracker
+<div class="metadata">
+    <span>title: Community Health Tracker</span>
+    <span>desc: Know when your friends are happy, sad, sleeping or awa... wait no. Just happy and sad!</span>
+    <span>tags: tech</span>
+</div>
 
-### [IDEA! Community Health Tracker](http://lynncyrin.me/post/health-tracker)
+### [IDEA! Community Health Tracker](/post/health-tracker)
 
 <blockquote class="twitter-tweet" lang="en"><p>thinking of a web app that [voluntarily] tracks people who are members of a certain community so that you can track community health</p>&mdash; lynn, productivity! (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/485581313110339585">July 6, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

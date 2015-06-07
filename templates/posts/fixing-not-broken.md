@@ -1,8 +1,8 @@
-title: Fixing Whats not Broken
-desc: About making more informed decisions when you decide to refactor things, especially things that are currently working fine
-date: 4/30/2015
-tags: tech
-link: http://lynncyrin.me/post/fixing-not-broken
+<div class="metadata">
+    <span>title: Fixing Whats not Broken</span>
+    <span>desc: About making more informed decisions when you decide to refactor things, especially things that are currently working fine</span>
+    <span>tags: tech</span>
+</div>
 
 ### [Making Better Decisions about When to Refactor your Code](/post/fixing-not-broken)
 

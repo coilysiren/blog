@@ -1,10 +1,10 @@
-title: Lynn has a Danger Fetish
-desc: I just... lol I don't even know what to say. Read this fucking story.
-date: 6/20/2014
-tags: life
-link: http://lynncyrin.me/post/lynnlovesdetroit
+<div class="metadata">
+    <span>title: Lynn has a Danger Fetish</span>
+    <span>desc: I just... lol I don't even know what to say. Read this fucking story.</span>
+    <span>tags: life</span>
+</div>
 
-### [Lynn has a Danger Fetish](http://lynncyrin.me/post/lynnlovesdetroit)
+### [Lynn has a Danger Fetish](/post/lynnlovesdetroit)
 
 #### PRELIMINARY NOTES!
 
@@ -89,7 +89,7 @@ Phone is on its last legs, drunk dude has been mumbling randomly - although at t
 <blockquote class="twitter-tweet" lang="en"><p>I mean tbh I haven&#39;t fought anyone in a while and it would be kinda fun I think</p>&mdash; Gay and Powerful (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/480187616256487425">June 21, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### 11:20 (15 minutes since I ordered) 
+#### 11:20 (15 minutes since I ordered)
 
 The soda can I ordered as a part of my meal has run out. Food shows no signs of showing up. Drunk dude randomly hits on me twice more from across the room.
 
@@ -97,7 +97,7 @@ At this point it becomes clear to store lady that Drunk dude may in fact actuall
 
 #### 12:25 (20 minutes since I ordered)
 
-At this point I'm sorta annoyed at my food taking so long. Also, two security gaurds show up and order some food. They clearly do not feel up to being in security gaurd mode and decide to sit in the corner of the room and watch drunk dude stumble around and hit on the girls (#WorstSecurityGaurdsEver). 
+At this point I'm sorta annoyed at my food taking so long. Also, two security gaurds show up and order some food. They clearly do not feel up to being in security gaurd mode and decide to sit in the corner of the room and watch drunk dude stumble around and hit on the girls (#WorstSecurityGaurdsEver).
 
 Drunk dude finally decides to sit down instead of stumble around the room, and the seat he picks is RIGHT BESIDE ME. I let loose the loudest audible sigh I can possibly manage, then get up and move to a seat farther away from him. Except like, now that he's sitting down, Store lady is out of his line of sight and he decides to only hit on me (as he sits in his chair rocking back and forth).
 

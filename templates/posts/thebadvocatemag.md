@@ -1,10 +1,10 @@
-title: The BAdvocate Mag
-desc: Rainbow is not the new black, white people please sit the fuck down.
-date: 4/17/2014
-tags: advocacy
-link: http://lynncyrin.me/post/thebadvocatemag
+<div class="metadata">
+    <span>title: The BAdvocate Mag</span>
+    <span>desc: Rainbow is not the new black, white people please sit the fuck down.</span>
+    <span>tags: advocacy</span>
+</div>
 
-### [A callout for a Popular LGBT Advocacy Magazine](http://lynncyrin.me/post/thebadvocatemag)
+### [A callout for a Popular LGBT Advocacy Magazine](/post/thebadvocatemag)
 
 So there was an issue today with [a popular LGBT Advocacy Magazine](http://www.advocate.com/) not having an understanding of the intersection of African American and transgender identities. The issue is ALMOST entirely with the headline of an article they published, headline shown here:
 
@@ -29,7 +29,7 @@ Note: it's not only white people who have this problem, but I use "white people"
 <blockquote class="twitter-tweet" lang="en"><p>When you assert the t-word is the new n-word, say that shit to the face of a Black trans woman who gets called both. See how wrong you are.</p>&mdash; Tina Vasquez (@TheTinaVasquez) <a href="https://twitter.com/TheTinaVasquez/statuses/456912568779415552">April 17, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Yea. If you're new here, I'm a black trans woman myself. 
+Yea. If you're new here, I'm a black trans woman myself.
 
 After my response some individuals felt that I was overreacting, that I should just read the article and then it would all be ok. Well...
 
