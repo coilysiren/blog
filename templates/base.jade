@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        block head
+            include head.html
+    body
+        block navigation
+            include nav.jade
+        block body
+            main
+                for post in posts
+                    article
+                        include post
+        block footer
+            include footer.html
