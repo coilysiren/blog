@@ -7,6 +7,7 @@ import glob
 import datetime
 #external
 import flask
+import misaka
 import PyRSS2Gen
 import flask_misaka
 
@@ -24,16 +25,44 @@ class Cms (object):
         # content building
         self.create_rss(app.config)
         app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
-        flask_misaka.Misaka(
-            app,
-            autolink=True,
-            lax_html=True,
-            )
+        flask_misaka.Misaka(app, autolink=True, lax_html=True)
         #
         from watchdog.observers import Observer
         watch = Observer()
         watch.schedule(If_scss_changes(), os.path.dirname(__file__)+'/static/')
         watch.start()
+
+    @staticmethod
+    def markdown(text):
+        return misaka.html(text,
+            extensions=misaka.EXT_LAX_HTML_BLOCKS | misaka.EXT_AUTOLINK)
+
+    @staticmethod
+    def snippet(text):
+        for seperator in ('<readmore/>', '<br>', '<br/>', '</p>'):
+            if seperator in text:
+                break
+        return text.split(seperator, 1)[0]
+
+    @staticmethod
+    def create_markdown_snippets(paths):
+        posts = []
+        for path in paths:
+            if path[-3:] != '.md':
+                path += '.md'
+            if path[:10] == 'templates/':
+                path = path[10:]
+            with open('templates/'+path) as f:
+                text = f.read()
+            text = flask.Markup(Cms.snippet(Cms.markdown(text)))
+            posts.append(text)
+        return posts
+
+    @staticmethod
+    def create_markdown(path):
+        with open('templates/'+path+'.md') as f:
+            text = f.read()
+        return flask.Markup(Cms.markdown(text))
 
     def create_rss(self, config):
         last_modified = os.path.getmtime(max(glob.iglob('templates/posts/*'), key=os.path.getmtime))

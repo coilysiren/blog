@@ -20,18 +20,6 @@ app.config.from_object(__name__)
 cms = Cms(app)
 Misaka(app)
 
-# @app.before_request
-def _before_request(self):
-    if not flask.request.endpoint in ['']:
-        print(flask.request.method+' '+str(flask.request.path)+' endpoint '+str(flask.request.endpoint)+'()')
-
-@app.template_filter("snippet")
-def snippet(post_content):
-    for seperator in ('<readmore/>', '<br>', '<br/>', '</p>'):
-        if seperator in post_content:
-            break
-    return flask.Markup(post_content.split(seperator, 1)[0])
-
 #index page
 @app.route('/index')
 @app.route('/')
@@ -106,11 +94,11 @@ def tagged_page (tag):
             post_content = f.read()
         meta = cms.get_metadata(post_content, post_path)
         if tag in meta['tags']:
-            posts.append(post_content)
+            posts.append(post_path)
     return flask.render_template('base.jade',
         page_title=app.config['SITENAME']+' // '+tag,
         page_desc='Posts tagged '+tag,
-        posts=posts)
+        posts=cms.create_markdown_snippets(posts))
 
 @app.errorhandler(404)
 def page_not_found (e):
