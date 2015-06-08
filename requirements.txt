@@ -17,6 +17,7 @@ libsass==0.8.2
 misaka==1.0.2
 pathtools==0.1.2
 pyScss==1.2.0.post3
+pyjade==3.0.0
 requests==0.13.2
 six==1.6.1
 stripe==1.18.0

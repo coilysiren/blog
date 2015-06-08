@@ -23,6 +23,7 @@ class Cms (object):
 
         # content building
         self.create_rss(app.config)
+        app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
         flask_misaka.Misaka(
             app,
             autolink=True,

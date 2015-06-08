@@ -36,7 +36,7 @@ def snippet(post_content):
 @app.route('/index')
 @app.route('/')
 def index ():
-    return flask.render_template('base.html',
+    return flask.render_template('base.jade',
         posts = [
             'posts/origin-story.md',
             'posts/intern-problems.md',
@@ -49,7 +49,7 @@ def index ():
 @app.route('/about')
 def about ():
     return flask.render_template(
-        'post.html',
+        'post.jade',
         page_title=app.config['SITENAME']+' // About Me',
         page_desc=app.config['DESC']+' // Information about me',
         posts=['pages/about.md', 'pages/contact.md']
@@ -59,7 +59,7 @@ def about ():
 @app.route('/contact')
 def contact ():
     return flask.render_template(
-        'post.html',
+        'post.jade',
         page_title=app.config['SITENAME']+' // Contact',
         page_desc=app.config['DESC']+' // Contact information and links',
         posts=['pages/contact.md'])
@@ -89,7 +89,7 @@ def show_post_by_title (post_title):
 
     meta = cms.get_metadata(post, post_title)
 
-    return flask.render_template('post.html',
+    return flask.render_template('post.jade',
         page_title=app.config['SITENAME']+' // '+meta['title'],
         page_desc=meta['desc'],
         posts=['posts/'+post_title+'.md'])
@@ -114,7 +114,7 @@ def tagged_page (tag):
 
 @app.errorhandler(404)
 def page_not_found (e):
-    return flask.render_template('post.html',
+    return flask.render_template('post.jade',
         page_title=app.config['SITENAME']+' // Error 404',
         page_desc='Page Not Found',
         posts=['pages/404.md'])
