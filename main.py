@@ -30,8 +30,8 @@ def index ():
     return flask.render_template('base.jade',
         posts = cms.create_markdown_snippets([
             'posts/origin-story.md',
-            'posts/intern-problems.md',
-            'posts/health-tracker.md',
+            'posts/fixing-not-broken.md',
+            'posts/community-health.md',
         ])
     )
 
