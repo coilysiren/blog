@@ -45,6 +45,12 @@ article {
         margin: (-$article-y-padding - $article-border-width) (-$article-x-padding) 15px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        line-height: 1.5em;
+    }
+
+    h4 {
+        padding: 5px;
+        line-height: 1.5em;
     }
 
     blockquote {

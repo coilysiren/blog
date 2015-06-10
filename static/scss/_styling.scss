@@ -6,10 +6,16 @@ body {
 }
 
 nav, .navbar-default {
-    box-shadow: 0 0 5px 1px $light_gray;
+    box-shadow: 0 0 5px 1px $deep_gray;
+    background-color: $light_gray;
 }
 
 .metadata {display: none;}
+
+a {
+    font-weight: bold;
+    color: $color_accent;
+}
 
 .avatar {
     text-align: center;
@@ -39,7 +45,6 @@ article {
 
 footer {
     text-align: center;
-    box-shadow: 0 0 5px 3px $light_gray;
-    background-color: $white;
-    color: $deep_gray;
+    box-shadow: 0 0 5px 1px $deep_gray;
+    background-color: $light_gray;
 }
