@@ -108,14 +108,19 @@ class Cms (object):
 
     @staticmethod
     def build_css():
-        import sass
-        with open(os.path.dirname(__file__)+'/static/css/main.css', 'w') as f:
-            f.write(sass.compile(
-                filename=os.path.dirname(__file__)+'/static/scss/main.scss',
-                output_style='compressed',
-                include_paths=os.path.dirname(__file__)+'/static/',
-            ))
-        print(' * Built css')
+        # scss configs
+        import scss
+        scss.config.STATIC_ROOT = 'static/scss/'
+        scss.config.LOAD_PATHS = ['static/scss/']
+        _scss = scss.Scss(scss_opts={'compress':True, 'debug_info': True})
+
+        # read, then write to file
+        with open('static/scss/main.scss', 'r') as f:
+            compiled_css = _scss.compile(f.read())
+        with open('static/css/main.css', 'w') as f:
+            f.write(compiled_css)
+
+        print('* Built css')
 
     @staticmethod
     def get_metadata(post, path):

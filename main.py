@@ -2,7 +2,6 @@
 import glob
 #external scripts
 import yaml
-import sass
 import flask
 from flask_misaka import Misaka
 #custom scripts
