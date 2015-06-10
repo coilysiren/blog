@@ -53,7 +53,8 @@ class Cms (object):
             if seperator in text:
                 break
         snip = text.split(seperator, 1)[0]
-
+        url = '/posts/'+path.split('/')[-1].split('.')[0]
+        snip += '<div class="readmore"><a href="{}" title="the post\'s not done! Here\'s the rest">Continued...</a></div>'.format(url)
         return snip
 
     @staticmethod
