@@ -10,7 +10,7 @@
 
 So I think what I have written here is essentially a philosophy of life. It may read as depressed, but it should be noted that I definitely am not sad right now. I'm just... feeling incredibly realistic. If you read it all, try to read it with rational thoughts - as opposed to emotions.
 
-((TW: Death, Suicide)) <readmore></readmore>
+((TW: Death, Suicide))<readmore/>
 
 #### So a particularly bad commute today...
 

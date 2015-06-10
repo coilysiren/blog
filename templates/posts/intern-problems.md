@@ -11,9 +11,7 @@
 <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/aredridel">@aredridel</a> ok. Just gonna create an autobuilder. No problem.</p>&mdash; lynn_cyrin.py (@lynncyrin) <a href="https://twitter.com/lynncyrin/statuses/476337912666005504">June 10, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<readmore></readmore>
-
-So I've had a sort of um... engaging time recently. Complex programming. Big problems. Stack overflow regex searches. The whole nine yards. I want to try to convey my experience to you all, as its been very interesting and enjoyable and I'd just love to share. Now this originally was going to be a blog post that I wrote up from scratch for this very purpose but I figured a microblog aggregration thing (i.e. I'm going to link to my twitter a lot) was a better idea. Get my raw feelings, from the heat of the moment! So without any further delay...
+So I've had a sort of um... engaging time recently. Complex programming. Big problems. Stack overflow regex searches. The whole nine yards. I want to try to convey my experience to you all, as its been very interesting and enjoyable and I'd just love to share. Now this originally was going to be a blog post that I wrote up from scratch for this very purpose but I figured a microblog aggregration thing (i.e. I'm going to link to my twitter a lot) was a better idea. Get my raw feelings, from the heat of the moment! So without any further delay...<readmore/>
 
 #### Stanza 1, "Vim"
 

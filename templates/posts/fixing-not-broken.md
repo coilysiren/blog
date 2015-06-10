@@ -10,9 +10,7 @@
 
 So that, that's the commit message of a developer doing something they probably shouldn't. Like, if you're going to refactor your code to move away from the leading solution for a particular problem, you had better do a lot of thinking on how you are going to do it. I didn't, and made a huge mess. Here's what happened:
 
-<readmore></readmore>
-
-I wanted to move away from using [AWS S3](http://aws.amazon.com/s3) as the image hosting for [Quirell](http://gitlab.com/collectqt/quirell). I still think that reasons are pretty solid
+I wanted to move away from using [AWS S3](http://aws.amazon.com/s3) as the image hosting for [Quirell](http://gitlab.com/collectqt/quirell). I still think that reasons are pretty solid<readmore/>
 
 * I want to make it easy for people to create their own version of Quirell, or at least to test the full feature set
 * To expidite that, I was going to make sure to eiter include throwaway account credentials (U: THROWAWAY_TEST_ACCOUNT@gmail.com // P: I_really_dont_care_about_this) or make it so that you only have to make one account with a provider that provides a variety of services (which in the case of Quirell, would be [Heroku](http://heroku.com))

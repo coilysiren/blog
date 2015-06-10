@@ -9,9 +9,7 @@
 <blockquote class="twitter-tweet" lang="en"><p>thinking of a web app that [voluntarily] tracks people who are members of a certain community so that you can track community health</p>&mdash; lynn, productivity! (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/485581313110339585">July 6, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<readmore></readmore>
-
-So on the heels of a [facebook being mildly more invasive than normal](http://www.avclub.com/article/facebook-tinkered-users-feeds-massive-psychology-e-206324), a [series](http://clatl.com/freshloaf/archives/2014/07/03/transgender-woman-attacked-in-l5p) of [events](http://geekfeminism.wikia.com/wiki/Gittip_crisis) that were very bad for community health, and short conversation with my partner cutie, I had an idea!
+So on the heels of a [facebook being mildly more invasive than normal](http://www.avclub.com/article/facebook-tinkered-users-feeds-massive-psychology-e-206324), a [series](http://clatl.com/freshloaf/archives/2014/07/03/transgender-woman-attacked-in-l5p) of [events](http://geekfeminism.wikia.com/wiki/Gittip_crisis) that were very bad for community health, and short conversation with my partner cutie, I had an idea!<readmore/>
 
 Generally, [sentiment analysis](http://en.wikipedia.org/wiki/Sentiment_analysis) has been used by massive social media platforms to gather all sorts of data on its users, usually for the sake of profit or control. But sentiment analysis can also be used to monitor the health of an online community / online discourse for the sake of the people engaging with it. [I talk about community health for a bit here](http://lynncyrin.me/post/community-health), but basically I want to have a broad idea of when my friends are happy or sad, along with what's going on with them! Basically, a level of data analysis for all the great communities and networks are people have already built. Here are some basic use cases:
 

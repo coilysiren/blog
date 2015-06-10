@@ -9,11 +9,9 @@
 <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p>Anti homeless floor studs. Deprive them of shelter and they&#39;ll choose not to be homeless, right? <a href="http://t.co/MCCJLdWHYG">pic.twitter.com/MCCJLdWHYG</a> Via <a href="https://twitter.com/thejediknight1">@thejediknight1</a></p>&mdash; Tentacle Sixteen (@latentexistence) <a href="https://twitter.com/latentexistence/statuses/475222545927778305">June 7, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<readmore></readmore>
-
 So here's the idea. There exists street homelessness (sleeping on the streets), and sheltered homelessness (sleeping in a shelter). Sheltered homelessness is less of a burden to soceity, the homeless people aren't nearly as hard to track, and much easier to provide services for. [A homeless outreach worker describes as much here](http://imsorrythatimlikethis.wordpress.com/2014/06/07/the-spikes/).
 
-So, why do people still opt for street homelessness over sheltered homelessness? Well, let me tell you a story...
+So, why do people still opt for street homelessness over sheltered homelessness? Well, let me tell you a story...<readmore/>
 
 #### A snip of my shelter experience
 

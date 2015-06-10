@@ -10,9 +10,7 @@
 
 #### Point 1, the title
 
-Even insinuating the San Francisco's class war could be invisible, and then writing an article directed at well paid tech workers about the visibly street homeless is downplaying the effects of the "class war". It's reducing the effects of wage gaps and increasing costs of living down to just people sleeping on the street, and anyone who's been poor for more than a few days (*ahem* Congress) should know "class war" is about much more than that. There's a lot of shit to go through before one become visibly street homeless, and those experiences should be respected too.
-
-<readmore></readmore>
+Even insinuating the San Francisco's class war could be invisible, and then writing an article directed at well paid tech workers about the visibly street homeless is downplaying the effects of the "class war". It's reducing the effects of wage gaps and increasing costs of living down to just people sleeping on the street, and anyone who's been poor for more than a few days (*ahem* Congress) should know "class war" is about much more than that. There's a lot of shit to go through before one become visibly street homeless, and those experiences should be respected too.<readmore/>
 
 #### Point 2, use of language
 

@@ -8,8 +8,6 @@
 
 After reading a post (that I do not feel entitled to link to) about social justice community dynamics I feel like I should write about my experiences / opinions with respect to existing and interacting with online communities. In this post in particular I'm going to talk about community health!
 
-<readmore></readmore>
-
 So the 3 main areas that concern me with respect to online communities are health, growth, and productivity. Also the two main communities that I interact with are the feminist tech community and the trans activist community (note: these communities intersect A LOT), so everything I say should be implied to apply to them (and generally only them).
 
 #### Health
@@ -19,6 +17,8 @@ First, health. So what makes online communities 'healthy'? Without trying to get
 * happy members
 * resources flowing through it
 * little infighting
+
+<readmore/>
 
 #### Happiness
 

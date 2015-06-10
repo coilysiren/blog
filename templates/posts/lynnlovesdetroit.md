@@ -16,10 +16,8 @@
 
 So I woke up today, this morning, the day of my birth...
 
-<readmore></readmore>
-
 <blockquote class="twitter-tweet" lang="en"><p>Relevant: <a href="http://t.co/38nmdlTKS1">pic.twitter.com/38nmdlTKS1</a></p>&mdash; Gay and Powerful (@LynnMagic) <a href="https://twitter.com/LynnMagic/statuses/480198982052749313">June 21, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><readmore/>
 
 (ok that's the last birthday mention I promise lol)
 
