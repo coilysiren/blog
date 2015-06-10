@@ -1,8 +1,28 @@
 // variables.scss
 
-$primary_color: #7AADA6;
-$secondary_color: #fda720;
-$body_color: rgba(#fda720, 0.3);
+// basics
+$white: #fff;
+$light_gray: #e7e7e7;
+$deep_gray: #777;
+$color_shadow: rgba(0, 0, 0, 0.1);
 
-$head_font: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-$body_font: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+// base colors
+$pastel_purple: rgb(220, 206, 228);
+$pastel_yellow: rgb(244, 231, 144);
+$pastel_deep_blue: rgb(130, 147, 227);
+$seafoam_green: rgb(202, 255, 204);
+
+// applied colors
+$color_primary: $pastel_yellow;
+$color_secondary: $pastel_purple;
+$color_accent: $pastel_deep_blue;
+
+// derived
+$color_body: rgba($color_primary, 0.3);
+$color_primary_faded: rgba($color_primary, 0.7);
+$color_secondary_faded: rgba($color_secondary, 0.3);
+$dark_primary: rgb(86, 72, 126);
+
+// fonts
+$font_head: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$font_body: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;

@@ -28,32 +28,31 @@ Misaka(app)
 @app.route('/')
 def index ():
     return flask.render_template('base.jade',
-        posts = [
+        posts = cms.create_markdown_snippets([
             'posts/origin-story.md',
             'posts/intern-problems.md',
             'posts/health-tracker.md',
-            'pages/about.md'
-        ]
+        ])
     )
 
 #about page
 @app.route('/about')
 def about ():
     return flask.render_template(
-        'post.jade',
+        'base.jade',
         page_title=app.config['SITENAME']+' // About Me',
         page_desc=app.config['DESC']+' // Information about me',
-        posts=['pages/about.md', 'pages/contact.md']
+        posts=cms.create_markdown('pages/about')
     )
 
 #contact page
 @app.route('/contact')
 def contact ():
     return flask.render_template(
-        'post.jade',
+        'base.jade',
         page_title=app.config['SITENAME']+' // Contact',
         page_desc=app.config['DESC']+' // Contact information and links',
-        posts=['pages/contact.md'])
+        posts=cms.create_markdown('pages/contact'))
 
 @app.route('/resume')
 def resume():
@@ -80,10 +79,10 @@ def show_post_by_title (post_title):
 
     meta = cms.get_metadata(post, post_title)
 
-    return flask.render_template('post.jade',
+    return flask.render_template('base.jade',
         page_title=app.config['SITENAME']+' // '+meta['title'],
         page_desc=meta['desc'],
-        posts=['posts/'+post_title+'.md'])
+        posts=cms.create_markdown('posts/'+post_title))
 
 @app.route('/static/<path:filename>')
 def base_static(filename):
@@ -105,10 +104,10 @@ def tagged_page (tag):
 
 @app.errorhandler(404)
 def page_not_found (e):
-    return flask.render_template('post.jade',
+    return flask.render_template('base.jade',
         page_title=app.config['SITENAME']+' // Error 404',
         page_desc='Page Not Found',
-        posts=['pages/404.md'])
+        posts=cms.create_markdown('pages/404'))
 
 
 #debug mode start options

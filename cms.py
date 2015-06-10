@@ -48,11 +48,13 @@ class Cms (object):
             extensions=misaka.EXT_LAX_HTML_BLOCKS | misaka.EXT_AUTOLINK)
 
     @staticmethod
-    def snippet(text):
+    def snippet(text, path):
         for seperator in ('<readmore/>', '<br>', '<br/>', '</p>'):
             if seperator in text:
                 break
-        return text.split(seperator, 1)[0]
+        snip = text.split(seperator, 1)[0]
+
+        return snip
 
     @staticmethod
     def create_markdown_snippets(paths):
@@ -64,7 +66,7 @@ class Cms (object):
                 path = path[10:]
             with open('templates/'+path) as f:
                 text = f.read()
-            text = flask.Markup(Cms.snippet(Cms.markdown(text)))
+            text = flask.Markup(Cms.snippet(Cms.markdown(text), path))
             posts.append(text)
         return posts
 
@@ -72,7 +74,7 @@ class Cms (object):
     def create_markdown(path):
         with open('templates/'+path+'.md') as f:
             text = f.read()
-        return flask.Markup(Cms.markdown(text))
+        return [flask.Markup(Cms.markdown(text))]
 
     def create_rss(self, config):
         last_modified = os.path.getmtime(max(glob.iglob('templates/posts/*'), key=os.path.getmtime))
