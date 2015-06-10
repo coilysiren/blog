@@ -27,10 +27,20 @@ class Cms (object):
         app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
         flask_misaka.Misaka(app, autolink=True, lax_html=True)
         #
-        from watchdog.observers import Observer
-        watch = Observer()
-        watch.schedule(If_scss_changes(), os.path.dirname(__file__)+'/static/')
-        watch.start()
+        if app.config['DEBUG']:
+            # build css on changes
+            from watchdog.events import FileSystemEventHandler
+            class If_scss_changes (FileSystemEventHandler):
+                def on_modified (self, event): Cms.build_css()
+
+            # monitor for changes
+            from watchdog.observers import Observer
+            watch = Observer()
+            watch.schedule(If_scss_changes(), os.path.dirname(__file__)+'/static/scss/')
+            watch.start()
+
+        # do a build
+        Cms.build_css()
 
     @staticmethod
     def markdown(text):

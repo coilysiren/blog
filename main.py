@@ -17,6 +17,9 @@ DESC = "The blog of a Queer, Feminist, Programmer - Lynn Cyrin"
 
 app.config.from_object(__name__)
 
+with open('ENV.yaml', 'r') as yaml_file:
+    app.config.update(yaml.load(yaml_file))
+
 cms = Cms(app)
 Misaka(app)
 
