@@ -4,6 +4,25 @@ body {
     padding-top: 70px;
 }
 
+.blog-header {
+    padding-bottom: 15px;
+}
+
+.avatar {
+    padding: 10px 0;
+}
+
+.sidebar-module {
+    padding: 10px 15px;
+    margin: 0 -15px 15px;
+}
+
 footer {
     padding: 20px 0;
+    color: #999;
+    background-color: #f9f9f9;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 }

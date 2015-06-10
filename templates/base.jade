@@ -7,9 +7,16 @@ html(lang="en")
         block navigation
             include nav.jade
         block body
-            main
-                for post in posts
-                    article
-                        = post
+            .container
+                .row
+                    main.col-sm-8
+                        for post in posts
+                            article
+                                = post
+                    aside.col-sm-3.col-sm-offset-1
+                        include sidebar.jade
+        footer
+            p A Lynn Cyrin Website
+            p: a(href='#') Back to top
         block footer
             include footer.html
