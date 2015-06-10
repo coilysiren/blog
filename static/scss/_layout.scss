@@ -1,4 +1,5 @@
 // layout.scss
+// for sizes, media queries, etc
 
 body {
     padding-top: 80px;
@@ -69,5 +70,19 @@ footer {
 
     p:last-child {
         margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: 768px) {
+    body {
+        font-size: 1.6em;
+    }
+
+    nav {
+        font-size: 1.2em;
+    }
+
+    .sidebar-module {
+        border-radius: 0;
     }
 }

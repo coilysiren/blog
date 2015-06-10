@@ -15,7 +15,8 @@ $seafoam_green: rgb(202, 255, 204);
 // applied colors
 $color_primary: $pastel_yellow;
 $color_secondary: $pastel_purple;
-$color_accent: $pastel_deep_blue;
+$color_dark_accent: $pastel_deep_blue;
+$color_light_accent: $seafoam_green;
 
 // derived
 $color_body: rgba($color_primary, 0.3);

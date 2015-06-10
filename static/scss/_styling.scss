@@ -5,17 +5,44 @@ body {
     background-color: $color_secondary_faded;
 }
 
-nav, .navbar-default {
-    box-shadow: 0 0 5px 1px $deep_gray;
-    background-color: $light_gray;
-}
-
 .metadata {display: none;}
 
 a {
     font-weight: bold;
-    color: $color_accent;
+    color: $color_dark_accent;
 }
+
+// nav
+
+.navbar-default {
+    box-shadow: 0 0 5px 1px $dark_primary;
+    background-color: $dark_primary;
+    border-style: none;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand {
+    color: $white;
+
+    &:hover, &:focus {
+        color: $color_primary;
+    }
+}
+
+.navbar-default .navbar-collapse {
+    border-color: $color-shadow;
+}
+
+#navbar-button {
+    border-style: none;
+    background-color: $white;
+
+    .icon-bar {background-color: $dark_primary;}
+
+    &:focus, &:hover {background-color: $color_primary;}
+}
+
+//
 
 .avatar {
     text-align: center;
@@ -45,6 +72,14 @@ article {
 
 footer {
     text-align: center;
-    box-shadow: 0 0 5px 1px $deep_gray;
-    background-color: $light_gray;
+    box-shadow: 0 0 5px 1px $dark_primary;
+    background-color: $dark_primary;
+    color: white;
+    a {
+        color: $color_light_accent;
+    }
+
+    a:hover, a:focus {
+        color: $color_primary;
+    }
 }
