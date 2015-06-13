@@ -36,16 +36,6 @@ def index ():
         ])
     )
 
-#about page
-@app.route('/about')
-def about ():
-    return flask.render_template(
-        'base.jade',
-        page_title=app.config['SITENAME']+' // About Me',
-        page_desc=app.config['DESC']+' // Information about me',
-        posts=cms.create_markdown('pages/about')
-    )
-
 #contact page
 @app.route('/contact')
 def contact ():
