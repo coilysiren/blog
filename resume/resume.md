@@ -47,8 +47,8 @@ Recent Work
 
     <http://gitlab.com/atunit/atunit>
 
-    * Particpated in planning for payment community website (ex: Patreon, Gratipay)
-    * Managed a team of 20+ developers in the creation of an minimally viable product
+    * Participated in planning for payment community website (ex: Patreon, Gratipay)
+    * Managed a team of 20+ developers in the creation of a minimally viable product
     * Advised on technology solutions and the availability of technical community resources
 
 Speaking and Writing
