@@ -2,11 +2,9 @@ Lynn Cyrin
 ===========
 
 Full Stack Web Developer
-<http://lynncyrin.me>
+<http://lynncyrin.me>  // lynncyrin@gmail.com
 
-Professional full stack web developer with 2 years of industry experience working in multifunctional roles on self-sufficient, agile teams.
-
-Primary looking for remote contract work, but also available for part time work in Portland Oregon.
+Professional full stack web developer with 2 years of industry experience working in multifunctional roles on self-sufficient, agile teams. Looking for fulltime work in Portland, Oregon.
 
 My nontechnical work revolves around community, access, identity, and diversity. The majority of this work is heavily integrated with online communities and social media (search for "Lynn Cyrin"). I expect any org I work with to support work like Transh4ck and Women Who Code.
 
